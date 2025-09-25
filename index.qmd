@@ -1,0 +1,132 @@
+# Content 
+
+#### Chapter 1. Vectors, Scalars, and Geometry 
+
+1. Scalars, vectors, and coordinate systems (what they are, why we care)
+2. Vector notation, components, and arrows (reading and writing vectors)
+3. Vector addition and scalar multiplication (the two basic moves)
+4. Linear combinations and span (building new vectors from old ones)
+5. Length (norm) and distance (how big and how far)
+6. Dot product (algebraic and geometric views)
+7. Angles between vectors and cosine (measuring alignment)
+8. Projections and decompositions (splitting along a direction)
+9. Cauchy–Schwarz and triangle inequalities (two fundamental bounds)
+10. Orthonormal sets in ℝ²/ℝ³ (nice bases you already know)
+
+#### Chapter 2. Matrices and Basic Operations 
+
+11. Matrices as tables and as machines (two mental models)
+12. Matrix shapes, indexing, and block views (seeing structure)
+13. Matrix addition and scalar multiplication (componentwise rules)
+14. Matrix–vector product (linear combos of columns)
+15. Matrix–matrix product (composition of linear steps)
+16. Identity, inverse, and transpose (three special friends)
+17. Symmetric, diagonal, triangular, and permutation matrices (special families)
+18. Trace and basic matrix properties (quick invariants)
+19. Affine transforms and homogeneous coordinates (translations included)
+20. Computing with matrices (cost counts and simple speedups)
+
+#### Chapter 3. Linear Systems and Elimination
+
+21. From equations to matrices (augmenting and encoding)
+22. Row operations (legal moves that keep solutions)
+23. Row-echelon and reduced row-echelon forms (target shapes)
+24. Pivots, free variables, and leading ones (reading solutions)
+25. Solving consistent systems (unique vs. infinite solutions)
+26. Detecting inconsistency (when no solution exists)
+27. Gaussian elimination by hand (a disciplined procedure)
+28. Back substitution and solution sets (finishing cleanly)
+29. Rank and its first meaning (pivots as information)
+30. LU factorization (elimination captured as L and U)
+
+#### Chapter 4. Vector Spaces and Subspaces 
+
+31. Axioms of vector spaces (what “space” really means)
+32. Subspaces, column space, and null space (where solutions live)
+33. Span and generating sets (coverage of a space)
+34. Linear independence and dependence (no redundancy vs. redundancy)
+35. Basis and coordinates (naming every vector uniquely)
+36. Dimension (how many directions)
+37. Rank–nullity theorem (dimensions that add up)
+38. Coordinates relative to a basis (changing the “ruler”)
+39. Change-of-basis matrices (moving between coordinate systems)
+40. Affine subspaces (lines and planes not through the origin)
+
+#### Chapter 5. Linear Transformations and Structure 
+
+41. Linear transformations (preserving lines and sums)
+42. Matrix representation of a linear map (choosing a basis)
+43. Kernel and image (inputs that vanish; outputs we can reach)
+44. Invertibility and isomorphisms (perfectly reversible maps)
+45. Composition, powers, and iteration (doing it again and again)
+46. Similarity and conjugation (same action, different basis)
+47. Projections and reflections (idempotent and involutive maps)
+48. Rotations and shear (geometric intuition)
+49. Rank and operator viewpoint (rank beyond elimination)
+50. Block matrices and block maps (divide and conquer structure)
+
+#### Chapter 6. Determinants and Volume 
+
+51. Areas, volumes, and signed scale factors (geometric entry point)
+52. Determinant via linear rules (multilinearity, sign, normalization)
+53. Determinant and row operations (how each move changes det)
+54. Triangular matrices and product of diagonals (fast wins)
+55. det(AB) = det(A)det(B) (multiplicative magic)
+56. Invertibility and zero determinant (flat vs. full volume)
+57. Cofactor expansion (Laplace’s method)
+58. Permutations and sign (the combinatorial core)
+59. Cramer’s rule (solving with determinants, and when not to use it)
+60. Computing determinants in practice (use LU, mind stability)
+
+#### Chapter 7. Eigenvalues, Eigenvectors, and Dynamics 
+
+61. Eigenvalues and eigenvectors (directions that stay put)
+62. Characteristic polynomial (where eigenvalues come from)
+63. Algebraic vs. geometric multiplicity (how many and how independent)
+64. Diagonalization (when a matrix becomes simple)
+65. Powers of a matrix (long-term behavior via eigenvalues)
+66. Real vs. complex spectra (rotations and oscillations)
+67. Defective matrices and a peek at Jordan form (when diagonalization fails)
+68. Stability and spectral radius (grow, decay, or oscillate)
+69. Markov chains and steady states (probabilities as linear algebra)
+70. Linear differential systems (solutions via eigen-decomposition)
+
+#### Chapter 8. Orthogonality, Least Squares, and QR
+
+71. Inner products beyond dot product (custom notions of angle)
+72. Orthogonality and orthonormal bases (perpendicular power)
+73. Gram–Schmidt process (constructing orthonormal bases)
+74. Orthogonal projections onto subspaces (closest point principle)
+75. Least-squares problems (fit when exact solve is impossible)
+76. Normal equations and geometry of residuals (why it works)
+77. QR factorization (stable least squares via orthogonality)
+78. Orthogonal matrices (length-preserving transforms)
+79. Fourier viewpoint (expanding in orthogonal waves)
+80. Polynomial and multifeature least squares (fitting more flexibly)
+
+#### Chapter 9. SVD, PCA, and Conditioning
+
+81. Singular values and SVD (universal factorization)
+82. Geometry of SVD (rotations + stretching)
+83. Relation to eigen-decompositions (ATA and AAT)
+84. Low-rank approximation (best small models)
+85. Principal component analysis (variance and directions)
+86. Pseudoinverse (Moore–Penrose) and solving ill-posed systems
+87. Conditioning and sensitivity (how errors amplify)
+88. Matrix norms and singular values (measuring size properly)
+89. Regularization (ridge/Tikhonov to tame instability)
+90. Rank-revealing QR and practical diagnostics (what rank really is)
+
+#### Chapter 10. Applications and Computation
+
+91. 2D/3D geometry pipelines (cameras, rotations, and transforms)
+92. Computer graphics and robotics (homogeneous tricks in action)
+93. Graphs, adjacency, and Laplacians (networks via matrices)
+94. Data preprocessing as linear ops (centering, whitening, scaling)
+95. Linear regression and classification (from model to matrix)
+96. PCA in practice (dimensionality reduction workflow)
+97. Recommender systems and low-rank models (fill the missing entries)
+98. PageRank and random walks (ranking with eigenvectors)
+99. Numerical linear algebra essentials (floating point, BLAS/LAPACK)
+100. Capstone problem sets and next steps (a roadmap to mastery)
+

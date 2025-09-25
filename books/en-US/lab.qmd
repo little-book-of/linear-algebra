@@ -1,0 +1,81 @@
+---
+engine: jupyter
+jupyter: lab-venv
+---
+
+# The LAB 
+
+## Chapter 1. Vectors, scalars, and geometry 
+
+### 1. Scalars, Vectors, and Coordinate Systems — LAB
+
+Let’s get our hands dirty! This lab is about playing with the *building blocks* of linear algebra: scalars and vectors. Think of a **scalar** as just a plain number, like `3` or `-1.5`. A **vector** is a small list of numbers, which you can picture as an arrow in space.
+
+We’ll use Python (with NumPy) to explore them. Don’t worry if this is your first time with NumPy — we’ll go slowly.
+
+#### Set Up Your Lab
+
+```{python}
+import numpy as np
+```
+
+That’s it — we’re ready! NumPy is the main tool we’ll use for linear algebra.
+
+#### Step-by-Step Code Walkthrough
+
+**Scalars are just numbers.**
+
+```{python}
+a = 5       # a scalar
+b = -2.5    # another scalar
+
+print(a + b)   # add them
+print(a * b)   # multiply them
+```
+
+**Vectors are lists of numbers.**
+
+```{python}
+v = np.array([2, 3])      # a vector in 2D
+w = np.array([1, -1, 4])  # a vector in 3D
+
+print(v)
+print(w)
+```
+
+**Coordinates tell us where we are.**
+Think of `[2, 3]` as “go 2 steps in the x-direction, 3 steps in the y-direction.”
+
+We can even *draw* it:
+
+```{python}
+import matplotlib.pyplot as plt
+
+# plot vector v
+plt.quiver(0, 0, v[0], v[1], angles='xy', scale_units='xy', scale=1, color='r')
+plt.xlim(0, 4)
+plt.ylim(0, 4)
+plt.grid()
+plt.show()
+```
+
+This makes a little arrow from the origin `(0,0)` to `(2,3)`.
+
+#### Try It Yourself
+
+1. Change the vector `v` to `[4, 1]`. Where does the arrow point now?
+2. Try making a 3D vector with 4 numbers, like `[1, 2, 3, 4]`. What happens?
+3. Replace `np.array([2,3])` with `np.array([0,0])`. What does the arrow look like?
+
+#### Common Beginner Pitfalls
+
+* Forgetting to use `np.array([...])`. Writing `[2, 3]` without NumPy just makes a Python list — not a vector.
+* Mixing dimensions: you can’t directly add a 2D vector and a 3D vector.
+
+#### The Takeaway
+
+* A **scalar** is a single number.
+* A **vector** is a list of numbers that represent a point or arrow in space.
+* Coordinate systems let us place vectors on a grid and visualize them.
+
+

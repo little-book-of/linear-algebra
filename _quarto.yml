@@ -1,0 +1,52 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: &book_title "The Little Book of Linear Algebra"
+  subtitle: &book_subtitle "Version 0.2.0"
+  author: &book_author "Duc-Tam Nguyen"
+  date: &book_date "2025-09-25"
+  output-file: book
+  chapters:
+    - index.qmd
+    - books/en-US/book.qmd
+
+website:
+  title: *book_title
+  page-navigation: true
+  navbar:
+    search: true
+    right:
+      - text: *book_subtitle 
+      - icon: github
+        href: https://github.com/little-book-of/linear-algebra
+        aria-label: GitHub
+
+format:
+  html:
+    sidebar: true
+    toc: true
+    toc-location: left
+    toc-depth: 3
+    number-sections: false
+    theme: [cosmo, brand]
+  epub:
+    title: *book_title
+    subtitle: *book_subtitle
+    author: *book_author
+    date: *book_date
+    toc: true 
+    toc-depth: 3
+    number-sections: false
+  pdf:
+    title: *book_title
+    subtitle: *book_subtitle
+    author: *book_author
+    date: *book_date
+    toc: true 
+    toc-depth: 3
+    number-sections: false
+    colorlinks: true
+  latex:
+    number-sections: false

@@ -1,21 +1,16 @@
-# LaTeX build artifacts
-*.aux
-*.log
-*.out
-*.toc
-*.fls
-*.fdb_latexmk
-*.synctex.gz
-*.bbl
-*.blg
-*.lof
-*.lot
-*.run.xml
+/.quarto/
+**/*.quarto_ipynb
 
-# Temporary files from editors
-*~
-*.swp
-*.swo
+book.aux
+book.toc
+texput.log
+
 .DS_Store
-Thumbs.db
 
+# Ignore ONLY the top-level site_libs
+/site_libs/
+
+# Keep the one inside docs (optional safeguards if you already ignore broadly)
+!docs/
+!docs/site_libs/
+!docs/site_libs/**
