@@ -1,6 +1,8 @@
 # The Little Book of Linear Algebra
 
-A concise, beginner-friendly introduction to the core ideas of linear algebra.
+A concise, beginner-friendly introduction to the core ideas of Linear Algebra. 
+
+A clear, hands-on guide to the geometry and structure behind vectors and matrices.
 
 ## Formats
 
@@ -8,6 +10,11 @@ A concise, beginner-friendly introduction to the core ideas of linear algebra.
 - [Download EPUB](releases/book.epub) - e-reader friendly
 - [View LaTeX](releases/book.tex) - `.tex` source
 - [Read on GitHub Pages](https://little-book-of.github.io/linear-algebra/) - online website
+- [Notebook](https://little-book-of.github.io/linear-algebra/books/en-US/lab.html) - Learning with Python
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
+  https://colab.research.google.com/github/little-book-of/linear-algebra/blob/main/releases/lab.ipynb
+)
 
 For old version (v1), here is the link
 
