@@ -4,13 +4,14 @@ project:
 
 book:
   title: &book_title "The Little Book of Linear Algebra"
-  subtitle: &book_subtitle "Version 0.2.0"
+  subtitle: &book_subtitle "Version 0.3.0"
   author: &book_author "Duc-Tam Nguyen"
-  date: &book_date "2025-09-25"
+  date: &book_date "2025-09-26"
   output-file: book
   chapters:
     - index.qmd
     - books/en-US/book.qmd
+    - books/en-US/lab.qmd # complicated setup local env, will write tutorials later.
 
 website:
   title: *book_title

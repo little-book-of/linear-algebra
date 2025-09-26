@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../books/en-US/lab.html" rel="next">
 <link href="../../index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -146,6 +147,11 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../books/en-US/book.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">The Book</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../books/en-US/lab.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">The LAB</span></a>
   </div>
 </li>
     </ul>
@@ -545,14 +551,6 @@ That’s the essence of constructing spaces.</p>
 <p>These rules are not trivial bookkeeping - they guarantee that linear algebra behaves predictably,<br>
 which is why it works as the language of science.</p>
 </section>
-<section id="everyday-analogies" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies">Everyday Analogies</h4>
-<ul>
-<li>Walking directions: If you walk 3 steps north and then 4 steps east, that’s like adding (0, 3) + (4, 0) = (4, 3).</li>
-<li>Forces in physics: If two people push on a box in different directions, the total force is the vector sum of their pushes.</li>
-<li>Budget planning: Think of income and expenses as vectors of numbers. Combining them is just vector addition.</li>
-</ul>
-</section>
 <section id="why-it-matters-2" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-2">Why It Matters</h4>
 <p>With only these two operations-addition and scaling-you can already describe lines, planes, and entire spaces. Any system that grows by combining influences, like physics, economics, or machine learning, is built on these simple rules. Later, when we define matrix multiplication, dot products, and eigenvalues, they all reduce to repeated patterns of adding and scaling vectors.</p>
@@ -630,14 +628,6 @@ It answers the question: <em>“What space do these vectors generate?”</em></p
 <li>Three independent vectors span all of 3D space.</li>
 </ul></li>
 <li><p>In higher dimensions: The same pattern continues. A set of k independent vectors spans a k-dimensional subspace inside the larger space.</p></li>
-</ul>
-</section>
-<section id="everyday-analogies-1" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-1">Everyday Analogies</h4>
-<ul>
-<li>Color mixing: Red and blue paints can mix to make purple shades. Add yellow, and you can cover a broader spectrum. Similarly, vectors combine to produce new ones.</li>
-<li>Cooking recipes: Ingredients (vectors) can be scaled up or down and combined in different amounts. The span is the full menu of dishes you can create with those ingredients.</li>
-<li>Directions in navigation: If you can only walk north and south, your span is a line. Add east-west walking, and suddenly you can reach any location in the city grid.</li>
 </ul>
 </section>
 <section id="algebraic-properties-1" class="level4">
@@ -753,14 +743,6 @@ But in linear algebra, other norms are also useful:</p>
 (largest component).</p></li>
 </ul>
 <p>These norms change the geometry of “length” and “distance.” For example, in the ℓ₁ norm, the unit circle is shaped like a diamond; in the ℓ∞ norm, it looks like a square.</p>
-</section>
-<section id="everyday-analogies-2" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-2">Everyday Analogies</h4>
-<ul>
-<li>Walking distance in a city: If streets are on a grid, the ℓ₁ norm (sum of absolute differences) is more natural than the Euclidean norm.</li>
-<li>Climbing stairs: The Euclidean norm is like measuring the diagonal distance, but step by step you may actually walk an ℓ₁ distance.</li>
-<li>Measuring error in data: Different norms capture different notions of “closeness” between predictions and reality. Euclidean distance punishes large errors heavily; ℓ₁ treats all errors equally.</li>
-</ul>
 </section>
 <section id="algebraic-properties-2" class="level4">
 <h4 class="anchored" data-anchor-id="algebraic-properties-2">Algebraic Properties</h4>
@@ -891,13 +873,6 @@ Slightly obtuse.</li>
            = \|\text{Force}\| \, \|\text{Displacement}\| \cos(\theta).
 \]</span></p>
 <p>Only the component of the force in the direction of motion contributes. If you push straight down on a box while trying to move it horizontally, the dot product is zero: no work is done in the direction of motion.</p>
-</section>
-<section id="everyday-analogies-3" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-3">Everyday Analogies</h4>
-<ul>
-<li>Teamwork analogy: Two people pushing a car. If they push in nearly the same direction, the dot product is large and positive (strong cooperation). If they push at right angles, the dot product is zero (they don’t help each other). If they push in opposite directions, the dot product is negative (they work against each other).</li>
-<li>Conversation analogy: Think of two ideas. If they’re aligned, the “dot product” of their meanings is high. If they’re unrelated, it’s zero. If they contradict, it’s negative.</li>
-</ul>
 </section>
 <section id="algebraic-properties-3" class="level4">
 <h4 class="anchored" data-anchor-id="algebraic-properties-3">Algebraic Properties</h4>
@@ -1039,20 +1014,6 @@ The length of the projection of <span class="math inline">\(u\)</span> onto <spa
 If the angle is close to <span class="math inline">\(90^\circ\)</span>, the projection shrinks toward zero.</p>
 <p>Thus, the cosine acts as a scaling factor between directions.</p>
 </section>
-<section id="everyday-analogies-4" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-4">Everyday Analogies</h4>
-<ul>
-<li><p>Teamwork analogy: If two people push a heavy object, the effectiveness of their combined effort depends on the angle.<br>
-If they push in nearly the same direction (small <span class="math inline">\(\theta\)</span>), they cooperate efficiently.<br>
-If they push at right angles (<span class="math inline">\(\theta = 90^\circ\)</span>), they waste effort.<br>
-If they push opposite each other (<span class="math inline">\(\theta \approx 180^\circ\)</span>), they cancel out.</p></li>
-<li><p>Conversation analogy: If two people’s opinions align (<span class="math inline">\(\cos \theta \approx 1\)</span>), they agree strongly.<br>
-If they are orthogonal (<span class="math inline">\(\cos \theta = 0\)</span>), they are unrelated.<br>
-If they oppose each other (<span class="math inline">\(\cos \theta \approx -1\)</span>), they fundamentally disagree.</p></li>
-<li><p>Navigation analogy: If two roads meet at a small angle, their directions are similar.<br>
-If they cross perpendicularly, their directions are independent.</p></li>
-</ul>
-</section>
 <section id="why-it-matters-6" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-6">Why It Matters</h4>
 <p>Angles between vectors provide:</p>
@@ -1159,14 +1120,6 @@ It generalizes to subspaces: we can project onto entire planes or higher-dimensi
 <li><p>Signal Processing: Decomposition into projections onto sine and cosine waves forms the basis of Fourier analysis, which powers audio, image, and video compression.</p></li>
 </ol>
 </section>
-<section id="everyday-analogies-5" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-5">Everyday Analogies</h4>
-<ul>
-<li>Flashlight shadow: Imagine shining a flashlight so that a stick casts a shadow on the floor. The shadow is the projection of the stick onto the floor plane.</li>
-<li>Team effort: If two people pull a box, the effective progress in one person’s direction is the projection of the other’s pull onto that direction.</li>
-<li>Grades analogy: If your performance is a mix of effort and distraction, the projection onto “effort” shows how much of your work aligns with real progress.</li>
-</ul>
-</section>
 <section id="algebraic-properties-4" class="level4">
 <h4 class="anchored" data-anchor-id="algebraic-properties-4">Algebraic Properties</h4>
 <ul>
@@ -1259,13 +1212,6 @@ This is exactly the inequality.</p>
 <h5 class="anchored" data-anchor-id="equality-case">Equality Case</h5>
 <p>The triangle inequality becomes equality when the vectors point in exactly the same direction (or are scalar multiples with nonnegative coefficients). For example, (1, 1) and (2, 2) produce equality because adding them gives a vector whose length equals the sum of their lengths.</p>
 </section>
-</section>
-<section id="everyday-analogies-6" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-6">Everyday Analogies</h4>
-<ul>
-<li>Cauchy–Schwarz: Imagine comparing two people’s study habits across multiple subjects. Each vector represents hours spent in each subject. The dot product represents how much their habits “align.” Cauchy–Schwarz says the alignment can never exceed the product of their individual efforts.</li>
-<li>Triangle inequality: Think of walking in a city. If you want to get from home to the store and then from the store to the park, the total distance is at least as long as going straight from home to the park. There is no shortcut longer than the direct route.</li>
-</ul>
 </section>
 <section id="extensions" class="level4">
 <h4 class="anchored" data-anchor-id="extensions">Extensions</h4>
@@ -1380,14 +1326,6 @@ For example, if <span class="math inline">\(u = a v_1 + b v_2\)</span>, then<br>
 <li>In engineering, they simplify stress, strain, and rotation analysis.</li>
 </ul>
 <p>Even though <span class="math inline">\(\mathbb{R}^2\)</span> and <span class="math inline">\(\mathbb{R}^3\)</span> are relatively simple, the same ideas extend naturally to higher dimensions, where visualization is impossible but the algebra is identical.</p>
-</section>
-<section id="everyday-analogies-7" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-7">Everyday Analogies</h4>
-<ul>
-<li>Navigating a city: Imagine two perpendicular streets, each marked in meters. Walking 3 units east and 4 units north gives coordinates (3, 4). That’s an orthonormal system.</li>
-<li>Furniture assembly: When you’re told to align one part “straight up” and another “straight across,” you’re working with orthonormal directions.</li>
-<li>Digital screens: Computer monitors use pixel grids aligned horizontally and vertically, a practical realization of orthonormality.</li>
-</ul>
 </section>
 <section id="why-orthonormal-sets-matter" class="level4">
 <h4 class="anchored" data-anchor-id="why-orthonormal-sets-matter">Why Orthonormal Sets Matter</h4>
@@ -1665,14 +1603,6 @@ A_{21} &amp; A_{22}
 </ul>
 <p>Recognizing these shapes saves time and clarifies reasoning.</p>
 </section>
-<section id="everyday-analogies-8" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-8">Everyday Analogies</h4>
-<ul>
-<li>Spreadsheets: A matrix is like a grid of cells, each with a row and column label. Indexing lets you specify exactly which cell you mean.</li>
-<li>Maps: Cities on a map can be located by coordinates (row, column). The same logic applies to entries in a matrix.</li>
-<li>Lego blocks: Just as large Lego structures are built from smaller blocks, large matrices are often analyzed by splitting into submatrices.</li>
-</ul>
-</section>
 <section id="why-it-matters-8" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-8">Why It Matters</h4>
 <p>Careful attention to matrix shapes, indexing, and block views ensures:</p>
@@ -1802,14 +1732,6 @@ cA = [c \cdot a_{ij}].
 <li>Scaling a transformation makes its action stronger or weaker. Doubling a shear makes it twice as pronounced.</li>
 </ol>
 <p>This shows that even before multiplication, addition and scaling already have geometric meaning.</p>
-</section>
-<section id="everyday-analogies-9" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-9">Everyday Analogies</h4>
-<ul>
-<li>Recipes: Adding two recipes (matrices) ingredient by ingredient gives a combined shopping list. Multiplying a recipe by 3 scales it for 3 times as many people.</li>
-<li>Financial planning: Adding two budget tables gives a combined budget. Multiplying by 12 scales monthly costs to yearly totals.</li>
-<li>Mixing effects: Think of audio signals represented by matrices. Adding them overlays sounds; scaling adjusts volume.</li>
-</ul>
 </section>
 <section id="why-it-matters-9" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-9">Why It Matters</h4>
@@ -1980,14 +1902,6 @@ A = \begin{bmatrix} \cosθ &amp; -\sinθ \\ \sinθ &amp; \cosθ \end{bmatrix}.
 \]</span></p>
 <p>This rotates vectors counterclockwise by θ in the plane.</p>
 </section>
-<section id="everyday-analogies-10" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-10">Everyday Analogies</h4>
-<ul>
-<li>Mixing ingredients: The vector x is a recipe, and the columns of <span class="math inline">\(A\)</span> are the ingredients. The product <span class="math inline">\(A\mathbf{x}\)</span> is the final mixture.</li>
-<li>Weighted averages: A student’s final grade is a matrix–vector product: weights (the vector) multiplied by scores (the matrix columns).</li>
-<li>Signal processing: Combining input signals with weights produces a new output, just like multiplying a matrix of signals by a weight vector.</li>
-</ul>
-</section>
 <section id="why-it-matters-10" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-10">Why It Matters</h4>
 <p>The matrix–vector product is the building block of everything in linear algebra:</p>
@@ -2114,14 +2028,6 @@ B = \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}.
 <li>Identity: <span class="math inline">\(AI = IA = A\)</span>.</li>
 </ol>
 <p>These properties highlight that while multiplication is structured, it is not symmetric. The order encodes the order of operations in transformations.</p>
-</section>
-<section id="everyday-analogies-11" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-11">Everyday Analogies</h4>
-<ul>
-<li>Cooking steps: If <span class="math inline">\(B\)</span> is “chop vegetables” and <span class="math inline">\(A\)</span> is “cook vegetables,” then <span class="math inline">\(AB\)</span> is “cook after chopping.” Doing it the other way (BA) would make no sense!</li>
-<li>Assembly line: Each machine (matrix) performs an operation on the input. Chaining them corresponds to multiplying the matrices.</li>
-<li>Maps and routes: Going from home to the station (B), then from station to office (A) equals the combined route home→office (AB).</li>
-</ul>
 </section>
 <section id="why-it-matters-11" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-11">Why It Matters</h4>
@@ -2294,14 +2200,6 @@ A^T = \begin{bmatrix}
 <li><p>Orthogonal matrices: <span class="math inline">\(Q^TQ = I\)</span>. Their columns form an orthonormal set, and they represent pure rotations/reflections.</p></li>
 </ul>
 </section>
-<section id="everyday-analogies-12" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-12">Everyday Analogies</h4>
-<ul>
-<li>Identity: A mirror that doesn’t distort your reflection-it leaves everything unchanged.</li>
-<li>Inverse: A “reverse recipe”-if one step mixes, the inverse unmixed (where possible).</li>
-<li>Transpose: Reorganizing a spreadsheet by flipping rows and columns.</li>
-</ul>
-</section>
 <section id="why-it-matters-12" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-12">Why It Matters</h4>
 <ol type="1">
@@ -2459,15 +2357,6 @@ P = \begin{bmatrix}
 </ul>
 <p>Together, these classes show that structure leads to simplicity-many computational algorithms exploit these patterns for speed and stability.</p>
 </section>
-<section id="everyday-analogies-13" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-13">Everyday Analogies</h4>
-<ul>
-<li>Symmetric: A perfectly balanced seesaw-forces are mirrored on both sides.</li>
-<li>Diagonal: Independent volume knobs for each channel of a stereo system-no cross-interference.</li>
-<li>Triangular: Step-by-step instructions where each step depends only on earlier steps, never later ones.</li>
-<li>Permutation: Shuffling cards-same elements, different order.</li>
-</ul>
-</section>
 <section id="why-it-matters-13" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-13">Why It Matters</h4>
 <ol type="1">
@@ -2611,14 +2500,6 @@ A = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}, \quad
 <li>In physics, the trace of the stress tensor measures pressure.</li>
 <li>In probability, the trace of a covariance matrix is the total variance of a system.</li>
 <li>In statistics and machine learning, the trace is often used as a measure of overall “size” or complexity of a model.</li>
-</ul>
-</section>
-<section id="everyday-analogies-14" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-14">Everyday Analogies</h4>
-<ul>
-<li>Grades on report card: The trace is like summing the “main subjects” (diagonal entries) without looking at electives (off-diagonal entries).</li>
-<li>Company budget: The diagonal could represent department totals, and the trace is the grand total.</li>
-<li>Lighting system: Imagine each diagonal entry is a light switch brightness for each room; the trace is the sum total brightness in the building.</li>
 </ul>
 </section>
 <section id="why-it-matters-14" class="level4">
@@ -2770,14 +2651,6 @@ cx + dy + t_y \\
 \]</span></p>
 <p>This formulation is universal in computer graphics and robotics.</p>
 </section>
-<section id="everyday-analogies-15" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-15">Everyday Analogies</h4>
-<ul>
-<li>Photography: Moving a camera involves not only rotating it (linear part) but also translating it in space.</li>
-<li>Navigation: Walking north (linear step) and then shifting east (translation).</li>
-<li>Graphics software: Scaling an image larger and then dragging it to a new position-exactly affine transformations in action.</li>
-</ul>
-</section>
 <section id="why-it-matters-15" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-15">Why It Matters</h4>
 <ol type="1">
@@ -2857,14 +2730,6 @@ cx + dy + t_y \\
 <li>GPUs: Specialize in massive parallel matrix–vector and matrix–matrix operations (critical in deep learning).</li>
 </ul>
 <p>This is why linear algebra libraries (BLAS, LAPACK, cuBLAS) are indispensable: they squeeze performance from hardware.</p>
-</section>
-<section id="everyday-analogies-16" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-16">Everyday Analogies</h4>
-<ul>
-<li>Cooking: Preparing one dish is easy. Preparing 100 dishes means thinking about batch size, oven space, and parallel steps.</li>
-<li>Budgeting: Adding two small budgets by hand is fine; merging thousands of spreadsheets requires software and structure.</li>
-<li>Travel: Driving across town is quick. Driving cross-country requires fuel planning, route optimization, and rest stops-scale changes everything.</li>
-</ul>
 </section>
 <section id="why-it-matters-16" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-16">Why It Matters</h4>
@@ -3006,14 +2871,6 @@ A\mathbf{x} = \begin{bmatrix} 2 &amp; 1 \\ 3 &amp; -1 \end{bmatrix}
 \end{bmatrix}.
 \]</span></p>
 <p>This form is especially useful for elimination methods, where we manipulate rows without writing variables at each step.</p>
-</section>
-<section id="everyday-analogies-17" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-17">Everyday Analogies</h4>
-<ul>
-<li>Recipes: A recipe tells you how many units of each ingredient (coefficients) produce the dish (constant result). Writing it as a matrix is like organizing all recipes into a clean table.</li>
-<li>Schedules: Each row of a timetable (equation) corresponds to one condition. Putting it into matrix form organizes it into one big grid.</li>
-<li>Construction: The coefficients are like “how many bricks per wall,” while the vector x is “number of walls built.” The product gives total bricks, and the system sets the required totals.</li>
-</ul>
 </section>
 <section id="why-it-matters-17" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-17">Why It Matters</h4>
@@ -3178,14 +3035,6 @@ x + 2y = 4 \\
 </ul>
 <p>Thus, row operations act like “reshaping the system” while leaving the intersection intact.</p>
 </section>
-<section id="everyday-analogies-18" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-18">Everyday Analogies</h4>
-<ul>
-<li>Cooking recipe: Scaling a row is like doubling all ingredients in one recipe-it doesn’t change the proportions.</li>
-<li>Task list: Swapping two rows is just reordering tasks; nothing about the tasks themselves changes.</li>
-<li>Budgeting: Adding one department’s budget equation to another is just reorganizing financial records, not altering totals.</li>
-</ul>
-</section>
 <section id="why-it-matters-18" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-18">Why It Matters</h4>
 <p>Row operations are the essential moves in solving linear systems by hand or computer. They:</p>
@@ -3315,14 +3164,6 @@ x + 2y + z = 4 \\
 <ul>
 <li>REF corresponds to simplifying the system step by step, making it “triangular” so variables can be solved one after another.</li>
 <li>RREF corresponds to a system that is fully disentangled-each variable isolated, with its value or free-variable relationship explicitly visible.</li>
-</ul>
-</section>
-<section id="everyday-analogies-19" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-19">Everyday Analogies</h4>
-<ul>
-<li>Filing papers: REF is like stacking documents in neat piles, but still grouped. RREF is like sorting every document individually into labeled folders.</li>
-<li>Solving a puzzle: REF gives you partial progress (pieces are grouped), while RREF finishes the puzzle so each piece is in its exact place.</li>
-<li>Cooking: REF is like preparing ingredients into rough categories (vegetables chopped, meat trimmed). RREF is the final stage where every dish is cooked and plated, fully ready.</li>
 </ul>
 </section>
 <section id="why-it-matters-19" class="level4">
@@ -3494,14 +3335,6 @@ x = 4 - 2y - z, \quad y = -1 + z, \quad z \text{ free}.
 \end{bmatrix}.
 \]</span></p>
 <p>The solutions are immediately visible: <span class="math inline">\(x=3, y=-3\)</span>.</p>
-</section>
-<section id="everyday-analogies-20" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-20">Everyday Analogies</h4>
-<ul>
-<li>Team roles: Pivot variables are assigned jobs, while free variables can choose freely, shaping the group’s flexibility.</li>
-<li>Recipe ingredients: Pivots are required ingredients with fixed proportions, free variables are optional additions.</li>
-<li>Construction plans: Pivot columns are load-bearing beams, free columns are spaces that can be filled in flexibly.</li>
-</ul>
 </section>
 <section id="why-it-matters-20" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-20">Why It Matters</h4>
@@ -3689,13 +3522,6 @@ x + y = 2
 <li>No solution: Contradictory row appears in augmented matrix.</li>
 </ul>
 </section>
-<section id="everyday-analogies-21" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-21">Everyday Analogies</h4>
-<ul>
-<li>Meeting point: If everyone agrees on the same café (unique solution), the plan is consistent. If they agree on any café along a certain street (infinite solutions), it’s still consistent. If they give completely different addresses, there’s no consistent plan.</li>
-<li>Recipes: If the ingredients match exactly one way, unique solution. If they can vary while still yielding the dish, infinite solutions. If the instructions contradict, no dish is possible.</li>
-</ul>
-</section>
 <section id="why-it-matters-21" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-21">Why It Matters</h4>
 <ol type="1">
@@ -3835,14 +3661,6 @@ x + y + z = 3
 <li>If <span class="math inline">\(\text{rank}(A) &lt; \text{rank}([A|\mathbf{b}])\)</span>, the system is inconsistent.</li>
 </ul>
 <p>This rank condition is fundamental and works in any dimension.</p>
-</section>
-<section id="everyday-analogies-22" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-22">Everyday Analogies</h4>
-<ul>
-<li>Meeting schedules: If one friend says “meet at 2pm” and another says “meet at 2pm and 3pm simultaneously,” the instructions contradict-no meeting possible.</li>
-<li>Construction blueprints: If two architects specify identical walls but with different lengths, the building plan is impossible.</li>
-<li>Cooking instructions: If one step requires “boil pasta until firm” and another says “the same pasta must already be raw,” the recipe cannot be carried out.</li>
-</ul>
 </section>
 <section id="why-it-matters-22" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-22">Why It Matters</h4>
@@ -4013,14 +3831,6 @@ x - y + 2z = 2
 </ul></li>
 </ul>
 </section>
-<section id="everyday-analogies-23" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-23">Everyday Analogies</h4>
-<ul>
-<li>Cleaning a desk: Start with a mess (equations mixed together), then eliminate clutter one step at a time until everything is sorted neatly into piles.</li>
-<li>Cooking: Elimination is like reducing a sauce-boiling away the excess until only the essence remains.</li>
-<li>Detective work: Each equation eliminates possibilities, narrowing down suspects until only the guilty party (the solution) remains.</li>
-</ul>
-</section>
 <section id="why-it-matters-23" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-23">Why It Matters</h4>
 <ol type="1">
@@ -4157,14 +3967,6 @@ y - z = 1
 \]</span></p>
 <p>This expresses the solution set as a base point plus a direction vector, making the geometry clear.</p>
 </section>
-<section id="everyday-analogies-24" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-24">Everyday Analogies</h4>
-<ul>
-<li>Stacked tasks: Back substitution is like solving a sequence of tasks where each depends on the result of the one below it.</li>
-<li>Domino effect: Once the last domino falls (the last variable solved), the rest fall in sequence.</li>
-<li>Filling out a form: Each field depends on earlier answers; once the final field is fixed, the others can be determined in order.</li>
-</ul>
-</section>
 <section id="why-it-matters-24" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-24">Why It Matters</h4>
 <ol type="1">
@@ -4278,14 +4080,6 @@ x + y + z = 2, \quad 2x + 2y + 2z = 4.
 <section id="rank-and-row-vs.-column-view" class="level4">
 <h4 class="anchored" data-anchor-id="rank-and-row-vs.-column-view">Rank and Row vs.&nbsp;Column View</h4>
 <p>It is a remarkable fact that the number of independent rows = number of independent columns. This is not obvious at first glance, but it is always true. So we can define rank either by rows or by columns-it makes no difference.</p>
-</section>
-<section id="everyday-analogies-25" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-25">Everyday Analogies</h4>
-<ul>
-<li>Library books: If three books say the same thing in different words, only one adds new knowledge. The others are redundant. Rank = number of genuinely independent books.</li>
-<li>Recipes: If you have five recipes but four are just scaled versions of the first, you really only have one distinct recipe. Rank = 1.</li>
-<li>Work team: If every team member repeats what another says, the effective number of independent voices is low. Rank measures how many unique contributions exist.</li>
-</ul>
 </section>
 <section id="why-it-matters-25" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-25">Why It Matters</h4>
@@ -4449,14 +4243,6 @@ PA = LU,
 </ul>
 <p>Together, they represent the same linear transformation as <span class="math inline">\(A\)</span>, but decomposed into simpler building blocks.</p>
 </section>
-<section id="everyday-analogies-26" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-26">Everyday Analogies</h4>
-<ul>
-<li>Recipe preparation: <span class="math inline">\(L\)</span> is the prep work (chopping, mixing), while <span class="math inline">\(U\)</span> is the final cooking (arranging in order). Together, they produce the finished dish.</li>
-<li>Assembly line: <span class="math inline">\(L\)</span> records the sequence of adjustments, <span class="math inline">\(U\)</span> the final structured product.</li>
-<li>Team project: <span class="math inline">\(L\)</span> shows who contributed what during the work process, <span class="math inline">\(U\)</span> is the neatly organized final report.</li>
-</ul>
-</section>
 <section id="why-it-matters-26" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-26">Why It Matters</h4>
 <ol type="1">
@@ -4595,14 +4381,6 @@ freedom takes its shape.</code></pre>
 </ul>
 <p>Together, these rules make vector spaces stable and reliable mathematical objects.</p>
 </section>
-<section id="everyday-analogies-27" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-27">Everyday Analogies</h4>
-<ul>
-<li>Language: Words form sentences by rules of grammar. Vector spaces are sets where addition and scaling follow strict grammar-like rules.</li>
-<li>Music: Notes combine (addition) and change pitch (scaling). A musical space is meaningful only if these operations stay within the system.</li>
-<li>Construction: Bricks and mortar can be combined (addition) and scaled (larger or smaller structures), but only when rules of stability are followed.</li>
-</ul>
-</section>
 <section id="why-it-matters-27" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-27">Why It Matters</h4>
 <ol type="1">
@@ -4715,14 +4493,6 @@ A = \begin{bmatrix}
 <li>Understanding both spaces gives a complete picture of how the matrix transforms vectors.</li>
 </ul>
 </section>
-<section id="everyday-analogies-28" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-28">Everyday Analogies</h4>
-<ul>
-<li>Column space as achievements: Think of the matrix as a machine. The column space is the set of all things the machine can produce.</li>
-<li>Null space as wasted effort: Any input vector in the null space produces nothing at all-like pressing buttons on a broken remote control.</li>
-<li>Teamwork analogy: If each team member contributes along independent directions, the column space is large. If some repeat others’ work, redundancy reduces the column space.</li>
-</ul>
-</section>
 <section id="why-it-matters-28" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-28">Why It Matters</h4>
 <ol type="1">
@@ -4816,14 +4586,6 @@ A = \begin{bmatrix}
 <ul>
 <li>The question “Is there a solution?” is equivalent to “Is <span class="math inline">\(b\)</span> in the span of the columns of <span class="math inline">\(A\)</span>?”</li>
 <li>Thus, span provides the geometric language for solvability.</li>
-</ul>
-</section>
-<section id="everyday-analogies-29" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-29">Everyday Analogies</h4>
-<ul>
-<li>Languages: If you have enough letters (generators), you can spell any word (vector). Redundant letters don’t add power (extra copies of “A” don’t help).</li>
-<li>Recipes: Ingredients are like generators; the span is all dishes you can cook from them. Some ingredients are essential, others can be left out.</li>
-<li>Travel directions: If you only know how to go north, you’re stuck on a line. Add east, and you can reach anywhere on the map.</li>
 </ul>
 </section>
 <section id="why-it-matters-29" class="level4">
@@ -4923,14 +4685,6 @@ a_1 = a_2 = \dots = a_k = 0.
 <li>Dependent vectors = one vector lies in the span of others.</li>
 <li>In 2D: two independent vectors span the plane.</li>
 <li>In 3D: three independent vectors span the space.</li>
-</ul>
-</section>
-<section id="everyday-analogies-30" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-30">Everyday Analogies</h4>
-<ul>
-<li>Ideas in a meeting: Independent ideas contribute new insights. Dependent ideas repeat what others already said.</li>
-<li>Recipes: Having salt, sugar, and flour gives three distinct ingredients. But having sugar and “2× sugar” is not new-it’s dependent.</li>
-<li>Travel directions: North and east are independent. North and “2× north” are dependent.</li>
 </ul>
 </section>
 <section id="why-it-matters-30" class="level4">
@@ -5043,14 +4797,6 @@ a + b = 2, \quad a - b = 0.
 <li>Different bases = different grids overlaying the same space.</li>
 </ul>
 </section>
-<section id="everyday-analogies-31" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-31">Everyday Analogies</h4>
-<ul>
-<li>Language: A basis is like an alphabet. Every word (vector) can be spelled uniquely from the letters (basis vectors).</li>
-<li>Colors: RGB is a basis for color space. Any color can be described uniquely by mixing red, green, and blue.</li>
-<li>Music: Musical notes form a basis. Every chord or melody is a combination of them.</li>
-</ul>
-</section>
 <section id="why-it-matters-31" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-31">Why It Matters</h4>
 <ol type="1">
@@ -5152,14 +4898,6 @@ a + b = 2, \quad a - b = 0.
 <li>In the polynomial space of degree ≤ 3, you need 4 coefficients.</li>
 </ul>
 <p>Thus, dimension = length of coordinate list.</p>
-</section>
-<section id="everyday-analogies-32" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-32">Everyday Analogies</h4>
-<ul>
-<li>Maps: A flat map needs 2 coordinates (latitude, longitude). A globe is 3D and needs 3. Adding altitude makes it 3D as well.</li>
-<li>Languages: To describe meaning, you need enough independent words. Redundant words don’t add dimension; new independent concepts do.</li>
-<li>Recipes: To describe all possible flavors, you need a certain number of independent ingredients. More ingredients = higher-dimensional “flavor space.”</li>
-</ul>
 </section>
 <section id="checking-dimension-in-practice" class="level4">
 <h4 class="anchored" data-anchor-id="checking-dimension-in-practice">Checking Dimension in Practice</h4>
@@ -5293,14 +5031,6 @@ A = \begin{bmatrix}
 <li><p>Machine learning: Rank signals how much real information a dataset contains; nullity indicates degrees of freedom that add nothing new.</p></li>
 </ol>
 </section>
-<section id="everyday-analogies-33" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-33">Everyday Analogies</h4>
-<ul>
-<li>Work team: Rank = number of independent workers contributing new ideas. Nullity = number of workers repeating what others already said. Total team members = contributors + redundant voices.</li>
-<li>Travel: Rank = number of useful directions on a map; nullity = directions that lead nowhere.</li>
-<li>Languages: Rank = unique words, nullity = synonyms. Total vocabulary size is always the sum.</li>
-</ul>
-</section>
 <section id="why-it-matters-33" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-33">Why It Matters</h4>
 <ol type="1">
@@ -5399,14 +5129,6 @@ P [x]_B = x.
 <li>A basis defines a coordinate system: axes in the space.</li>
 <li>Coordinates are the “addresses” of vectors relative to those axes.</li>
 <li>Changing basis is like rotating or stretching the grid: the address changes, but the point does not.</li>
-</ul>
-</section>
-<section id="everyday-analogies-34" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-34">Everyday Analogies</h4>
-<ul>
-<li>Maps: Latitude and longitude are coordinates relative to Earth’s axis. If we change the map projection, the coordinates change, but the physical location stays the same.</li>
-<li>Languages: Describing the same object in English or French yields different words (coordinates), but the object (vector) is unchanged.</li>
-<li>Music: The same melody can be written in different keys (bases); the notes shift, but the tune remains.</li>
 </ul>
 </section>
 <section id="why-it-matters-34" class="level4">
@@ -5545,14 +5267,6 @@ P_{B \to C} = P_C^{-1} P_B.
 <li>Data science: PCA finds a new basis (principal components) where data is easier to analyze.</li>
 </ol>
 </section>
-<section id="everyday-analogies-35" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-35">Everyday Analogies</h4>
-<ul>
-<li>Languages: The word “dog” in English corresponds to “chien” in French. The change-of-basis matrix is the bilingual dictionary.</li>
-<li>Currencies: Converting from dollars to euros requires an exchange rate. The matrix is the exchange table.</li>
-<li>Maps: Switching between Cartesian and polar coordinates is a change of basis-different coordinates, same location.</li>
-</ul>
-</section>
 <section id="why-it-matters-35" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-35">Why It Matters</h4>
 <ol type="1">
@@ -5650,14 +5364,6 @@ x = x_p + N(A),
 <li>A line through the origin is a rope tied at the center.</li>
 <li>A line parallel to it but offset is the same rope moved to the side.</li>
 <li>Affine subspaces preserve shape and direction, but not position.</li>
-</ul>
-</section>
-<section id="everyday-analogies-36" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-36">Everyday Analogies</h4>
-<ul>
-<li>Railway tracks: A railway line is straight (like a subspace), but it doesn’t need to pass through the city center (origin).</li>
-<li>Office floors: Each floor in a building is a plane parallel to the ground, offset vertically. The ground floor is like the subspace through the origin; higher floors are affine subspaces.</li>
-<li>Schedules: A repeating pattern (like working hours 9–5) is the subspace. Starting the shift at 10 instead of 9 shifts it into an affine version.</li>
 </ul>
 </section>
 <section id="applications-3" class="level4">
@@ -5796,15 +5502,6 @@ A = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; -1 \end{bmatrix}.
 </ul>
 <p>The key feature: straight lines remain straight, and the origin stays fixed.</p>
 </section>
-<section id="everyday-analogies-37" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-37">Everyday Analogies</h4>
-<ul>
-<li>Maps and coordinates: A GPS system transforms geographic positions (lat/long) into screen positions (x,y).</li>
-<li>Shadows: Projecting a 3D object onto the ground is a linear transformation.</li>
-<li>Economics: A matrix that takes production levels (inputs) and outputs profits is a linear transformation of data.</li>
-<li>Music: An equalizer linearly adjusts different frequencies: the structure of the sound is preserved but reshaped.</li>
-</ul>
-</section>
 <section id="applications-4" class="level4">
 <h4 class="anchored" data-anchor-id="applications-4">Applications</h4>
 <ol type="1">
@@ -5897,14 +5594,6 @@ T(x,y) = A \begin{bmatrix} x \\ y \end{bmatrix}.
 <li>The second column shows where the y-axis goes. The entire grid is determined by these two images.</li>
 </ul>
 <p>In <span class="math inline">\(\mathbb{R}^3\)</span>, the three columns are the images of the unit coordinate directions, defining how the whole space twists, rotates, or compresses.</p>
-</section>
-<section id="everyday-analogies-38" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-38">Everyday Analogies</h4>
-<ul>
-<li>Translation dictionary: The abstract transformation is like a language teacher; the matrix is the bilingual dictionary that makes every translation calculable.</li>
-<li>Blueprint: The linear rule is the design; the matrix is the instruction sheet that workers can follow step by step.</li>
-<li>Mixing recipe: Each column tells you exactly how much of each “ingredient” (basis vector) contributes to the new mixture.</li>
-</ul>
 </section>
 <section id="applications-5" class="level4">
 <h4 class="anchored" data-anchor-id="applications-5">Applications</h4>
@@ -6040,14 +5729,6 @@ A = \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 0 &amp; 1 &amp; 1 \end{bmatrix}.
 <li>Image: the entire xy-plane (all possible shadows).</li>
 </ul>
 </section>
-<section id="everyday-analogies-39" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-39">Everyday Analogies</h4>
-<ul>
-<li>Camera lens: The kernel is the lost depth when turning 3D scenes into 2D images; the image is the actual picture captured.</li>
-<li>Compression: A lossy file compressor sends some details (kernel) to oblivion, but keeps the rest (image).</li>
-<li>Business: A company’s hiring system transforms applicants into employees. The kernel is rejected candidates; the image is those who make it through.</li>
-</ul>
-</section>
 <section id="applications-6" class="level4">
 <h4 class="anchored" data-anchor-id="applications-6">Applications</h4>
 <ol type="1">
@@ -6140,14 +5821,6 @@ R(\theta) = \begin{bmatrix} \cos\theta &amp; -\sin\theta \\ \sin\theta &amp; \co
 <li>Invertible transformations preserve dimension: no flattening or collapsing occurs.</li>
 <li>They may rotate, shear, stretch, or reflect, but every input vector can be uniquely recovered.</li>
 <li>The determinant tells the “volume scaling” of the transformation: invertibility requires this volume not to collapse to zero.</li>
-</ul>
-</section>
-<section id="everyday-analogies-40" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-40">Everyday Analogies</h4>
-<ul>
-<li>Secret codes: An invertible transformation is like an encryption that can be decrypted; non-invertible codes lose information permanently.</li>
-<li>Recipes: Doubling a recipe is invertible (just halve it back); baking a cake is not invertible (you can’t get raw ingredients back).</li>
-<li>Translations: Moving every point on a map 5 units east is invertible (move 5 units west to undo). Flattening a 3D globe into a 2D map loses depth and is not invertible.</li>
 </ul>
 </section>
 <section id="applications-7" class="level4">
@@ -6253,15 +5926,6 @@ x_{k+1} = T(x_k), \quad x_0 \text{ given}.
 <li>Iteration = exploring the “orbit” of a vector under repeated transformations.</li>
 </ul>
 </section>
-<section id="everyday-analogies-41" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-41">Everyday Analogies</h4>
-<ul>
-<li>Assembly line: Each station performs a transformation. The entire process is the composition of all steps.</li>
-<li>Compound interest: Repeated multiplication by a growth factor is iteration.</li>
-<li>Dance choreography: One step repeated many times creates a rhythm-like powers of a transformation.</li>
-<li>Social media algorithms: Iterative recommendations amplify some signals while suppressing others-much like eigenvalues controlling growth or decay.</li>
-</ul>
-</section>
 <section id="applications-8" class="level4">
 <h4 class="anchored" data-anchor-id="applications-8">Applications</h4>
 <ol type="1">
@@ -6350,14 +6014,6 @@ A = PDP^{-1}.
 <li>Similarity says: two matrices may look different, but they are “the same” transformation seen from different coordinate systems.</li>
 <li>Conjugation is the mathematical act of relabeling coordinates.</li>
 <li>Think of shifting your camera angle: the scene hasn’t changed, only the perspective has.</li>
-</ul>
-</section>
-<section id="everyday-analogies-42" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-42">Everyday Analogies</h4>
-<ul>
-<li>Translations of stories: The same plot can be told in different languages (bases). The words differ (matrices), but the story remains identical (transformation).</li>
-<li>Maps and coordinates: The shape of a mountain range doesn’t depend on whether we use latitude/longitude or UTM coordinates.</li>
-<li>Software code: The same algorithm can be written in Python or C++-different symbols, same behavior.</li>
 </ul>
 </section>
 <section id="applications-9" class="level4">
@@ -6455,15 +6111,6 @@ R = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}.
 <li>Projection is about approximation (“closest point”), reflection is about symmetry.</li>
 </ul>
 </section>
-<section id="everyday-analogies-43" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-43">Everyday Analogies</h4>
-<ul>
-<li>Projection: A flashlight casts the 3D shape of your hand onto a 2D wall.</li>
-<li>Reflection: A mirror flips your left and right sides.</li>
-<li>Statistics: Projection corresponds to regression-finding the best linear approximation of data.</li>
-<li>Design: Reflection symmetry is everywhere in art and architecture.</li>
-</ul>
-</section>
 <section id="applications-10" class="level4">
 <h4 class="anchored" data-anchor-id="applications-10">Applications</h4>
 <ol type="1">
@@ -6559,14 +6206,6 @@ S = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}, \quad (x,y) \mapsto (x
 <li>Shear: Distorts shape but often preserves area (in 2D) or volume (in 3D). Circles become ellipses or slanted figures.</li>
 </ul>
 <p>Together, rotations and shears can generate a vast variety of linear distortions.</p>
-</section>
-<section id="everyday-analogies-44" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-44">Everyday Analogies</h4>
-<ul>
-<li>Rotation: The motion of a spinning wheel, turning a camera, or rotating an image on your phone.</li>
-<li>Shear: Sliding cards in a deck so the top shifts relative to the bottom, or slanting a stack of books without changing their height.</li>
-<li>Combination: Buildings in perspective drawings are sheared versions of rectangles, while wheels rotate cleanly.</li>
-</ul>
 </section>
 <section id="applications-11" class="level4">
 <h4 class="anchored" data-anchor-id="applications-11">Applications</h4>
@@ -6672,14 +6311,6 @@ S = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}, \quad (x,y) \mapsto (x
 <li>Equations <span class="math inline">\(Ax=b\)</span> may be inconsistent or underdetermined.</li>
 </ul>
 <p>Detecting and handling rank deficiency is crucial in numerical linear algebra, where ill-conditioning can hide in nearly dependent columns.</p>
-</section>
-<section id="everyday-analogies-45" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-45">Everyday Analogies</h4>
-<ul>
-<li>Photography: A 3D scene projected to 2D loses depth: rank drops from 3 to 2.</li>
-<li>Business pipeline: If only 2 of 5 departments actually influence profits, the effective “rank” is 2.</li>
-<li>Conversation: If two people keep repeating the same idea, they don’t add rank-the discussion’s dimension hasn’t increased.</li>
-</ul>
 </section>
 <section id="why-it-matters-45" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-45">Why It Matters</h4>
@@ -6789,14 +6420,6 @@ A^{-1} + A^{-1}B(D-CA^{-1}B)^{-1}CA^{-1} &amp; -A^{-1}B(D-CA^{-1}B)^{-1} \\
 <li>A block diagonal matrix acts like two independent transformations operating side by side.</li>
 <li>A block triangular matrix shows a “hierarchy”: one subspace influences the other but not the reverse.</li>
 <li>This decomposition mirrors how systems can be separated into smaller interacting parts.</li>
-</ul>
-</section>
-<section id="everyday-analogies-46" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-46">Everyday Analogies</h4>
-<ul>
-<li>Organizations: Departments (subspaces) with internal operations (diagonal blocks) and communication between them (off-diagonal blocks).</li>
-<li>Cities: Neighborhoods evolve independently (diagonal blocks) but also exchange resources (off-diagonal blocks).</li>
-<li>Software systems: Independent modules with interfaces to exchange data.</li>
 </ul>
 </section>
 <section id="applications-12" class="level4">
@@ -6919,15 +6542,6 @@ A = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 3 
 <p>In <span class="math inline">\(\mathbb{R}^n\)</span>, determinants extend the same idea. A unit hypercube (side length 1) is transformed into an n-dimensional parallelotope, whose volume is given by <span class="math inline">\(|\det(A)|\)</span>.</p>
 <p>Though we cannot visualize beyond 3D, the concept generalizes smoothly: determinants encode how much an n-dimensional object is stretched or collapsed.</p>
 </section>
-<section id="everyday-analogies-47" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-47">Everyday Analogies</h4>
-<ul>
-<li>Maps and scaling: A map might scale a square kilometer of land into a rectangle on paper. The determinant of the transformation encodes that scale factor.</li>
-<li>3D printing: Scaling a digital object before printing changes its volume by the determinant of the scaling matrix.</li>
-<li>Cooking: Doubling a recipe doubles volume; scaling each ingredient in three dimensions multiplies volume by <span class="math inline">\(\det(A)\)</span>.</li>
-<li>Mirrors: Looking into a mirror reverses left and right-mathematically, this is a transformation with determinant <span class="math inline">\(-1\)</span>.</li>
-</ul>
-</section>
 <section id="applications-13" class="level4">
 <h4 class="anchored" data-anchor-id="applications-13">Applications</h4>
 <ol type="1">
@@ -7038,14 +6652,6 @@ g &amp; h &amp; i
 <h4 class="anchored" data-anchor-id="higher-dimensional-generalization">Higher-Dimensional Generalization</h4>
 <p>In <span class="math inline">\(\mathbb{R}^n\)</span>, determinants measure oriented hyper-volume. For example, in 4D, determinants give the “4-volume” of a parallelotope. Though impossible to picture, the same rules apply.</p>
 </section>
-<section id="everyday-analogies-48" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-48">Everyday Analogies</h4>
-<ul>
-<li>Blueprint scaling: Doubling the width of a rectangle doubles the area. Linearity captures this.</li>
-<li>DNA strands: If two strands are identical, the structure collapses; alternating captures redundancy.</li>
-<li>Standard ruler: Calibration requires a reference-normalization fixes the unit cube’s volume at 1.</li>
-</ul>
-</section>
 <section id="applications-14" class="level4">
 <h4 class="anchored" data-anchor-id="applications-14">Applications</h4>
 <ol type="1">
@@ -7148,14 +6754,6 @@ U = \begin{bmatrix} 2 &amp; 1 &amp; 3 \\ 0 &amp; -1 &amp; 1 \\ 0 &amp; 0 &amp; -
 </ul>
 <p>This geometric reasoning reinforces why the rules are natural.</p>
 </section>
-<section id="everyday-analogies-49" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-49">Everyday Analogies</h4>
-<ul>
-<li>Cooking: Doubling one ingredient (scaling) doubles the total mixture if it’s the only varying part.</li>
-<li>Team projects: Swapping two roles reverses order but doesn’t change overall group size.</li>
-<li>Architecture: Shifting a wall while keeping the same base area preserves the floor plan (row replacement).</li>
-</ul>
-</section>
 <section id="applications-15" class="level4">
 <h4 class="anchored" data-anchor-id="applications-15">Applications</h4>
 <ol type="1">
@@ -7245,14 +6843,6 @@ L = \begin{bmatrix}
 <li>Example: In 3D, scaling x by 2, y by 3, and z by 7 gives a volume scaling of <span class="math inline">\(2 \cdot 3 \cdot 7 = 42\)</span>.</li>
 </ul>
 <p>Even if shear is present in the upper entries, the determinant ignores it-it only cares about the pure diagonal scaling.</p>
-</section>
-<section id="everyday-analogies-50" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-50">Everyday Analogies</h4>
-<ul>
-<li>Business growth: If three independent factors (sales, marketing, operations) scale profits by 2, 3, and 7, the combined scaling is their product, 42.</li>
-<li>Cooking layers: Scaling each layer of a recipe multiplies effects-2× saltiness, 3× spiciness, 7× sweetness → 42× overall intensity.</li>
-<li>Pipeline processes: If each stage of a pipeline scales throughput independently, the total scaling is the product of individual factors.</li>
-</ul>
 </section>
 <section id="applications-16" class="level4">
 <h4 class="anchored" data-anchor-id="applications-16">Applications</h4>
@@ -7367,14 +6957,6 @@ B = \begin{bmatrix} e &amp; f \\ g &amp; h \end{bmatrix}.
 <li>Determinants encapsulate both magnitude (volume scaling) and sign (orientation). Multiplicativity ensures these combine correctly.</li>
 </ul>
 </section>
-<section id="everyday-analogies-51" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-51">Everyday Analogies</h4>
-<ul>
-<li>Economics: If a policy doubles output (factor 2) and another policy triples it (factor 3), combined effect is sixfold.</li>
-<li>Cooking: Scaling a recipe by 2, then again by 3, multiplies the final volume by 6.</li>
-<li>Maps: If one map projection scales area by 4 and another zooms out by 1/2, the total scaling is 2.</li>
-</ul>
-</section>
 <section id="applications-17" class="level4">
 <h4 class="anchored" data-anchor-id="applications-17">Applications</h4>
 <ol type="1">
@@ -7483,14 +7065,6 @@ A = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 3 \end{bmatrix}, \quad \det(A) = 5 \neq
 B = \begin{bmatrix} 2 &amp; 4 \\ 1 &amp; 2 \end{bmatrix}, \quad \det(B) = 0.
 \]</span></p>
 <p>Not invertible, since the second column is just twice the first.</p>
-</section>
-<section id="everyday-analogies-52" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-52">Everyday Analogies</h4>
-<ul>
-<li>Shadows: Projecting a 3D object onto a 2D wall loses depth information. This is like a determinant of 0: flattening makes inversion impossible.</li>
-<li>Recipes: If two ingredients are exact multiples of each other, you don’t really have two independent “flavors.” The recipe loses uniqueness.</li>
-<li>Maps: A detailed city map shrunk to a single line loses all spatial information. You cannot reconstruct the city from the line.</li>
-</ul>
 </section>
 <section id="applications-18" class="level4">
 <h4 class="anchored" data-anchor-id="applications-18">Applications</h4>
@@ -7606,14 +7180,6 @@ g &amp; h &amp; i
 <h4 class="anchored" data-anchor-id="geometric-interpretation-12">Geometric Interpretation</h4>
 <p>Each cofactor corresponds to excluding one direction (row/column), measuring the volume of the remaining sub-parallelotope. The alternating sign keeps track of orientation. Thus the determinant is a weighted combination of contributions from all entries along a chosen row or column.</p>
 </section>
-<section id="everyday-analogies-53" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-53">Everyday Analogies</h4>
-<ul>
-<li>Voting system: Each candidate (matrix entry) contributes a weighted score (cofactor) to the final outcome.</li>
-<li>Team project: Removing one member (row/column) still leaves a sub-team whose structure influences the whole.</li>
-<li>Recipe adjustments: Leaving out one ingredient and adjusting the others changes the flavor, but the original dish can be reconstructed from these partial contributions.</li>
-</ul>
-</section>
 <section id="applications-19" class="level4">
 <h4 class="anchored" data-anchor-id="applications-19">Applications</h4>
 <ol type="1">
@@ -7727,14 +7293,6 @@ A = \begin{bmatrix} a &amp; b &amp; c \\ d &amp; e &amp; f \\ g &amp; h &amp; i 
 <li>Still, it gives the deepest definition of determinants, from which all other rules follow.</li>
 </ul>
 </section>
-<section id="everyday-analogies-54" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-54">Everyday Analogies</h4>
-<ul>
-<li>Seating arrangements: Each way to assign seats corresponds to a permutation; the determinant weights each arrangement with a sign.</li>
-<li>Logistics: Assigning workers to tasks one-to-one has many possibilities; some align consistently, others “flip” the structure.</li>
-<li>DNA sequences: Permutations rearrange bases; the sign tracks whether the sequence orientation is preserved.</li>
-</ul>
-</section>
 <section id="applications-20" class="level4">
 <h4 class="anchored" data-anchor-id="applications-20">Applications</h4>
 <ol type="1">
@@ -7843,14 +7401,6 @@ A^{-1} = \frac{1}{\det(A)} \text{adj}(A),
 <li>In practice, Gaussian elimination or LU decomposition is far superior.</li>
 </ul>
 </section>
-<section id="everyday-analogies-55" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-55">Everyday Analogies</h4>
-<ul>
-<li>Recipe substitution: Replacing one ingredient (column) with the desired outcome (b) gives the exact proportion for that component.</li>
-<li>Voting systems: The total determinant is the baseline “influence volume,” and replacing a column measures one voter’s impact on the outcome.</li>
-<li>Maps: Changing one coordinate axis to match a destination vector shows the exact contribution of that axis to reaching the destination.</li>
-</ul>
-</section>
 <section id="applications-21" class="level4">
 <h4 class="anchored" data-anchor-id="applications-21">Applications</h4>
 <ol type="1">
@@ -7948,14 +7498,6 @@ g &amp; h &amp; i
 <li>Block diagonal matrices: Determinant is the product of determinants of blocks.</li>
 <li>Sparse matrices: Exploit structure-only nonzero patterns matter.</li>
 <li>Orthogonal matrices: Determinant is always <span class="math inline">\(+1\)</span> or <span class="math inline">\(-1\)</span>.</li>
-</ul>
-</section>
-<section id="everyday-analogies-56" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-56">Everyday Analogies</h4>
-<ul>
-<li>Scaling recipes: For a small dish, you can calculate portions by hand. For a banquet, you need a system (LU decomposition).</li>
-<li>Construction: Measuring the area of a single tile is simple; measuring the area of a complex floor plan requires breaking it into manageable blocks.</li>
-<li>Finance: Computing compound growth for one investment is straightforward; doing it for a large, interconnected portfolio requires systematic methods.</li>
 </ul>
 </section>
 <section id="applications-22" class="level4">
@@ -8084,15 +7626,6 @@ A^k v = \lambda^k v.
 <li>If <span class="math inline">\(\lambda = 1\)</span>, the vector stays the same length (though direction may flip if <span class="math inline">\(\lambda=-1\)</span>).</li>
 </ul>
 </section>
-<section id="everyday-analogies-57" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-57">Everyday Analogies</h4>
-<ul>
-<li>Echo in a room: Certain tones (eigenvalues) resonate because the room geometry preserves them.</li>
-<li>Business growth: An eigenvector could represent a stable investment direction, with eigenvalue as the growth multiplier.</li>
-<li>Genetics: Eigenvectors of population models describe stable distributions of traits, eigenvalues describe growth rates.</li>
-<li>Traffic flow: Certain paths remain proportionally consistent over time; eigenvalues determine speed of growth or decay.</li>
-</ul>
-</section>
 <section id="applications-23" class="level4">
 <h4 class="anchored" data-anchor-id="applications-23">Applications</h4>
 <ol type="1">
@@ -8206,14 +7739,6 @@ p_A(\lambda) = (-1)^n \lambda^n + (\text{tr}(A))(-1)^{n-1}\lambda^{n-1} + \cdots
 <li>The roots of the characteristic polynomial tell us scaling factors along invariant directions.</li>
 <li>In 2D: the polynomial encodes area scaling (<span class="math inline">\(\det(A)\)</span>) and total stretching (<span class="math inline">\(\text{tr}(A)\)</span>).</li>
 <li>In higher dimensions: it condenses the complexity of <span class="math inline">\(A\)</span> into a single equation whose solutions reveal the spectrum.</li>
-</ul>
-</section>
-<section id="everyday-analogies-58" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-58">Everyday Analogies</h4>
-<ul>
-<li>Fingerprint: The characteristic polynomial uniquely identifies the eigenvalues of a matrix, much like a fingerprint identifies a person.</li>
-<li>Recipe proportions: Just as ratios determine taste, the coefficients of the polynomial encode how trace and determinant control eigenvalues.</li>
-<li>Financial portfolio: The polynomial summarizes growth rates (eigenvalues) into one compact formula.</li>
 </ul>
 </section>
 <section id="applications-24" class="level4">
@@ -8330,14 +7855,6 @@ A = \begin{bmatrix} 2 &amp; 1 \\ 0 &amp; 2 \end{bmatrix}
 <li>Cannot be diagonalized.</li>
 </ul></li>
 </ol>
-</section>
-<section id="everyday-analogies-59" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-59">Everyday Analogies</h4>
-<ul>
-<li>Seats vs.&nbsp;people: Algebraic multiplicity is the number of seats reserved for an eigenvalue; geometric multiplicity is how many actual people show up. If fewer people arrive, the system is defective.</li>
-<li>Promises vs.&nbsp;reality: AM is the theoretical promise given by the polynomial; GM is the reality of independent directions.</li>
-<li>Musical notes: AM is how many times a note is written in the score; GM is how many distinct instruments actually play it.</li>
-</ul>
 </section>
 <section id="applications-25" class="level4">
 <h4 class="anchored" data-anchor-id="applications-25">Applications</h4>
@@ -8458,14 +7975,6 @@ B = \begin{bmatrix} 2 &amp; 1 \\ 0 &amp; 2 \end{bmatrix}.
 <ul>
 <li>Think of a room where the floor stretches more in one direction than another. In the right coordinate system (aligned with eigenvectors), the stretch is purely along axes.</li>
 <li>Without diagonalization, stretching mixes directions and is harder to describe.</li>
-</ul>
-</section>
-<section id="everyday-analogies-60" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-60">Everyday Analogies</h4>
-<ul>
-<li>Musical notes: A chord can be decomposed into independent notes. Diagonalization isolates each “note” of a transformation.</li>
-<li>Recipe ingredients: A dish may look complex, but diagonalization breaks it into pure ingredients.</li>
-<li>Business growth: A company might expand differently in separate divisions. In the right basis, each division grows independently, with its own multiplier.</li>
 </ul>
 </section>
 <section id="applications-26" class="level4">
@@ -8589,14 +8098,6 @@ B^k = \begin{bmatrix} 2^k &amp; k 2^{k-1} \\ 0 &amp; 2^k \end{bmatrix}.
 </ul>
 <p>Think of stretching a rubber sheet: after each stretch, the sheet aligns more and more strongly with the dominant eigenvector.</p>
 </section>
-<section id="everyday-analogies-61" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-61">Everyday Analogies</h4>
-<ul>
-<li>Interest rates: If you repeatedly apply interest, the growth multiplies exponentially, just like powers of eigenvalues.</li>
-<li>Echoes: Each echo in a room is weaker (if eigenvalues &lt; 1) or stronger (if eigenvalues &gt; 1).</li>
-<li>Business growth: Repeated investment growth is governed by the largest eigenvalue, which dominates in the long run.</li>
-</ul>
-</section>
 <section id="applications-27" class="level4">
 <h4 class="anchored" data-anchor-id="applications-27">Applications</h4>
 <ol type="1">
@@ -8705,14 +8206,6 @@ B = \begin{bmatrix} 0.8 &amp; -0.6 \\ 0.6 &amp; 0.8 \end{bmatrix},
 <p>the eigenvalues are complex with modulus &lt; 1.</p>
 <ul>
 <li>Interpretation: rotation combined with shrinking → spiraling toward the origin.</li>
-</ul>
-</section>
-<section id="everyday-analogies-62" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-62">Everyday Analogies</h4>
-<ul>
-<li>Clock hands: Rotation without stretching is like clock hands moving-direction changes continuously but length stays the same.</li>
-<li>Spiral staircase: Each step forward involves both rising and rotating, just like scaling and rotation in complex eigenvalues.</li>
-<li>Musical pitch shifts: A note can rise in pitch (rotation) while fading in volume (scaling).</li>
 </ul>
 </section>
 <section id="applications-28" class="level4">
@@ -8835,14 +8328,6 @@ J^k = \begin{bmatrix} \lambda^k &amp; k\lambda^{k-1} \\ 0 &amp; \lambda^k \end{b
 </ul>
 <p>So while a diagonalizable matrix decomposes space into neat independent directions, a defective matrix entangles some directions together, forcing them into chains.</p>
 </section>
-<section id="everyday-analogies-63" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-63">Everyday Analogies</h4>
-<ul>
-<li>Orchestra analogy: A diagonalizable matrix has one instrument per note. A defective matrix has fewer instruments, so some notes must be “shared” in harmonies, represented by chains.</li>
-<li>River flow: Instead of independent straight channels, some currents merge and pull each other, causing dependencies.</li>
-<li>Office hierarchy: Instead of each manager having their own team (independent eigenvectors), some teams overlap, producing chains of influence.</li>
-</ul>
-</section>
 <section id="applications-29" class="level4">
 <h4 class="anchored" data-anchor-id="applications-29">Applications</h4>
 <ol type="1">
@@ -8962,14 +8447,6 @@ D^k = \begin{bmatrix} 1 &amp; k \\ 0 &amp; 1 \end{bmatrix}.
 <li>If the stretching is less than 1, everything shrinks.</li>
 <li>If greater than 1, everything expands.</li>
 <li>If exactly 1, the system is balanced on the edge of stability.</li>
-</ul>
-</section>
-<section id="everyday-analogies-64" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-64">Everyday Analogies</h4>
-<ul>
-<li>Population dynamics: If the reproduction factor (largest eigenvalue) is below 1, a species dies out; above 1, it grows; at 1, it balances.</li>
-<li>Bank interest: Interest rate &lt; 1 shrinks your balance; &gt; 1 grows it; = 1 keeps it steady.</li>
-<li>Echoes in a hall: Each echo fades if <span class="math inline">\(\rho&lt;1\)</span>, persists if <span class="math inline">\(\rho=1\)</span>, and grows chaotic if <span class="math inline">\(\rho&gt;1\)</span>.</li>
 </ul>
 </section>
 <section id="applications-30" class="level4">
@@ -9102,15 +8579,6 @@ P = \begin{bmatrix}
 <li>The dominant eigenvector (steady state) is like the “center of gravity” of the system.</li>
 </ul>
 <p>So powers of <span class="math inline">\(P\)</span> filter out all but the eigenvector of eigenvalue 1.</p>
-</section>
-<section id="everyday-analogies-65" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-65">Everyday Analogies</h4>
-<ul>
-<li>Board games: After many moves, the distribution of where players end up (like Monopoly squares) stabilizes, regardless of start.</li>
-<li>Web surfing: The Google PageRank algorithm is based on eigenvalue 1 of a huge transition matrix.</li>
-<li>Shuffling cards: With enough shuffles, the probability distribution becomes uniform-a steady state.</li>
-<li>Weather models: Even if today’s weather matters, in the long run the system converges to a stable climate distribution.</li>
-</ul>
 </section>
 <section id="applications-31" class="level4">
 <h4 class="anchored" data-anchor-id="applications-31">Applications</h4>
@@ -9268,15 +8736,6 @@ x(t) = \begin{bmatrix} c_1 e^t \\ c_2 e^{-2t} \end{bmatrix}.
 <li>Complex eigenvalues → spirals or circles.</li>
 </ul>
 </section>
-<section id="everyday-analogies-66" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-66">Everyday Analogies</h4>
-<ul>
-<li>Population dynamics: Growth rates correspond to eigenvalues. Negative rates → extinction; positive rates → explosion.</li>
-<li>Engineering vibrations: Eigenvalues determine resonance frequencies and damping.</li>
-<li>Finance: Interest rates with oscillatory components (complex eigenvalues) describe cyclical economies.</li>
-<li>Climate models: Stability of equilibria (e.g., greenhouse gas balance) comes from sign of eigenvalues.</li>
-</ul>
-</section>
 <section id="applications-32" class="level4">
 <h4 class="anchored" data-anchor-id="applications-32">Applications</h4>
 <ol type="1">
@@ -9398,14 +8857,6 @@ balance in silence.</code></pre>
 </ul>
 <p>Example: A weighted inner product distorts circles into ellipses, changing which vectors count as “orthogonal.”</p>
 </section>
-<section id="everyday-analogies-67" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-67">Everyday Analogies</h4>
-<ul>
-<li>Weighted voting: In an election, some votes count more; in a weighted inner product, some dimensions of a vector count more.</li>
-<li>Sound and music: The inner product of two signals measures how much one resonates with the other.</li>
-<li>Search engines: Inner products between word-frequency vectors measure document similarity. Different weighting schemes (like TF-IDF) correspond to different inner products.</li>
-</ul>
-</section>
 <section id="applications-33" class="level4">
 <h4 class="anchored" data-anchor-id="applications-33">Applications</h4>
 <ol type="1">
@@ -9508,15 +8959,6 @@ x = \sum_{i=1}^n \langle x, u_i \rangle u_i.
 <li>Orthonormal bases are like perfectly aligned coordinate axes.</li>
 <li>Any vector decomposes uniquely as a sum of independent contributions along these axes.</li>
 <li>Distances and angles are preserved, making the geometry transparent.</li>
-</ul>
-</section>
-<section id="everyday-analogies-68" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-68">Everyday Analogies</h4>
-<ul>
-<li>Sound frequencies: Each note in a chord can be separated if the notes are orthogonal (independent frequencies).</li>
-<li>Data analysis: Orthogonal axes correspond to independent features.</li>
-<li>Sports: Offense and defense in a game are orthogonal roles-different but both necessary.</li>
-<li>Finance: Orthogonal portfolios have no correlation-risk in one does not affect the other.</li>
 </ul>
 </section>
 <section id="applications-34" class="level4">
@@ -9626,14 +9068,6 @@ u_1 = \left(\tfrac{1}{\sqrt{2}}, \tfrac{1}{\sqrt{2}}\right), \quad u_2 = \left(\
 <li>In practice, QR factorization algorithms often implement MGS or Householder reflections.</li>
 </ul>
 </section>
-<section id="everyday-analogies-69" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-69">Everyday Analogies</h4>
-<ul>
-<li>Teamwork: If two teammates overlap in their roles, Gram–Schmidt reallocates effort until each works independently.</li>
-<li>Noise filtering: Orthogonal components separate useful signals from redundancy.</li>
-<li>Cooking recipe: Adjusting ingredients so that each adds a unique flavor, without duplicating what’s already present.</li>
-</ul>
-</section>
 <section id="applications-35" class="level4">
 <h4 class="anchored" data-anchor-id="applications-35">Applications</h4>
 <ol type="1">
@@ -9737,15 +9171,6 @@ x - \text{proj}_u(x) = (3,4) - (4,2) = (-1,2).
 </ol>
 <p>Notice: <span class="math inline">\((4,2)\)</span> lies on the line through <span class="math inline">\(u\)</span>, and the error vector <span class="math inline">\((-1,2)\)</span> is orthogonal to <span class="math inline">\(u\)</span>.</p>
 </section>
-<section id="everyday-analogies-70" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-70">Everyday Analogies</h4>
-<ul>
-<li>Casting shadows: A projection is like shining a light; the shadow is the projection onto the floor or wall.</li>
-<li>Work in physics: The projection of a force onto a direction gives the effective force doing work in that direction.</li>
-<li>Budget allocation: Projecting expenses onto categories shows how much belongs to each category.</li>
-<li>Simplified models: Projecting data onto a lower-dimensional space gives the closest “simplified” version.</li>
-</ul>
-</section>
 <section id="applications-36" class="level4">
 <h4 class="anchored" data-anchor-id="applications-36">Applications</h4>
 <ol type="1">
@@ -9842,15 +9267,6 @@ x = Px + (I-P)x,
 \]</span></p>
 <p>where <span class="math inline">\(Px \in W\)</span> and <span class="math inline">\((I-P)x \in W^\perp\)</span>.</p>
 <p>This formulation is used constantly in numerical linear algebra.</p>
-</section>
-<section id="everyday-analogies-71" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-71">Everyday Analogies</h4>
-<ul>
-<li>Work-life balance: Splitting your time into “work” and “non-work,” where the two categories do not overlap.</li>
-<li>Noise filtering: A signal is split into the meaningful part (projection onto a signal space) and pure noise (orthogonal component).</li>
-<li>Budgeting: Expenses can be uniquely divided into “planned” (projection) and “unexpected” (orthogonal) categories.</li>
-<li>Debate: Arguments can be split into “relevant to the topic” and “off-topic” parts, independent of each other.</li>
-</ul>
 </section>
 <section id="applications-37" class="level4">
 <h4 class="anchored" data-anchor-id="applications-37">Applications</h4>
@@ -9965,15 +9381,6 @@ r = b - \hat{b} = \left(\tfrac{5}{7}, -\tfrac{4}{7}, \tfrac{1}{7}\right).
 <li>This is like dropping a perpendicular from <span class="math inline">\(b\)</span> to the subspace <span class="math inline">\(\text{Col}(A)\)</span>.</li>
 </ul>
 </section>
-<section id="everyday-analogies-72" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-72">Everyday Analogies</h4>
-<ul>
-<li>Fitting a line to data: The line won’t pass through every point, but it minimizes the sum of squared vertical distances.</li>
-<li>Negotiation: You can’t satisfy every demand, but you settle in the “closest possible” compromise.</li>
-<li>Budget cuts: You can’t match every expense exactly, but you minimize the overall deviation.</li>
-<li>Image compression: You can’t store every detail, but you keep the closest possible low-dimensional version.</li>
-</ul>
-</section>
 <section id="applications-38" class="level4">
 <h4 class="anchored" data-anchor-id="applications-38">Applications</h4>
 <ol type="1">
@@ -10064,14 +9471,6 @@ u_2 = \frac{1}{\sqrt{1.5}} \left(\tfrac{1}{2}, -\tfrac{1}{2}, 1\right)^T.
 <li><span class="math inline">\(Q\)</span> represents an orthogonal change of basis-rotations and reflections that preserve length and angle.</li>
 <li><span class="math inline">\(R\)</span> encodes scaling and shear in the new orthonormal coordinate system.</li>
 <li>Together, they show how <span class="math inline">\(A\)</span> transforms space: first rotate into a clean basis, then apply triangular distortion.</li>
-</ul>
-</section>
-<section id="everyday-analogies-73" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-73">Everyday Analogies</h4>
-<ul>
-<li>Changing perspective: QR decomposition is like rotating your view so the structure of a problem becomes simpler, then measuring distortion in this aligned frame.</li>
-<li>Team roles: <span class="math inline">\(Q\)</span> represents independent, orthogonal roles, while <span class="math inline">\(R\)</span> shows how much each role contributes to the final outcome.</li>
-<li>Navigation: <span class="math inline">\(Q\)</span> gives perfectly aligned compass directions, while <span class="math inline">\(R\)</span> records how far you move along each.</li>
 </ul>
 </section>
 <section id="applications-39" class="level4">
@@ -10181,14 +9580,6 @@ Q = \begin{bmatrix}0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1\e
 </ul>
 <p>This is why in computer graphics, orthogonal matrices model pure rotations and reflections without scaling.</p>
 </section>
-<section id="everyday-analogies-74" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-74">Everyday Analogies</h4>
-<ul>
-<li>Photography: Rotating a camera keeps the picture content intact-it only changes orientation.</li>
-<li>Maps: A compass rotation preserves distances between cities.</li>
-<li>Dance moves: Rotating or flipping a formation keeps relative spacing unchanged.</li>
-</ul>
-</section>
 <section id="applications-40" class="level4">
 <h4 class="anchored" data-anchor-id="applications-40">Applications</h4>
 <ol type="1">
@@ -10273,15 +9664,6 @@ X_k = \sum_{j=0}^{n-1} x_j e^{-2\pi i jk / n}, \quad k=0,\dots,n-1.
 <li>In the time domain, data is expressed as a sequence of raw values.</li>
 <li>In the frequency domain, data is expressed as amplitudes of orthogonal waves.</li>
 <li>The Fourier viewpoint is just a rotation into a new orthogonal coordinate system, exactly like diagonalizing a matrix or changing basis.</li>
-</ul>
-</section>
-<section id="everyday-analogies-75" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-75">Everyday Analogies</h4>
-<ul>
-<li>Music: Any chord is a mixture of pure notes. The Fourier viewpoint extracts the individual notes (frequencies) from the sound.</li>
-<li>Light: A beam of light is a mixture of colors (frequencies of waves). A prism “performs” a Fourier decomposition.</li>
-<li>Finance: A price signal is decomposed into long-term trends (low frequencies) and short-term fluctuations (high frequencies).</li>
-<li>Cooking: A dish is made from distinct ingredients-Fourier analysis tells you what proportions of each ingredient are in the mix.</li>
 </ul>
 </section>
 <section id="applications-41" class="level4">
@@ -10382,15 +9764,6 @@ A = \begin{bmatrix}
 <li>The least squares solution projects the observed output vector <span class="math inline">\(y\)</span> onto this subspace.</li>
 </ul>
 <p>Thus, whether polynomial or multifeature, the geometry is the same: projection onto the model space.</p>
-</section>
-<section id="everyday-analogies-76" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-76">Everyday Analogies</h4>
-<ul>
-<li>Forecasting growth: Linear models capture trends, but quadratic or cubic fits capture acceleration and curvature.</li>
-<li>House prices: Price depends on multiple features (size, location, number of rooms). Multifeature least squares fits them simultaneously.</li>
-<li>Sports performance: A player’s score may depend on training time, rest, and nutrition-multiple interacting predictors.</li>
-<li>Physics experiments: Data often follows quadratic or higher-order laws (projectile motion, energy vs.&nbsp;displacement).</li>
-</ul>
 </section>
 <section id="practical-challenges" class="level4">
 <h4 class="anchored" data-anchor-id="practical-challenges">Practical Challenges</h4>
@@ -10515,14 +9888,6 @@ A = \begin{bmatrix} 3 &amp; 1 \\ 0 &amp; 2 \end{bmatrix}.
 <li>Numerical Stability: SVD helps diagnose conditioning-how sensitive solutions are to input errors.</li>
 </ol>
 </section>
-<section id="everyday-analogies-77" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-77">Everyday Analogies</h4>
-<ul>
-<li>Music mixing: Any complex sound can be broken into independent “tracks” with different strengths.</li>
-<li>Clothing store: A pile of clothes can be organized along principal directions (shirts, pants, jackets), with singular values measuring how much each dominates.</li>
-<li>Maps: A geographic map distorts distances differently along different directions; singular values quantify those distortions.</li>
-</ul>
-</section>
 <section id="why-it-matters-77" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-77">Why It Matters</h4>
 <ul>
@@ -10607,14 +9972,6 @@ A = \begin{bmatrix}3 &amp; 1 \\ 0 &amp; 2\end{bmatrix}.
 <li>The largest singular value <span class="math inline">\(\sigma_1\)</span> is how much <span class="math inline">\(A\)</span> can stretch a vector.</li>
 <li>The smallest nonzero singular value <span class="math inline">\(\sigma_r\)</span> (where <span class="math inline">\(r = \text{rank}(A)\)</span>) measures how much the matrix compresses.</li>
 <li>The condition number <span class="math inline">\(\kappa(A) = \sigma_1 / \sigma_r\)</span> measures distortion: small values mean nearly spherical stretching, large values mean extreme elongation.</li>
-</ul>
-</section>
-<section id="everyday-analogies-78" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-78">Everyday Analogies</h4>
-<ul>
-<li>Elastic band: Stretching a circular band into an ellipse, with major and minor axes as singular values.</li>
-<li>Maps: A globe projected onto flat paper distorts distances differently along latitude and longitude-like singular values stretching some directions more than others.</li>
-<li>Clothing: Pulling fabric in one direction stretches it more along that axis while leaving other directions less affected.</li>
 </ul>
 </section>
 <section id="applications-of-the-geometry" class="level4">
@@ -10724,14 +10081,6 @@ A = \begin{bmatrix}3 &amp; 0 \\ 4 &amp; 0 \\ 0 &amp; 5\end{bmatrix}.
 <li>Singular values tell us how much stretching occurs.</li>
 </ul>
 <p>Thus, SVD is essentially eigen-decomposition in disguise-but applied to the right symmetric companions.</p>
-</section>
-<section id="everyday-analogies-79" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-79">Everyday Analogies</h4>
-<ul>
-<li>Echo in a room: Eigen-decomposition studies how vibrations behave within the room’s geometry. SVD studies both the input (sound waves) and output (what you hear) by linking them with matching directions.</li>
-<li>Teamwork analogy: Eigen-decomposition tells you about the strengths of a team internally. SVD tells you how those strengths show up when tasks are actually performed.</li>
-<li>Projection screens: Eigen-decomposition shows the internal stability of the projector lens; SVD shows how the input image translates into a stretched or compressed projection on the wall.</li>
-</ul>
 </section>
 <section id="applications-of-the-connection" class="level4">
 <h4 class="anchored" data-anchor-id="applications-of-the-connection">Applications of the Connection</h4>
@@ -10956,14 +10305,6 @@ X_c = U \Sigma V^T.
 <li>Projecting onto the top <span class="math inline">\(k\)</span> components flattens the data into a lower-dimensional space, like flattening a tilted pancake onto its broadest plane.</li>
 </ul>
 </section>
-<section id="everyday-analogies-80" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-80">Everyday Analogies</h4>
-<ul>
-<li>Photography: PCA is like adjusting the angle of a camera to capture the most important part of a scene in one shot.</li>
-<li>Summarizing a book: Instead of every page, you keep only the main themes.</li>
-<li>Music: A symphony can be broken into a few dominant melodies; the rest are variations.</li>
-</ul>
-</section>
 <section id="applications-44" class="level4">
 <h4 class="anchored" data-anchor-id="applications-44">Applications</h4>
 <ol type="1">
@@ -11104,14 +10445,6 @@ x = \begin{bmatrix}3 \\ 4 \\ 0\end{bmatrix},
 </ul>
 <p>So <span class="math inline">\(A^+\)</span> embodies the principle of “best possible inverse” under the circumstances.</p>
 </section>
-<section id="everyday-analogies-81" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-81">Everyday Analogies</h4>
-<ul>
-<li>GPS triangulation: If multiple satellites give inconsistent measurements, the pseudoinverse provides the location that minimizes total error.</li>
-<li>Fitting clothes: If a shirt doesn’t fit perfectly, you pick the size that is closest overall; that’s least squares in action.</li>
-<li>Balancing a scale: When too many constraints pull in different directions, the pseudoinverse finds the compromise that balances them best.</li>
-</ul>
-</section>
 <section id="applications-45" class="level4">
 <h4 class="anchored" data-anchor-id="applications-45">Applications</h4>
 <ol type="1">
@@ -11218,14 +10551,6 @@ A = \begin{bmatrix}1 &amp; 1 \\ 1 &amp; 1.0001\end{bmatrix}.
 <li>The ratio <span class="math inline">\(\sigma_{\max} / \sigma_{\min}\)</span> shows how stretched the transformation is.</li>
 </ul>
 <p>If the ellipse is nearly flat, directions aligned with the short axis almost vanish, and recovering them is highly unstable.</p>
-</section>
-<section id="everyday-analogies-82" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-82">Everyday Analogies</h4>
-<ul>
-<li>Whispering in a noisy room: If the signal is much weaker than the background noise, any message is drowned out. That’s an ill-conditioned system.</li>
-<li>Balancing a broomstick on your finger: Small wobbles cause big movements-sensitive, unstable, ill-conditioned.</li>
-<li>Maps: A distorted map stretches some regions (well-measured) and squashes others (poorly represented). That’s condition number in geometry.</li>
-</ul>
 </section>
 <section id="why-conditioning-matters-in-computation" class="level4">
 <h4 class="anchored" data-anchor-id="why-conditioning-matters-in-computation">Why Conditioning Matters in Computation</h4>
@@ -11378,23 +10703,6 @@ A = \begin{bmatrix}3 &amp; 4 \\ 0 &amp; 0\end{bmatrix}.
 </ul>
 <p>Each is a lens, giving a different perspective.</p>
 </section>
-<section id="everyday-analogies-83" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-83">Everyday Analogies</h4>
-<ul>
-<li><p>Car performance:</p>
-<ul>
-<li>Top speed = spectral norm (max stretch).</li>
-<li>Average fuel usage = Frobenius norm (overall energy).</li>
-<li>Total mileage cost = nuclear norm (total contribution).</li>
-</ul></li>
-<li><p>Team output:</p>
-<ul>
-<li>Strongest player = spectral norm.</li>
-<li>Combined effort = Frobenius norm.</li>
-<li>Collective capacity = nuclear norm.</li>
-</ul></li>
-</ul>
-</section>
 <section id="applications-46" class="level4">
 <h4 class="anchored" data-anchor-id="applications-46">Applications</h4>
 <ol type="1">
@@ -11486,14 +10794,6 @@ x_\lambda = \sum_i \frac{\sigma_i}{\sigma_i^2 + \lambda} (u_i^T b) v_i.
 <li>The unregularized problem fits <span class="math inline">\(b\)</span> exactly in the column space of <span class="math inline">\(A\)</span>.</li>
 <li>Regularization tilts the solution toward the origin, shrinking coefficients.</li>
 <li>Geometrically, the feasible region (ellipsoid from <span class="math inline">\(Ax\)</span>) intersects with a ball constraint from <span class="math inline">\(\|x\|_2\)</span>. The solution is where these two shapes balance.</li>
-</ul>
-</section>
-<section id="everyday-analogies-84" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-84">Everyday Analogies</h4>
-<ul>
-<li>Steering on ice: Without regularization, the car responds wildly to tiny wheel turns. With regularization, steering is damped, keeping control.</li>
-<li>Balancing investments: Purely chasing returns (fit) leads to fragile portfolios. Regularization is like risk management, preferring stable outcomes.</li>
-<li>Tuning a guitar: Without damping, strings resonate uncontrollably. Adding a damper produces cleaner, controlled sound.</li>
 </ul>
 </section>
 <section id="extensions-1" class="level4">
@@ -11611,14 +10911,6 @@ A = \begin{bmatrix}1 &amp; 1 &amp; 1 \\ 1 &amp; 1.0001 &amp; 2 \\ 1 &amp; 2 &amp
 <li>Singular Values in SVD: Most reliable indicator, but expensive.</li>
 <li>Determinants/Minors: Useful in theory, unstable in practice.</li>
 </ol>
-</section>
-<section id="everyday-analogies-85" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-85">Everyday Analogies</h4>
-<ul>
-<li>Team redundancy: If two players always move together, the team has fewer independent strategies. RRQR identifies the most independent players first.</li>
-<li>Cooking recipes: If one recipe is just a slight variation of another, your cookbook effectively has fewer distinct dishes. Numerical rank captures this redundancy.</li>
-<li>Music notes: Different instruments may play, but if they harmonize in sync, the number of independent melodies is smaller than the number of instruments.</li>
-</ul>
 </section>
 <section id="applications-48" class="level4">
 <h4 class="anchored" data-anchor-id="applications-48">Applications</h4>
@@ -11748,14 +11040,6 @@ f &amp; 0 &amp; 0 &amp; 0 \\
 <h4 class="anchored" data-anchor-id="robotics-connection">Robotics Connection</h4>
 <p>Robotic arms use similar pipelines: each joint contributes a rotation or translation, encoded as a matrix. By multiplying them, we get the forward kinematics-the position and orientation of the hand given the joint angles.</p>
 </section>
-<section id="everyday-analogies-86" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-86">Everyday Analogies</h4>
-<ul>
-<li>Photography: The model transform arranges the objects, the view transform positions the camera, and the projection is the lens that flattens the scene.</li>
-<li>Stage performance: Actors move on stage (translations), rotate to face the audience (rotations), and lighting projects their shadows onto a backdrop (projection).</li>
-<li>Navigation: GPS coordinates are transformed into map coordinates, then into screen pixels-another geometry pipeline.</li>
-</ul>
-</section>
 <section id="why-it-matters-87" class="level4">
 <h4 class="anchored" data-anchor-id="why-it-matters-87">Why It Matters</h4>
 <p>Geometry pipelines unify graphics, robotics, and vision. They show how linear algebra powers the everyday visuals of video games, animations, simulations, and even self-driving cars. Without the consistency of matrix multiplication, the complexity of managing transformations would be unmanageable.</p>
@@ -11833,14 +11117,6 @@ p = R(\theta_1) T(l_1) R(\theta_2) T(l_2) \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatr
 <li>Hierarchy: Objects in graphics may be nested (a car’s wheel rotates relative to the car), just like robot joints. Homogeneous transforms naturally handle these hierarchies.</li>
 <li>Inverse Problems: Graphics uses inverse transforms for camera movement; robotics uses them for inverse kinematics (finding joint angles to reach a point).</li>
 </ol>
-</section>
-<section id="everyday-analogies-87" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-87">Everyday Analogies</h4>
-<ul>
-<li>Video games: Moving your character or rotating the camera is just matrix math running millions of times per second.</li>
-<li>Animation rigs: A character’s skeleton is a robotic arm in disguise, joints moving in sequence.</li>
-<li>Augmented reality: Overlaying digital objects onto real-world camera images requires the same transforms as robotics calibration.</li>
-</ul>
 </section>
 <section id="why-homogeneous-tricks-are-powerful" class="level4">
 <h4 class="anchored" data-anchor-id="why-homogeneous-tricks-are-powerful">Why Homogeneous Tricks Are Powerful</h4>
@@ -11969,15 +11245,6 @@ L = \begin{bmatrix}
 <ul>
 <li>Eigenvalues of <span class="math inline">\(L\)</span>: <span class="math inline">\(0, 3, 3\)</span>.</li>
 <li>The single zero eigenvalue confirms the graph is connected.</li>
-</ul>
-</section>
-<section id="everyday-analogies-88" class="level4">
-<h4 class="anchored" data-anchor-id="everyday-analogies-88">Everyday Analogies</h4>
-<ul>
-<li>Social networks: Adjacency matrices track friendships; Laplacians reveal communities.</li>
-<li>Transportation: Nodes are cities, edges are roads; eigenvalues measure robustness of connectivity.</li>
-<li>Electric circuits: Laplacians act like conductance matrices, governing current flow.</li>
-<li>Internet links: Adjacency captures hyperlinks; spectral analysis finds central hubs.</li>
 </ul>
 </section>
 <section id="applications-50" class="level4">
@@ -13272,6 +12539,9 @@ they stretch toward the stars.</code></pre>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../../books/en-US/lab.html" class="pagination-link" aria-label="The LAB">
+        <span class="nav-page-text"><span class="chapter-title">The LAB</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

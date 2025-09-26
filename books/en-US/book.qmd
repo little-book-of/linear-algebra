@@ -271,12 +271,6 @@ Vector addition and scalar multiplication obey rules that mirror arithmetic with
 These rules are not trivial bookkeeping - they guarantee that linear algebra behaves predictably,  
 which is why it works as the language of science.
 
-#### Everyday Analogies
-
-- Walking directions: If you walk 3 steps north and then 4 steps east, that's like adding (0, 3) + (4, 0) = (4, 3).
-- Forces in physics: If two people push on a box in different directions, the total force is the vector sum of their pushes.
-- Budget planning: Think of income and expenses as vectors of numbers. Combining them is just vector addition.
-
 #### Why It Matters
 
 With only these two operations-addition and scaling-you can already describe lines, planes, and entire spaces. Any system that grows by combining influences, like physics, economics, or machine learning, is built on these simple rules. Later, when we define matrix multiplication, dot products, and eigenvalues, they all reduce to repeated patterns of adding and scaling vectors.
@@ -357,12 +351,6 @@ If vectors point in the same or opposite directions (one is a scalar multiple of
   - Three independent vectors span all of 3D space.
 
 - In higher dimensions: The same pattern continues. A set of k independent vectors spans a k-dimensional subspace inside the larger space.
-
-#### Everyday Analogies
-
-- Color mixing: Red and blue paints can mix to make purple shades. Add yellow, and you can cover a broader spectrum. Similarly, vectors combine to produce new ones.
-- Cooking recipes: Ingredients (vectors) can be scaled up or down and combined in different amounts. The span is the full menu of dishes you can create with those ingredients.
-- Directions in navigation: If you can only walk north and south, your span is a line. Add east-west walking, and suddenly you can reach any location in the city grid.
 
 #### Algebraic Properties
 
@@ -489,12 +477,6 @@ But in linear algebra, other norms are also useful:
   (largest component).
 
 These norms change the geometry of "length" and "distance." For example, in the ℓ₁ norm, the unit circle is shaped like a diamond; in the ℓ∞ norm, it looks like a square.
-
-#### Everyday Analogies
-
-- Walking distance in a city: If streets are on a grid, the ℓ₁ norm (sum of absolute differences) is more natural than the Euclidean norm.
-- Climbing stairs: The Euclidean norm is like measuring the diagonal distance, but step by step you may actually walk an ℓ₁ distance.
-- Measuring error in data: Different norms capture different notions of "closeness" between predictions and reality. Euclidean distance punishes large errors heavily; ℓ₁ treats all errors equally.
 
 #### Algebraic Properties
 
@@ -626,11 +608,6 @@ $$
 
 Only the component of the force in the direction of motion contributes. If you push straight down on a box while trying to move it horizontally, the dot product is zero: no work is done in the direction of motion.
 
-#### Everyday Analogies
-
-- Teamwork analogy: Two people pushing a car. If they push in nearly the same direction, the dot product is large and positive (strong cooperation). If they push at right angles, the dot product is zero (they don't help each other). If they push in opposite directions, the dot product is negative (they work against each other).
-- Conversation analogy: Think of two ideas. If they're aligned, the "dot product" of their meanings is high. If they're unrelated, it's zero. If they contradict, it's negative.
-
 #### Algebraic Properties
 
 - Commutative: $u \cdot v = v \cdot u$  
@@ -761,20 +738,6 @@ If the angle is close to $90^\circ$, the projection shrinks toward zero.
 
 Thus, the cosine acts as a scaling factor between directions.
 
-#### Everyday Analogies
-
-- Teamwork analogy: If two people push a heavy object, the effectiveness of their combined effort depends on the angle.  
-  If they push in nearly the same direction (small $\theta$), they cooperate efficiently.  
-  If they push at right angles ($\theta = 90^\circ$), they waste effort.  
-  If they push opposite each other ($\theta \approx 180^\circ$), they cancel out.  
-
-- Conversation analogy: If two people's opinions align ($\cos \theta \approx 1$), they agree strongly.  
-  If they are orthogonal ($\cos \theta = 0$), they are unrelated.  
-  If they oppose each other ($\cos \theta \approx -1$), they fundamentally disagree.  
-
-- Navigation analogy: If two roads meet at a small angle, their directions are similar.  
-  If they cross perpendicularly, their directions are independent.
-
 #### Why It Matters
 
 Angles between vectors provide:
@@ -895,12 +858,6 @@ It generalizes to subspaces: we can project onto entire planes or higher-dimensi
 5. Signal Processing:
    Decomposition into projections onto sine and cosine waves forms the basis of Fourier analysis, which powers audio, image, and video compression.
 
-#### Everyday Analogies
-
-- Flashlight shadow: Imagine shining a flashlight so that a stick casts a shadow on the floor. The shadow is the projection of the stick onto the floor plane.
-- Team effort: If two people pull a box, the effective progress in one person's direction is the projection of the other's pull onto that direction.
-- Grades analogy: If your performance is a mix of effort and distraction, the projection onto "effort" shows how much of your work aligns with real progress.
-
 #### Algebraic Properties
 
 - Projections are linear: proj(u + w) = proj(u) + proj(w).
@@ -994,11 +951,6 @@ Indeed, $7.21 \leq 7.24$, very close in this case.
 ##### Equality Case
 
 The triangle inequality becomes equality when the vectors point in exactly the same direction (or are scalar multiples with nonnegative coefficients). For example, (1, 1) and (2, 2) produce equality because adding them gives a vector whose length equals the sum of their lengths.
-
-#### Everyday Analogies
-
-- Cauchy–Schwarz: Imagine comparing two people's study habits across multiple subjects. Each vector represents hours spent in each subject. The dot product represents how much their habits "align." Cauchy–Schwarz says the alignment can never exceed the product of their individual efforts.
-- Triangle inequality: Think of walking in a city. If you want to get from home to the store and then from the store to the park, the total distance is at least as long as going straight from home to the park. There is no shortcut longer than the direct route.
 
 #### Extensions
 
@@ -1110,12 +1062,6 @@ Similarly, in $\mathbb{R}^3$, you can construct rotated orthonormal sets (such a
 - In engineering, they simplify stress, strain, and rotation analysis.
 
 Even though $\mathbb{R}^2$ and $\mathbb{R}^3$ are relatively simple, the same ideas extend naturally to higher dimensions, where visualization is impossible but the algebra is identical.
-
-#### Everyday Analogies
-
-- Navigating a city: Imagine two perpendicular streets, each marked in meters. Walking 3 units east and 4 units north gives coordinates (3, 4). That's an orthonormal system.
-- Furniture assembly: When you're told to align one part "straight up" and another "straight across," you're working with orthonormal directions.
-- Digital screens: Computer monitors use pixel grids aligned horizontally and vertically, a practical realization of orthonormality.
 
 #### Why Orthonormal Sets Matter
 
@@ -1417,12 +1363,6 @@ Some shapes of matrices are so common they deserve names:
 
 Recognizing these shapes saves time and clarifies reasoning.
 
-#### Everyday Analogies
-
-- Spreadsheets: A matrix is like a grid of cells, each with a row and column label. Indexing lets you specify exactly which cell you mean.
-- Maps: Cities on a map can be located by coordinates (row, column). The same logic applies to entries in a matrix.
-- Lego blocks: Just as large Lego structures are built from smaller blocks, large matrices are often analyzed by splitting into submatrices.
-
 #### Why It Matters
 
 Careful attention to matrix shapes, indexing, and block views ensures:
@@ -1567,12 +1507,6 @@ These act as neutral or scaling elements in matrix arithmetic.
 2. Scaling a transformation makes its action stronger or weaker. Doubling a shear makes it twice as pronounced.
 
 This shows that even before multiplication, addition and scaling already have geometric meaning.
-
-#### Everyday Analogies
-
-- Recipes: Adding two recipes (matrices) ingredient by ingredient gives a combined shopping list. Multiplying a recipe by 3 scales it for 3 times as many people.
-- Financial planning: Adding two budget tables gives a combined budget. Multiplying by 12 scales monthly costs to yearly totals.
-- Mixing effects: Think of audio signals represented by matrices. Adding them overlays sounds; scaling adjusts volume.
 
 #### Why It Matters
 
@@ -1758,12 +1692,6 @@ $$
 
 This rotates vectors counterclockwise by θ in the plane.
 
-#### Everyday Analogies
-
-- Mixing ingredients: The vector x is a recipe, and the columns of $A$ are the ingredients. The product $A\mathbf{x}$ is the final mixture.
-- Weighted averages: A student's final grade is a matrix–vector product: weights (the vector) multiplied by scores (the matrix columns).
-- Signal processing: Combining input signals with weights produces a new output, just like multiplying a matrix of signals by a weight vector.
-
 #### Why It Matters
 
 The matrix–vector product is the building block of everything in linear algebra:
@@ -1895,12 +1823,6 @@ Then $AB$ scales vectors by 2 after rotating them 90°.
 4. Identity: $AI = IA = A$.
 
 These properties highlight that while multiplication is structured, it is not symmetric. The order encodes the order of operations in transformations.
-
-#### Everyday Analogies
-
-- Cooking steps: If $B$ is "chop vegetables" and $A$ is "cook vegetables," then $AB$ is "cook after chopping." Doing it the other way (BA) would make no sense!
-- Assembly line: Each machine (matrix) performs an operation on the input. Chaining them corresponds to multiplying the matrices.
-- Maps and routes: Going from home to the station (B), then from station to office (A) equals the combined route home→office (AB).
 
 #### Why It Matters
 
@@ -2084,12 +2006,6 @@ Two important classes emerge from the transpose:
 
 - Orthogonal matrices: $Q^TQ = I$. Their columns form an orthonormal set, and they represent pure rotations/reflections.
 
-#### Everyday Analogies
-
-- Identity: A mirror that doesn't distort your reflection-it leaves everything unchanged.
-- Inverse: A "reverse recipe"-if one step mixes, the inverse unmixed (where possible).
-- Transpose: Reorganizing a spreadsheet by flipping rows and columns.
-
 #### Why It Matters
 
 1. The identity guarantees a neutral element for multiplication.
@@ -2253,13 +2169,6 @@ Permutation matrices are used in pivoting strategies in elimination, ensuring nu
 
 Together, these classes show that structure leads to simplicity-many computational algorithms exploit these patterns for speed and stability.
 
-#### Everyday Analogies
-
-- Symmetric: A perfectly balanced seesaw-forces are mirrored on both sides.
-- Diagonal: Independent volume knobs for each channel of a stereo system-no cross-interference.
-- Triangular: Step-by-step instructions where each step depends only on earlier steps, never later ones.
-- Permutation: Shuffling cards-same elements, different order.
-
 #### Why It Matters
 
 1. Symmetric matrices guarantee stable and interpretable eigen-decompositions.
@@ -2411,12 +2320,6 @@ Alongside the trace, here are some important algebraic facts that every student 
 - In physics, the trace of the stress tensor measures pressure.
 - In probability, the trace of a covariance matrix is the total variance of a system.
 - In statistics and machine learning, the trace is often used as a measure of overall "size" or complexity of a model.
-
-#### Everyday Analogies
-
-- Grades on report card: The trace is like summing the "main subjects" (diagonal entries) without looking at electives (off-diagonal entries).
-- Company budget: The diagonal could represent department totals, and the trace is the grand total.
-- Lighting system: Imagine each diagonal entry is a light switch brightness for each room; the trace is the sum total brightness in the building.
 
 #### Why It Matters
 
@@ -2572,12 +2475,6 @@ $$
 
 This formulation is universal in computer graphics and robotics.
 
-#### Everyday Analogies
-
-- Photography: Moving a camera involves not only rotating it (linear part) but also translating it in space.
-- Navigation: Walking north (linear step) and then shifting east (translation).
-- Graphics software: Scaling an image larger and then dragging it to a new position-exactly affine transformations in action.
-
 #### Why It Matters
 
 1. Unified representation: Using homogeneous coordinates, we can treat translations as matrices, enabling consistent matrix multiplication for all transformations.
@@ -2651,12 +2548,6 @@ Modern computing leverages hardware for speed:
 - GPUs: Specialize in massive parallel matrix–vector and matrix–matrix operations (critical in deep learning).
 
 This is why linear algebra libraries (BLAS, LAPACK, cuBLAS) are indispensable: they squeeze performance from hardware.
-
-#### Everyday Analogies
-
-- Cooking: Preparing one dish is easy. Preparing 100 dishes means thinking about batch size, oven space, and parallel steps.
-- Budgeting: Adding two small budgets by hand is fine; merging thousands of spreadsheets requires software and structure.
-- Travel: Driving across town is quick. Driving cross-country requires fuel planning, route optimization, and rest stops-scale changes everything.
 
 #### Why It Matters
 
@@ -2815,12 +2706,6 @@ $$
 $$
 
 This form is especially useful for elimination methods, where we manipulate rows without writing variables at each step.
-
-#### Everyday Analogies
-
-- Recipes: A recipe tells you how many units of each ingredient (coefficients) produce the dish (constant result). Writing it as a matrix is like organizing all recipes into a clean table.
-- Schedules: Each row of a timetable (equation) corresponds to one condition. Putting it into matrix form organizes it into one big grid.
-- Construction: The coefficients are like "how many bricks per wall," while the vector x is "number of walls built." The product gives total bricks, and the system sets the required totals.
 
 #### Why It Matters
 
@@ -3017,12 +2902,6 @@ Row operations do not alter the solution space:
 
 Thus, row operations act like "reshaping the system" while leaving the intersection intact.
 
-#### Everyday Analogies
-
-- Cooking recipe: Scaling a row is like doubling all ingredients in one recipe-it doesn't change the proportions.
-- Task list: Swapping two rows is just reordering tasks; nothing about the tasks themselves changes.
-- Budgeting: Adding one department's budget equation to another is just reorganizing financial records, not altering totals.
-
 #### Why It Matters
 
 Row operations are the essential moves in solving linear systems by hand or computer. They:
@@ -3162,12 +3041,6 @@ Solution: $x=2, y=1, z=2$.
 
 - REF corresponds to simplifying the system step by step, making it "triangular" so variables can be solved one after another.
 - RREF corresponds to a system that is fully disentangled-each variable isolated, with its value or free-variable relationship explicitly visible.
-
-#### Everyday Analogies
-
-- Filing papers: REF is like stacking documents in neat piles, but still grouped. RREF is like sorting every document individually into labeled folders.
-- Solving a puzzle: REF gives you partial progress (pieces are grouped), while RREF finishes the puzzle so each piece is in its exact place.
-- Cooking: REF is like preparing ingredients into rough categories (vegetables chopped, meat trimmed). RREF is the final stage where every dish is cooked and plated, fully ready.
 
 #### Why It Matters
 
@@ -3364,12 +3237,6 @@ $$
 $$
 
 The solutions are immediately visible: $x=3, y=-3$.
-
-#### Everyday Analogies
-
-- Team roles: Pivot variables are assigned jobs, while free variables can choose freely, shaping the group's flexibility.
-- Recipe ingredients: Pivots are required ingredients with fixed proportions, free variables are optional additions.
-- Construction plans: Pivot columns are load-bearing beams, free columns are spaces that can be filled in flexibly.
 
 #### Why It Matters
 
@@ -3581,11 +3448,6 @@ Contradiction: $0 = 1$. Inconsistent, no solution.
 - Infinitely many solutions: At least one free variable exists, but no contradiction.
 - No solution: Contradictory row appears in augmented matrix.
 
-#### Everyday Analogies
-
-- Meeting point: If everyone agrees on the same café (unique solution), the plan is consistent. If they agree on any café along a certain street (infinite solutions), it's still consistent. If they give completely different addresses, there's no consistent plan.
-- Recipes: If the ingredients match exactly one way, unique solution. If they can vary while still yielding the dish, infinite solutions. If the instructions contradict, no dish is possible.
-
 #### Why It Matters
 
 1. Consistency is the first checkpoint in solving systems.
@@ -3742,12 +3604,6 @@ Rule:
 - If $\text{rank}(A) < \text{rank}([A|\mathbf{b}])$, the system is inconsistent.
 
 This rank condition is fundamental and works in any dimension.
-
-#### Everyday Analogies
-
-- Meeting schedules: If one friend says "meet at 2pm" and another says "meet at 2pm and 3pm simultaneously," the instructions contradict-no meeting possible.
-- Construction blueprints: If two architects specify identical walls but with different lengths, the building plan is impossible.
-- Cooking instructions: If one step requires "boil pasta until firm" and another says "the same pasta must already be raw," the recipe cannot be carried out.
 
 #### Why It Matters
 
@@ -3925,12 +3781,6 @@ Solution: $(x, y, z) = (4, 2, 0)$.
   - Add second equation → intersection becomes a line.
   - Add third equation → intersection becomes a point (unique solution) or vanishes (inconsistent).
 
-#### Everyday Analogies
-
-- Cleaning a desk: Start with a mess (equations mixed together), then eliminate clutter one step at a time until everything is sorted neatly into piles.
-- Cooking: Elimination is like reducing a sauce-boiling away the excess until only the essence remains.
-- Detective work: Each equation eliminates possibilities, narrowing down suspects until only the guilty party (the solution) remains.
-
 #### Why It Matters
 
 1. Gaussian elimination is the foundation for solving systems by hand and by computer.
@@ -4080,12 +3930,6 @@ $$
 
 This expresses the solution set as a base point plus a direction vector, making the geometry clear.
 
-#### Everyday Analogies
-
-- Stacked tasks: Back substitution is like solving a sequence of tasks where each depends on the result of the one below it.
-- Domino effect: Once the last domino falls (the last variable solved), the rest fall in sequence.
-- Filling out a form: Each field depends on earlier answers; once the final field is fixed, the others can be determined in order.
-
 #### Why It Matters
 
 1. Back substitution turns row-echelon form into concrete answers.
@@ -4199,12 +4043,6 @@ Example:
 #### Rank and Row vs. Column View
 
 It is a remarkable fact that the number of independent rows = number of independent columns. This is not obvious at first glance, but it is always true. So we can define rank either by rows or by columns-it makes no difference.
-
-#### Everyday Analogies
-
-- Library books: If three books say the same thing in different words, only one adds new knowledge. The others are redundant. Rank = number of genuinely independent books.
-- Recipes: If you have five recipes but four are just scaled versions of the first, you really only have one distinct recipe. Rank = 1.
-- Work team: If every team member repeats what another says, the effective number of independent voices is low. Rank measures how many unique contributions exist.
 
 #### Why It Matters
 
@@ -4382,12 +4220,6 @@ LU decomposition separates the elimination process into:
 
 Together, they represent the same linear transformation as $A$, but decomposed into simpler building blocks.
 
-#### Everyday Analogies
-
-- Recipe preparation: $L$ is the prep work (chopping, mixing), while $U$ is the final cooking (arranging in order). Together, they produce the finished dish.
-- Assembly line: $L$ records the sequence of adjustments, $U$ the final structured product.
-- Team project: $L$ shows who contributed what during the work process, $U$ is the neatly organized final report.
-
 #### Why It Matters
 
 1. LU factorization compresses elimination into a reusable format.
@@ -4529,12 +4361,6 @@ Scalars come from a field: usually the real numbers $\mathbb{R}$ or the complex 
 
 Together, these rules make vector spaces stable and reliable mathematical objects.
 
-#### Everyday Analogies
-
-- Language: Words form sentences by rules of grammar. Vector spaces are sets where addition and scaling follow strict grammar-like rules.
-- Music: Notes combine (addition) and change pitch (scaling). A musical space is meaningful only if these operations stay within the system.
-- Construction: Bricks and mortar can be combined (addition) and scaled (larger or smaller structures), but only when rules of stability are followed.
-
 #### Why It Matters
 
 1. Vector spaces unify many areas of math under a single framework.
@@ -4645,12 +4471,6 @@ Together, they capture the full behavior of a matrix.
 - The null space is orthogonal (in a precise sense) to the row space, which we'll study later.
 - Understanding both spaces gives a complete picture of how the matrix transforms vectors.
 
-#### Everyday Analogies
-
-- Column space as achievements: Think of the matrix as a machine. The column space is the set of all things the machine can produce.
-- Null space as wasted effort: Any input vector in the null space produces nothing at all-like pressing buttons on a broken remote control.
-- Teamwork analogy: If each team member contributes along independent directions, the column space is large. If some repeat others' work, redundancy reduces the column space.
-
 #### Why It Matters
 
 1. Subspaces are the natural habitat of linear algebra: almost everything happens inside them.
@@ -4736,12 +4556,6 @@ Consider the system $Ax=b$.
 
 - The question "Is there a solution?" is equivalent to "Is $b$ in the span of the columns of $A$?"
 - Thus, span provides the geometric language for solvability.
-
-#### Everyday Analogies
-
-- Languages: If you have enough letters (generators), you can spell any word (vector). Redundant letters don't add power (extra copies of "A" don't help).
-- Recipes: Ingredients are like generators; the span is all dishes you can cook from them. Some ingredients are essential, others can be left out.
-- Travel directions: If you only know how to go north, you're stuck on a line. Add east, and you can reach anywhere on the map.
 
 #### Why It Matters
 
@@ -4832,12 +4646,6 @@ Here the third column has no pivot → the 3rd vector is dependent on the first 
 - Dependent vectors = one vector lies in the span of others.
 - In 2D: two independent vectors span the plane.
 - In 3D: three independent vectors span the space.
-
-#### Everyday Analogies
-
-- Ideas in a meeting: Independent ideas contribute new insights. Dependent ideas repeat what others already said.
-- Recipes: Having salt, sugar, and flour gives three distinct ingredients. But having sugar and "2× sugar" is not new-it's dependent.
-- Travel directions: North and east are independent. North and "2× north" are dependent.
 
 #### Why It Matters
 
@@ -4947,12 +4755,6 @@ Dimension tells us how many independent directions exist in the space.
 - In 3D, three independent vectors define a full coordinate system.
 - Different bases = different grids overlaying the same space.
 
-#### Everyday Analogies
-
-- Language: A basis is like an alphabet. Every word (vector) can be spelled uniquely from the letters (basis vectors).
-- Colors: RGB is a basis for color space. Any color can be described uniquely by mixing red, green, and blue.
-- Music: Musical notes form a basis. Every chord or melody is a combination of them.
-
 #### Why It Matters
 
 1. Bases provide the simplest possible description of a vector space.
@@ -5040,12 +4842,6 @@ When solving $A\mathbf{x} = \mathbf{b}$:
 - In the polynomial space of degree ≤ 3, you need 4 coefficients.
 
 Thus, dimension = length of coordinate list.
-
-#### Everyday Analogies
-
-- Maps: A flat map needs 2 coordinates (latitude, longitude). A globe is 3D and needs 3. Adding altitude makes it 3D as well.
-- Languages: To describe meaning, you need enough independent words. Redundant words don't add dimension; new independent concepts do.
-- Recipes: To describe all possible flavors, you need a certain number of independent ingredients. More ingredients = higher-dimensional "flavor space."
 
 #### Checking Dimension in Practice
 
@@ -5170,12 +4966,6 @@ The theorem guarantees the geometry of "surviving" and "vanishing" directions al
 
 4. Machine learning: Rank signals how much real information a dataset contains; nullity indicates degrees of freedom that add nothing new.
 
-#### Everyday Analogies
-
-- Work team: Rank = number of independent workers contributing new ideas. Nullity = number of workers repeating what others already said. Total team members = contributors + redundant voices.
-- Travel: Rank = number of useful directions on a map; nullity = directions that lead nowhere.
-- Languages: Rank = unique words, nullity = synonyms. Total vocabulary size is always the sum.
-
 #### Why It Matters
 
 1. The rank–nullity theorem connects the abstract ideas of rank and nullity into a single, elegant formula.
@@ -5293,12 +5083,6 @@ This process is fundamental in computer graphics, robotics, and data transformat
 - A basis defines a coordinate system: axes in the space.
 - Coordinates are the "addresses" of vectors relative to those axes.
 - Changing basis is like rotating or stretching the grid: the address changes, but the point does not.
-
-#### Everyday Analogies
-
-- Maps: Latitude and longitude are coordinates relative to Earth's axis. If we change the map projection, the coordinates change, but the physical location stays the same.
-- Languages: Describing the same object in English or French yields different words (coordinates), but the object (vector) is unchanged.
-- Music: The same melody can be written in different keys (bases); the notes shift, but the tune remains.
 
 #### Why It Matters
 
@@ -5450,12 +5234,6 @@ This formula is extremely useful because it reduces the problem to matrix multip
 3. Robotics: Coordinate transformations connect robot arms, joints, and workspace frames.
 4. Data science: PCA finds a new basis (principal components) where data is easier to analyze.
 
-#### Everyday Analogies
-
-- Languages: The word "dog" in English corresponds to "chien" in French. The change-of-basis matrix is the bilingual dictionary.
-- Currencies: Converting from dollars to euros requires an exchange rate. The matrix is the exchange table.
-- Maps: Switching between Cartesian and polar coordinates is a change of basis-different coordinates, same location.
-
 #### Why It Matters
 
 1. Provides a universal method to translate coordinates between bases.
@@ -5546,12 +5324,6 @@ Think of affine subspaces as "flat sheets" floating in space:
 - A line through the origin is a rope tied at the center.
 - A line parallel to it but offset is the same rope moved to the side.
 - Affine subspaces preserve shape and direction, but not position.
-
-#### Everyday Analogies
-
-- Railway tracks: A railway line is straight (like a subspace), but it doesn't need to pass through the city center (origin).
-- Office floors: Each floor in a building is a plane parallel to the ground, offset vertically. The ground floor is like the subspace through the origin; higher floors are affine subspaces.
-- Schedules: A repeating pattern (like working hours 9–5) is the subspace. Starting the shift at 10 instead of 9 shifts it into an affine version.
 
 #### Applications
 
@@ -5709,13 +5481,6 @@ Linear transformations reshape space:
 
 The key feature: straight lines remain straight, and the origin stays fixed.
 
-#### Everyday Analogies
-
-- Maps and coordinates: A GPS system transforms geographic positions (lat/long) into screen positions (x,y).
-- Shadows: Projecting a 3D object onto the ground is a linear transformation.
-- Economics: A matrix that takes production levels (inputs) and outputs profits is a linear transformation of data.
-- Music: An equalizer linearly adjusts different frequencies: the structure of the sound is preserved but reshaped.
-
 #### Applications
 
 1. Computer graphics: Scaling, rotating, projecting 3D objects onto 2D screens.
@@ -5813,12 +5578,6 @@ Matrices reshape space. In $\mathbb{R}^2$:
   The entire grid is determined by these two images.
 
 In $\mathbb{R}^3$, the three columns are the images of the unit coordinate directions, defining how the whole space twists, rotates, or compresses.
-
-#### Everyday Analogies
-
-- Translation dictionary: The abstract transformation is like a language teacher; the matrix is the bilingual dictionary that makes every translation calculable.
-- Blueprint: The linear rule is the design; the matrix is the instruction sheet that workers can follow step by step.
-- Mixing recipe: Each column tells you exactly how much of each "ingredient" (basis vector) contributes to the new mixture.
 
 #### Applications
 
@@ -5948,12 +5707,6 @@ Projecting $\mathbb{R}^3$ onto the xy-plane:
 - Kernel: the z-axis (all points collapsed to zero height).
 - Image: the entire xy-plane (all possible shadows).
 
-#### Everyday Analogies
-
-- Camera lens: The kernel is the lost depth when turning 3D scenes into 2D images; the image is the actual picture captured.
-- Compression: A lossy file compressor sends some details (kernel) to oblivion, but keeps the rest (image).
-- Business: A company's hiring system transforms applicants into employees. The kernel is rejected candidates; the image is those who make it through.
-
 #### Applications
 
 1. Solving equations: Kernel describes all solutions to $Ax=0$. Image describes what right-hand sides $b$ make $Ax=b$ solvable.
@@ -6051,12 +5804,6 @@ Two vector spaces $V$ and $W$ are isomorphic if there exists a bijective linear 
 - Invertible transformations preserve dimension: no flattening or collapsing occurs.
 - They may rotate, shear, stretch, or reflect, but every input vector can be uniquely recovered.
 - The determinant tells the "volume scaling" of the transformation: invertibility requires this volume not to collapse to zero.
-
-#### Everyday Analogies
-
-- Secret codes: An invertible transformation is like an encryption that can be decrypted; non-invertible codes lose information permanently.
-- Recipes: Doubling a recipe is invertible (just halve it back); baking a cake is not invertible (you can't get raw ingredients back).
-- Translations: Moving every point on a map 5 units east is invertible (move 5 units west to undo). Flattening a 3D globe into a 2D map loses depth and is not invertible.
 
 #### Applications
 
@@ -6168,13 +5915,6 @@ This link between powers and eigenvalues underpins many algorithms in numerical 
 - Powers = applying the same action repeatedly (rotating 90° four times = identity).
 - Iteration = exploring the "orbit" of a vector under repeated transformations.
 
-#### Everyday Analogies
-
-- Assembly line: Each station performs a transformation. The entire process is the composition of all steps.
-- Compound interest: Repeated multiplication by a growth factor is iteration.
-- Dance choreography: One step repeated many times creates a rhythm-like powers of a transformation.
-- Social media algorithms: Iterative recommendations amplify some signals while suppressing others-much like eigenvalues controlling growth or decay.
-
 #### Applications
 
 1. Search engines: PageRank is computed by iterating a linear transformation until it stabilizes.
@@ -6267,12 +6007,6 @@ These invariants define the "skeleton" of a linear operator, unaffected by coord
 - Similarity says: two matrices may look different, but they are "the same" transformation seen from different coordinate systems.
 - Conjugation is the mathematical act of relabeling coordinates.
 - Think of shifting your camera angle: the scene hasn't changed, only the perspective has.
-
-#### Everyday Analogies
-
-- Translations of stories: The same plot can be told in different languages (bases). The words differ (matrices), but the story remains identical (transformation).
-- Maps and coordinates: The shape of a mountain range doesn't depend on whether we use latitude/longitude or UTM coordinates.
-- Software code: The same algorithm can be written in Python or C++-different symbols, same behavior.
 
 #### Applications
 
@@ -6383,13 +6117,6 @@ So reflection swaps coordinates: $(2,3) \mapsto (3,2)$.
 - Reflection preserves length but flips orientation relative to the subspace.
 - Projection is about approximation ("closest point"), reflection is about symmetry.
 
-#### Everyday Analogies
-
-- Projection: A flashlight casts the 3D shape of your hand onto a 2D wall.
-- Reflection: A mirror flips your left and right sides.
-- Statistics: Projection corresponds to regression-finding the best linear approximation of data.
-- Design: Reflection symmetry is everywhere in art and architecture.
-
 #### Applications
 
 1. Statistics & Machine Learning: Least-squares regression is projection of data onto the span of predictor variables.
@@ -6488,12 +6215,6 @@ In $\mathbb{R}^3$: shears distort volumes while preserving parallelism of faces.
 - Shear: Distorts shape but often preserves area (in 2D) or volume (in 3D). Circles become ellipses or slanted figures.
 
 Together, rotations and shears can generate a vast variety of linear distortions.
-
-#### Everyday Analogies
-
-- Rotation: The motion of a spinning wheel, turning a camera, or rotating an image on your phone.
-- Shear: Sliding cards in a deck so the top shifts relative to the bottom, or slanting a stack of books without changing their height.
-- Combination: Buildings in perspective drawings are sheared versions of rectangles, while wheels rotate cleanly.
 
 #### Applications
 
@@ -6597,12 +6318,6 @@ If a transformation has less than full rank, it is rank-deficient. This means:
 - Equations $Ax=b$ may be inconsistent or underdetermined.
 
 Detecting and handling rank deficiency is crucial in numerical linear algebra, where ill-conditioning can hide in nearly dependent columns.
-
-#### Everyday Analogies
-
-- Photography: A 3D scene projected to 2D loses depth: rank drops from 3 to 2.
-- Business pipeline: If only 2 of 5 departments actually influence profits, the effective "rank" is 2.
-- Conversation: If two people keep repeating the same idea, they don't add rank-the discussion's dimension hasn't increased.
 
 #### Why It Matters
 
@@ -6728,12 +6443,6 @@ This formula is central in statistics, optimization, and numerical analysis.
 - A block diagonal matrix acts like two independent transformations operating side by side.
 - A block triangular matrix shows a "hierarchy": one subspace influences the other but not the reverse.
 - This decomposition mirrors how systems can be separated into smaller interacting parts.
-
-#### Everyday Analogies
-
-- Organizations: Departments (subspaces) with internal operations (diagonal blocks) and communication between them (off-diagonal blocks).
-- Cities: Neighborhoods evolve independently (diagonal blocks) but also exchange resources (off-diagonal blocks).
-- Software systems: Independent modules with interfaces to exchange data.
 
 #### Applications
 
@@ -6865,13 +6574,6 @@ In $\mathbb{R}^n$, determinants extend the same idea. A unit hypercube (side len
 
 Though we cannot visualize beyond 3D, the concept generalizes smoothly: determinants encode how much an n-dimensional object is stretched or collapsed.
 
-#### Everyday Analogies
-
-- Maps and scaling: A map might scale a square kilometer of land into a rectangle on paper. The determinant of the transformation encodes that scale factor.
-- 3D printing: Scaling a digital object before printing changes its volume by the determinant of the scaling matrix.
-- Cooking: Doubling a recipe doubles volume; scaling each ingredient in three dimensions multiplies volume by $\det(A)$.
-- Mirrors: Looking into a mirror reverses left and right-mathematically, this is a transformation with determinant $-1$.
-
 #### Applications
 
 1. Geometry: Computing areas, volumes, and orientation directly from vectors.
@@ -6992,12 +6694,6 @@ Together, these mirror geometric intuition exactly.
 
 In $\mathbb{R}^n$, determinants measure oriented hyper-volume. For example, in 4D, determinants give the "4-volume" of a parallelotope. Though impossible to picture, the same rules apply.
 
-#### Everyday Analogies
-
-- Blueprint scaling: Doubling the width of a rectangle doubles the area. Linearity captures this.
-- DNA strands: If two strands are identical, the structure collapses; alternating captures redundancy.
-- Standard ruler: Calibration requires a reference-normalization fixes the unit cube's volume at 1.
-
 #### Applications
 
 1. Defining area and volume: Determinants provide a universal formula for computing geometric sizes from coordinates.
@@ -7109,12 +6805,6 @@ Efficient, clear, and no messy cofactor expansions.
 
 This geometric reasoning reinforces why the rules are natural.
 
-#### Everyday Analogies
-
-- Cooking: Doubling one ingredient (scaling) doubles the total mixture if it's the only varying part.
-- Team projects: Swapping two roles reverses order but doesn't change overall group size.
-- Architecture: Shifting a wall while keeping the same base area preserves the floor plan (row replacement).
-
 #### Applications
 
 1. Efficient computation: Algorithms for large determinants (LU decomposition) are based on row operations.
@@ -7209,12 +6899,6 @@ In geometric terms:
 - Example: In 3D, scaling x by 2, y by 3, and z by 7 gives a volume scaling of $2 \cdot 3 \cdot 7 = 42$.
 
 Even if shear is present in the upper entries, the determinant ignores it-it only cares about the pure diagonal scaling.
-
-#### Everyday Analogies
-
-- Business growth: If three independent factors (sales, marketing, operations) scale profits by 2, 3, and 7, the combined scaling is their product, 42.
-- Cooking layers: Scaling each layer of a recipe multiplies effects-2× saltiness, 3× spiciness, 7× sweetness → 42× overall intensity.
-- Pipeline processes: If each stage of a pipeline scales throughput independently, the total scaling is the product of individual factors.
 
 #### Applications
 
@@ -7333,12 +7017,6 @@ The proof can be approached in multiple ways:
 - If $B$ scales space by 3 and flips it (det = –3), and $A$ scales by 2 without flipping (det = 2), then $AB$ scales by –6, consistent with the rule.
 - Determinants encapsulate both magnitude (volume scaling) and sign (orientation). Multiplicativity ensures these combine correctly.
 
-#### Everyday Analogies
-
-- Economics: If a policy doubles output (factor 2) and another policy triples it (factor 3), combined effect is sixfold.
-- Cooking: Scaling a recipe by 2, then again by 3, multiplies the final volume by 6.
-- Maps: If one map projection scales area by 4 and another zooms out by 1/2, the total scaling is 2.
-
 #### Applications
 
 1. Change of Variables in Calculus: The Jacobian determinant follows this multiplicative rule, ensuring transformations compose consistently.
@@ -7437,12 +7115,6 @@ B = \begin{bmatrix} 2 & 4 \\ 1 & 2 \end{bmatrix}, \quad \det(B) = 0.
 $$
 
 Not invertible, since the second column is just twice the first.
-
-#### Everyday Analogies
-
-- Shadows: Projecting a 3D object onto a 2D wall loses depth information. This is like a determinant of 0: flattening makes inversion impossible.
-- Recipes: If two ingredients are exact multiples of each other, you don't really have two independent "flavors." The recipe loses uniqueness.
-- Maps: A detailed city map shrunk to a single line loses all spatial information. You cannot reconstruct the city from the line.
 
 #### Applications
 
@@ -7568,12 +7240,6 @@ That's why in practice, elimination or LU decomposition is preferred. Cofactor e
 
 Each cofactor corresponds to excluding one direction (row/column), measuring the volume of the remaining sub-parallelotope. The alternating sign keeps track of orientation. Thus the determinant is a weighted combination of contributions from all entries along a chosen row or column.
 
-#### Everyday Analogies
-
-- Voting system: Each candidate (matrix entry) contributes a weighted score (cofactor) to the final outcome.
-- Team project: Removing one member (row/column) still leaves a sub-team whose structure influences the whole.
-- Recipe adjustments: Leaving out one ingredient and adjusting the others changes the flavor, but the original dish can be reconstructed from these partial contributions.
-
 #### Applications
 
 1. Theoretical proofs: Cofactor expansion underlies many determinant identities.
@@ -7688,12 +7354,6 @@ This is exactly the cofactor expansion result, but now explained as a permutatio
 - For $n=5$, $5! = 120$ terms.
 - In general, $n!$ terms make this formula impractical for large matrices.
 - Still, it gives the deepest definition of determinants, from which all other rules follow.
-
-#### Everyday Analogies
-
-- Seating arrangements: Each way to assign seats corresponds to a permutation; the determinant weights each arrangement with a sign.
-- Logistics: Assigning workers to tasks one-to-one has many possibilities; some align consistently, others "flip" the structure.
-- DNA sequences: Permutations rearrange bases; the sign tracks whether the sequence orientation is preserved.
 
 #### Applications
 
@@ -7813,12 +7473,6 @@ where $\text{adj}(A)$ is the adjugate (transpose of the cofactor matrix). When w
 - Numerical instability: Determinants can be sensitive to rounding errors.
 - In practice, Gaussian elimination or LU decomposition is far superior.
 
-#### Everyday Analogies
-
-- Recipe substitution: Replacing one ingredient (column) with the desired outcome (b) gives the exact proportion for that component.
-- Voting systems: The total determinant is the baseline "influence volume," and replacing a column measures one voter's impact on the outcome.
-- Maps: Changing one coordinate axis to match a destination vector shows the exact contribution of that axis to reaching the destination.
-
 #### Applications
 
 1. Theoretical proofs: Establishes uniqueness of solutions for small systems.
@@ -7915,12 +7569,6 @@ it can be computed by finding eigenvalues (numerically via QR iteration or other
 - Block diagonal matrices: Determinant is the product of determinants of blocks.
 - Sparse matrices: Exploit structure-only nonzero patterns matter.
 - Orthogonal matrices: Determinant is always $+1$ or $-1$.
-
-#### Everyday Analogies
-
-- Scaling recipes: For a small dish, you can calculate portions by hand. For a banquet, you need a system (LU decomposition).
-- Construction: Measuring the area of a single tile is simple; measuring the area of a complex floor plan requires breaking it into manageable blocks.
-- Finance: Computing compound growth for one investment is straightforward; doing it for a large, interconnected portfolio requires systematic methods.
 
 #### Applications
 
@@ -8058,13 +7706,6 @@ If you apply $A$ repeatedly to an eigenvector, the result is predictable: just m
 - If $|\lambda| > 1$, the vector grows without bound.
 - If $\lambda = 1$, the vector stays the same length (though direction may flip if $\lambda=-1$).
 
-#### Everyday Analogies
-
-- Echo in a room: Certain tones (eigenvalues) resonate because the room geometry preserves them.
-- Business growth: An eigenvector could represent a stable investment direction, with eigenvalue as the growth multiplier.
-- Genetics: Eigenvectors of population models describe stable distributions of traits, eigenvalues describe growth rates.
-- Traffic flow: Certain paths remain proportionally consistent over time; eigenvalues determine speed of growth or decay.
-
 #### Applications
 
 1. Physics: Vibrations of molecules, quantum energy levels, and resonance all rely on eigenvalues/eigenvectors.
@@ -8192,12 +7833,6 @@ This ties together trace, determinant, and eigenvalues in one polynomial.
 - In 2D: the polynomial encodes area scaling ($\det(A)$) and total stretching ($\text{tr}(A)$).
 - In higher dimensions: it condenses the complexity of $A$ into a single equation whose solutions reveal the spectrum.
 
-#### Everyday Analogies
-
-- Fingerprint: The characteristic polynomial uniquely identifies the eigenvalues of a matrix, much like a fingerprint identifies a person.
-- Recipe proportions: Just as ratios determine taste, the coefficients of the polynomial encode how trace and determinant control eigenvalues.
-- Financial portfolio: The polynomial summarizes growth rates (eigenvalues) into one compact formula.
-
 #### Applications
 
 1. Eigenvalue computation: Foundation for diagonalization and spectral theory.
@@ -8317,12 +7952,6 @@ Think of AM as the *theoretical demand* for eigenvectors, and GM as the *actual 
    - Not enough eigenvectors.
    - Cannot be diagonalized.
 
-#### Everyday Analogies
-
-- Seats vs. people: Algebraic multiplicity is the number of seats reserved for an eigenvalue; geometric multiplicity is how many actual people show up. If fewer people arrive, the system is defective.
-- Promises vs. reality: AM is the theoretical promise given by the polynomial; GM is the reality of independent directions.
-- Musical notes: AM is how many times a note is written in the score; GM is how many distinct instruments actually play it.
-
 #### Applications
 
 1. Diagonalization: Only possible when GM = AM for all eigenvalues.
@@ -8441,12 +8070,6 @@ Diagonalization means we can rotate into a basis of eigenvectors where the trans
 
 - Think of a room where the floor stretches more in one direction than another. In the right coordinate system (aligned with eigenvectors), the stretch is purely along axes.
 - Without diagonalization, stretching mixes directions and is harder to describe.
-
-#### Everyday Analogies
-
-- Musical notes: A chord can be decomposed into independent notes. Diagonalization isolates each "note" of a transformation.
-- Recipe ingredients: A dish may look complex, but diagonalization breaks it into pure ingredients.
-- Business growth: A company might expand differently in separate divisions. In the right basis, each division grows independently, with its own multiplier.
 
 #### Applications
 
@@ -8588,12 +8211,6 @@ The presence of the off-diagonal entry introduces linear growth in $k$, in addit
 
 Think of stretching a rubber sheet: after each stretch, the sheet aligns more and more strongly with the dominant eigenvector.
 
-#### Everyday Analogies
-
-- Interest rates: If you repeatedly apply interest, the growth multiplies exponentially, just like powers of eigenvalues.
-- Echoes: Each echo in a room is weaker (if eigenvalues < 1) or stronger (if eigenvalues > 1).
-- Business growth: Repeated investment growth is governed by the largest eigenvalue, which dominates in the long run.
-
 #### Applications
 
 1. Dynamical Systems: Population models, economic growth, and iterative algorithms all rely on powers of a matrix.
@@ -8706,12 +8323,6 @@ $$
 the eigenvalues are complex with modulus < 1.
 
 - Interpretation: rotation combined with shrinking → spiraling toward the origin.
-
-#### Everyday Analogies
-
-- Clock hands: Rotation without stretching is like clock hands moving-direction changes continuously but length stays the same.
-- Spiral staircase: Each step forward involves both rising and rotating, just like scaling and rotation in complex eigenvalues.
-- Musical pitch shifts: A note can rise in pitch (rotation) while fading in volume (scaling).
 
 #### Applications
 
@@ -8841,12 +8452,6 @@ $$
 
 So while a diagonalizable matrix decomposes space into neat independent directions, a defective matrix entangles some directions together, forcing them into chains.
 
-#### Everyday Analogies
-
-- Orchestra analogy: A diagonalizable matrix has one instrument per note. A defective matrix has fewer instruments, so some notes must be "shared" in harmonies, represented by chains.
-- River flow: Instead of independent straight channels, some currents merge and pull each other, causing dependencies.
-- Office hierarchy: Instead of each manager having their own team (independent eigenvectors), some teams overlap, producing chains of influence.
-
 #### Applications
 
 1. Differential Equations: Jordan blocks determine the appearance of extra polynomial factors (like $t e^{\lambda t}$) in solutions.
@@ -8964,12 +8569,6 @@ The spectral radius measures the dominant mode of a transformation:
 - If the stretching is less than 1, everything shrinks.
 - If greater than 1, everything expands.
 - If exactly 1, the system is balanced on the edge of stability.
-
-#### Everyday Analogies
-
-- Population dynamics: If the reproduction factor (largest eigenvalue) is below 1, a species dies out; above 1, it grows; at 1, it balances.
-- Bank interest: Interest rate < 1 shrinks your balance; > 1 grows it; = 1 keeps it steady.
-- Echoes in a hall: Each echo fades if $\rho<1$, persists if $\rho=1$, and grows chaotic if $\rho>1$.
 
 #### Applications
 
@@ -9107,13 +8706,6 @@ $$
 - The dominant eigenvector (steady state) is like the "center of gravity" of the system.
 
 So powers of $P$ filter out all but the eigenvector of eigenvalue 1.
-
-#### Everyday Analogies
-
-- Board games: After many moves, the distribution of where players end up (like Monopoly squares) stabilizes, regardless of start.
-- Web surfing: The Google PageRank algorithm is based on eigenvalue 1 of a huge transition matrix.
-- Shuffling cards: With enough shuffles, the probability distribution becomes uniform-a steady state.
-- Weather models: Even if today's weather matters, in the long run the system converges to a stable climate distribution.
 
 #### Applications
 
@@ -9292,13 +8884,6 @@ For example:
 - Positive eigenvalues → trajectories repel outward.
 - Complex eigenvalues → spirals or circles.
 
-#### Everyday Analogies
-
-- Population dynamics: Growth rates correspond to eigenvalues. Negative rates → extinction; positive rates → explosion.
-- Engineering vibrations: Eigenvalues determine resonance frequencies and damping.
-- Finance: Interest rates with oscillatory components (complex eigenvalues) describe cyclical economies.
-- Climate models: Stability of equilibria (e.g., greenhouse gas balance) comes from sign of eigenvalues.
-
 #### Applications
 
 1. Control theory: Stability analysis of systems requires eigenvalue placement in the left-half plane.
@@ -9431,12 +9016,6 @@ Thus, inner products generalize the familiar geometry of $\mathbb{R}^n$ to broad
 
 Example: A weighted inner product distorts circles into ellipses, changing which vectors count as "orthogonal."
 
-#### Everyday Analogies
-
-- Weighted voting: In an election, some votes count more; in a weighted inner product, some dimensions of a vector count more.
-- Sound and music: The inner product of two signals measures how much one resonates with the other.
-- Search engines: Inner products between word-frequency vectors measure document similarity. Different weighting schemes (like TF-IDF) correspond to different inner products.
-
 #### Applications
 
 1. Signal Processing: Correlation between signals is an inner product. Orthogonality means two signals carry independent information.
@@ -9539,13 +9118,6 @@ Orthogonality splits space into independent "directions."
 - Orthonormal bases are like perfectly aligned coordinate axes.
 - Any vector decomposes uniquely as a sum of independent contributions along these axes.
 - Distances and angles are preserved, making the geometry transparent.
-
-#### Everyday Analogies
-
-- Sound frequencies: Each note in a chord can be separated if the notes are orthogonal (independent frequencies).
-- Data analysis: Orthogonal axes correspond to independent features.
-- Sports: Offense and defense in a game are orthogonal roles-different but both necessary.
-- Finance: Orthogonal portfolios have no correlation-risk in one does not affect the other.
 
 #### Applications
 
@@ -9659,12 +9231,6 @@ $$
 - A numerically stable alternative is Modified Gram–Schmidt (MGS), which reorders the projection steps to reduce loss of orthogonality.
 - In practice, QR factorization algorithms often implement MGS or Householder reflections.
 
-#### Everyday Analogies
-
-- Teamwork: If two teammates overlap in their roles, Gram–Schmidt reallocates effort until each works independently.
-- Noise filtering: Orthogonal components separate useful signals from redundancy.
-- Cooking recipe: Adjusting ingredients so that each adds a unique flavor, without duplicating what's already present.
-
 #### Applications
 
 1. QR Factorization: Gram–Schmidt provides the foundation: $A = QR$, where $Q$ is orthogonal and $R$ is upper triangular.
@@ -9773,13 +9339,6 @@ Let $u = (2,1)$, and project $x = (3,4)$ onto span$\{u\}$.
 
 Notice: $(4,2)$ lies on the line through $u$, and the error vector $(-1,2)$ is orthogonal to $u$.
 
-#### Everyday Analogies
-
-- Casting shadows: A projection is like shining a light; the shadow is the projection onto the floor or wall.
-- Work in physics: The projection of a force onto a direction gives the effective force doing work in that direction.
-- Budget allocation: Projecting expenses onto categories shows how much belongs to each category.
-- Simplified models: Projecting data onto a lower-dimensional space gives the closest "simplified" version.
-
 #### Applications
 
 1. Least Squares Regression: The regression line is the projection of data onto the subspace spanned by predictor variables.
@@ -9883,13 +9442,6 @@ $$
 where $Px \in W$ and $(I-P)x \in W^\perp$.
 
 This formulation is used constantly in numerical linear algebra.
-
-#### Everyday Analogies
-
-- Work-life balance: Splitting your time into "work" and "non-work," where the two categories do not overlap.
-- Noise filtering: A signal is split into the meaningful part (projection onto a signal space) and pure noise (orthogonal component).
-- Budgeting: Expenses can be uniquely divided into "planned" (projection) and "unexpected" (orthogonal) categories.
-- Debate: Arguments can be split into "relevant to the topic" and "off-topic" parts, independent of each other.
 
 #### Applications
 
@@ -10008,13 +9560,6 @@ Check: $\langle r,A\rangle = 0$, so it's orthogonal.
 - The error vector is orthogonal to the subspace.
 - This is like dropping a perpendicular from $b$ to the subspace $\text{Col}(A)$.
 
-#### Everyday Analogies
-
-- Fitting a line to data: The line won't pass through every point, but it minimizes the sum of squared vertical distances.
-- Negotiation: You can't satisfy every demand, but you settle in the "closest possible" compromise.
-- Budget cuts: You can't match every expense exactly, but you minimize the overall deviation.
-- Image compression: You can't store every detail, but you keep the closest possible low-dimensional version.
-
 #### Applications
 
 1. Statistics: Linear regression uses least squares to fit models to data.
@@ -10109,12 +9654,6 @@ The result is $A = QR$, with $Q$ orthonormal and $R$ triangular.
 - $Q$ represents an orthogonal change of basis-rotations and reflections that preserve length and angle.
 - $R$ encodes scaling and shear in the new orthonormal coordinate system.
 - Together, they show how $A$ transforms space: first rotate into a clean basis, then apply triangular distortion.
-
-#### Everyday Analogies
-
-- Changing perspective: QR decomposition is like rotating your view so the structure of a problem becomes simpler, then measuring distortion in this aligned frame.
-- Team roles: $Q$ represents independent, orthogonal roles, while $R$ shows how much each role contributes to the final outcome.
-- Navigation: $Q$ gives perfectly aligned compass directions, while $R$ records how far you move along each.
 
 #### Applications
 
@@ -10241,12 +9780,6 @@ Orthogonal matrices represent isometries: transformations that preserve the shap
 
 This is why in computer graphics, orthogonal matrices model pure rotations and reflections without scaling.
 
-#### Everyday Analogies
-
-- Photography: Rotating a camera keeps the picture content intact-it only changes orientation.
-- Maps: A compass rotation preserves distances between cities.
-- Dance moves: Rotating or flipping a formation keeps relative spacing unchanged.
-
 #### Applications
 
 1. Computer Graphics: Rotations of 3D models use orthogonal matrices to avoid distortion.
@@ -10338,13 +9871,6 @@ The Fast Fourier Transform (FFT) computes this in $O(n \log n)$ time, making Fou
 - In the time domain, data is expressed as a sequence of raw values.
 - In the frequency domain, data is expressed as amplitudes of orthogonal waves.
 - The Fourier viewpoint is just a rotation into a new orthogonal coordinate system, exactly like diagonalizing a matrix or changing basis.
-
-#### Everyday Analogies
-
-- Music: Any chord is a mixture of pure notes. The Fourier viewpoint extracts the individual notes (frequencies) from the sound.
-- Light: A beam of light is a mixture of colors (frequencies of waves). A prism "performs" a Fourier decomposition.
-- Finance: A price signal is decomposed into long-term trends (low frequencies) and short-term fluctuations (high frequencies).
-- Cooking: A dish is made from distinct ingredients-Fourier analysis tells you what proportions of each ingredient are in the mix.
 
 #### Applications
 
@@ -10454,13 +9980,6 @@ The same process works for higher-degree polynomials or multiple features.
 - The least squares solution projects the observed output vector $y$ onto this subspace.
 
 Thus, whether polynomial or multifeature, the geometry is the same: projection onto the model space.
-
-#### Everyday Analogies
-
-- Forecasting growth: Linear models capture trends, but quadratic or cubic fits capture acceleration and curvature.
-- House prices: Price depends on multiple features (size, location, number of rooms). Multifeature least squares fits them simultaneously.
-- Sports performance: A player's score may depend on training time, rest, and nutrition-multiple interacting predictors.
-- Physics experiments: Data often follows quadratic or higher-order laws (projectile motion, energy vs. displacement).
 
 #### Practical Challenges
 
@@ -10575,12 +10094,6 @@ This decomposition reveals how $A$ reshapes circles into ellipses.
 4. Noise Filtering: Discard small singular values to remove noise in signals and images.
 5. Numerical Stability: SVD helps diagnose conditioning-how sensitive solutions are to input errors.
 
-#### Everyday Analogies
-
-- Music mixing: Any complex sound can be broken into independent "tracks" with different strengths.
-- Clothing store: A pile of clothes can be organized along principal directions (shirts, pants, jackets), with singular values measuring how much each dominates.
-- Maps: A geographic map distorts distances differently along different directions; singular values quantify those distortions.
-
 #### Why It Matters
 
 - SVD is the "Swiss army knife" of linear algebra: versatile, always applicable, and rich in interpretation.
@@ -10670,12 +10183,6 @@ Thus, rank-deficient matrices literally squash space into lower dimensions.
 - The largest singular value $\sigma_1$ is how much $A$ can stretch a vector.
 - The smallest nonzero singular value $\sigma_r$ (where $r = \text{rank}(A)$) measures how much the matrix compresses.
 - The condition number $\kappa(A) = \sigma_1 / \sigma_r$ measures distortion: small values mean nearly spherical stretching, large values mean extreme elongation.
-
-#### Everyday Analogies
-
-- Elastic band: Stretching a circular band into an ellipse, with major and minor axes as singular values.
-- Maps: A globe projected onto flat paper distorts distances differently along latitude and longitude-like singular values stretching some directions more than others.
-- Clothing: Pulling fabric in one direction stretches it more along that axis while leaving other directions less affected.
 
 #### Applications of the Geometry
 
@@ -10789,12 +10296,6 @@ So the geometry of SVD is fully encoded in eigen-analysis of $A^T A$ and $AA^T$.
 - Singular values tell us how much stretching occurs.
 
 Thus, SVD is essentially eigen-decomposition in disguise-but applied to the right symmetric companions.
-
-#### Everyday Analogies
-
-- Echo in a room: Eigen-decomposition studies how vibrations behave within the room's geometry. SVD studies both the input (sound waves) and output (what you hear) by linking them with matching directions.
-- Teamwork analogy: Eigen-decomposition tells you about the strengths of a team internally. SVD tells you how those strengths show up when tasks are actually performed.
-- Projection screens: Eigen-decomposition shows the internal stability of the projector lens; SVD shows how the input image translates into a stretched or compressed projection on the wall.
 
 #### Applications of the Connection
 
@@ -11016,12 +10517,6 @@ Imagine we measure height and weight of 1000 people. Plotting them shows a stron
 - PCA rotates the coordinate system so that axes align with directions of greatest variance.
 - Projecting onto the top $k$ components flattens the data into a lower-dimensional space, like flattening a tilted pancake onto its broadest plane.
 
-#### Everyday Analogies
-
-- Photography: PCA is like adjusting the angle of a camera to capture the most important part of a scene in one shot.
-- Summarizing a book: Instead of every page, you keep only the main themes.
-- Music: A symphony can be broken into a few dominant melodies; the rest are variations.
-
 #### Applications
 
 1. Data Compression: Reduce storage by keeping only leading components (e.g., compressing images).
@@ -11165,12 +10660,6 @@ choosing the solution with minimum norm.
 
 So $A^+$ embodies the principle of "best possible inverse" under the circumstances.
 
-#### Everyday Analogies
-
-- GPS triangulation: If multiple satellites give inconsistent measurements, the pseudoinverse provides the location that minimizes total error.
-- Fitting clothes: If a shirt doesn't fit perfectly, you pick the size that is closest overall; that's least squares in action.
-- Balancing a scale: When too many constraints pull in different directions, the pseudoinverse finds the compromise that balances them best.
-
 #### Applications
 
 1. Least-Squares Regression: Solving $\min_x \|Ax - b\|^2$ via $A^+$.
@@ -11279,12 +10768,6 @@ A matrix transforms a unit sphere into an ellipse.
 - The ratio $\sigma_{\max} / \sigma_{\min}$ shows how stretched the transformation is.
 
 If the ellipse is nearly flat, directions aligned with the short axis almost vanish, and recovering them is highly unstable.
-
-#### Everyday Analogies
-
-- Whispering in a noisy room: If the signal is much weaker than the background noise, any message is drowned out. That's an ill-conditioned system.
-- Balancing a broomstick on your finger: Small wobbles cause big movements-sensitive, unstable, ill-conditioned.
-- Maps: A distorted map stretches some regions (well-measured) and squashes others (poorly represented). That's condition number in geometry.
 
 #### Why Conditioning Matters in Computation
 
@@ -11435,19 +10918,6 @@ Here, different norms coincide, but generally they highlight different aspects o
 
 Each is a lens, giving a different perspective.
 
-#### Everyday Analogies
-
-- Car performance:
-
-  - Top speed = spectral norm (max stretch).
-  - Average fuel usage = Frobenius norm (overall energy).
-  - Total mileage cost = nuclear norm (total contribution).
-- Team output:
-
-  - Strongest player = spectral norm.
-  - Combined effort = Frobenius norm.
-  - Collective capacity = nuclear norm.
-
 #### Applications
 
 1. Numerical Stability: Condition number $\kappa(A) = \sigma_{\max}/\sigma_{\min}$ uses the spectral norm.
@@ -11544,12 +11014,6 @@ This explains why ridge regression stabilizes solutions: it damps noise-amplifyi
 - The unregularized problem fits $b$ exactly in the column space of $A$.
 - Regularization tilts the solution toward the origin, shrinking coefficients.
 - Geometrically, the feasible region (ellipsoid from $Ax$) intersects with a ball constraint from $\|x\|_2$. The solution is where these two shapes balance.
-
-#### Everyday Analogies
-
-- Steering on ice: Without regularization, the car responds wildly to tiny wheel turns. With regularization, steering is damped, keeping control.
-- Balancing investments: Purely chasing returns (fit) leads to fragile portfolios. Regularization is like risk management, preferring stable outcomes.
-- Tuning a guitar: Without damping, strings resonate uncontrollably. Adding a damper produces cleaner, controlled sound.
 
 #### Extensions
 
@@ -11663,12 +11127,6 @@ Thus, RRQR "reveals" effective rank without fully computing SVD.
 2. Diagonal of R in RRQR: Monitors independence of columns.
 3. Singular Values in SVD: Most reliable indicator, but expensive.
 4. Determinants/Minors: Useful in theory, unstable in practice.
-
-#### Everyday Analogies
-
-- Team redundancy: If two players always move together, the team has fewer independent strategies. RRQR identifies the most independent players first.
-- Cooking recipes: If one recipe is just a slight variation of another, your cookbook effectively has fewer distinct dishes. Numerical rank captures this redundancy.
-- Music notes: Different instruments may play, but if they harmonize in sync, the number of independent melodies is smaller than the number of instruments.
 
 #### Applications
 
@@ -11815,12 +11273,6 @@ Every step is linear algebra, and the final picture is the result of multiplying
 
 Robotic arms use similar pipelines: each joint contributes a rotation or translation, encoded as a matrix. By multiplying them, we get the forward kinematics-the position and orientation of the hand given the joint angles.
 
-#### Everyday Analogies
-
-- Photography: The model transform arranges the objects, the view transform positions the camera, and the projection is the lens that flattens the scene.
-- Stage performance: Actors move on stage (translations), rotate to face the audience (rotations), and lighting projects their shadows onto a backdrop (projection).
-- Navigation: GPS coordinates are transformed into map coordinates, then into screen pixels-another geometry pipeline.
-
 #### Why It Matters
 
 Geometry pipelines unify graphics, robotics, and vision. They show how linear algebra powers the everyday visuals of video games, animations, simulations, and even self-driving cars. Without the consistency of matrix multiplication, the complexity of managing transformations would be unmanageable.
@@ -11903,12 +11355,6 @@ Here $R(\theta_i)$ are rotation matrices and $T(l_i)$ are translations along the
 2. Speed: Both fields demand real-time computation-60 frames per second for graphics, millisecond reaction times for robots.
 3. Hierarchy: Objects in graphics may be nested (a car's wheel rotates relative to the car), just like robot joints. Homogeneous transforms naturally handle these hierarchies.
 4. Inverse Problems: Graphics uses inverse transforms for camera movement; robotics uses them for inverse kinematics (finding joint angles to reach a point).
-
-#### Everyday Analogies
-
-- Video games: Moving your character or rotating the camera is just matrix math running millions of times per second.
-- Animation rigs: A character's skeleton is a robotic arm in disguise, joints moving in sequence.
-- Augmented reality: Overlaying digital objects onto real-world camera images requires the same transforms as robotics calibration.
 
 #### Why Homogeneous Tricks Are Powerful
 
@@ -12037,13 +11483,6 @@ $$
 
 - Eigenvalues of $L$: $0, 3, 3$.
 - The single zero eigenvalue confirms the graph is connected.
-
-#### Everyday Analogies
-
-- Social networks: Adjacency matrices track friendships; Laplacians reveal communities.
-- Transportation: Nodes are cities, edges are roads; eigenvalues measure robustness of connectivity.
-- Electric circuits: Laplacians act like conductance matrices, governing current flow.
-- Internet links: Adjacency captures hyperlinks; spectral analysis finds central hubs.
 
 #### Applications
 
