@@ -1,18 +1,19 @@
-# The Little Book of Artificial Intelligence
+# The Little Book of Linear Algebra
 
-This is _The Little Book of Linear Algebra_ 
-
-```bash
-
-```
+A concise, beginner-friendly introduction to the core ideas of linear algebra.
 
 ## Formats
 
 - [Download PDF](releases/book.pdf) - print-ready
 - [Download EPUB](releases/book.epub) - e-reader friendly
 - [View LaTeX](releases/book.tex) - `.tex` source
-- [Read on GitHub Pages](https://little-book-of.github.io/llm.c/) - online
-  website
+- [Read on GitHub Pages](https://little-book-of.github.io/linear-algebra/) - online website
+
+For old version (v1), here is the link
+
+- [Download PDF (v1)](archived/v1/book.pdf) - print-ready
+- [Download EPUB (v1)](archived/v1/book.epub) - e-reader friendly
+- [View LaTeX (v1)](archived/v1/book.tex) - `.tex` source
 
 ## Build it yourself (Quarto)
 
@@ -38,60 +39,6 @@ quarto render --to latex    # docs/book-latex/book.tex
 ```
 
 # The Book
-
-### Overtune
-*A soft opening, an invitation into the world of vectors and spaces, where each step begins a journey.*
-
-**1. Geometry’s Dawn**
-```
-Lines cross in silence,
-planes awaken with order,
-numbers sketch the world.
-```
-
-**2. Invitation to Learn**
-```
-Steps begin with dots,
-arrows stretch into new paths,
-the journey unfolds.
-```
-
-**3. Light and Shadow**
-```
-Shadows fall on grids,
-hidden shapes emerge in form,
-clarity takes root.
-```
-
-**4. The Seed of Structure**
-```
-One point, then a line,
-spaces blossom out from rules,
-infinity grows.
-```
-
-**5. Whisper of Algebra**
-```
-Silent rules of space,
-woven threads of thought align,
-order sings through time.
-```
-
-**6. Beginner’s Welcome**
-```
-Empty page awaits,
-axes cross like guiding hands,
-first steps find their place.
-```
-
-**7. Eternal Path**
-```
-From vectors to stars,
-equations trace destiny,
-patterns guide our sight.
-```
-
-\newpage
 
 ## Chapter 1. Vectors, scalars, and geometry 
 
@@ -12924,67 +12871,6 @@ Linear algebra is both a tool and a way of thinking. You now have enough to stan
 From lines to the stars,
 each problem bends, transforms, grows—
 paths extend ahead.
-```
-
-\newpage
-
-### Finale
-*A quiet closing, where lessons settle and the music of algebra carries on beyond the final page.*
-
-**1. Quiet Reflection**
-```
-Lessons intertwining,
-the book rests, but vectors stretch—
-silence holds their song.
-```
-
-**2. Infinite Journey**
-```
-One map now complete,
-yet beyond each line and plane
-new horizons call.
-```
-
-**3. Structure and Growth**
-```
-Roots beneath the ground,
-branches weaving endless skies,
-algebra takes flight.
-```
-
-**4. Light After Study**
-```
-Numbers fade to light,
-patterns linger in the mind,
-paths remain open.
-```
-
-**5. Eternal Motion**
-```
-Stillness finds its place,
-transformations carry on,
-movement without end.
-```
-
-**6. Gratitude and Closure**
-```
-Steps of thought complete,
-spaces carved with gentle care,
-thank you, wandering mind.
-```
-
-**7. Future Echo**
-```
-From shadows to form,
-each question births new echoes—
-the journey goes on.
-```
-
-**8. Horizon Beyond**
-```
-The book closes here,
-yet the lines refuse to end,
-they stretch toward the stars.
 ```
 
 ## Contributing
