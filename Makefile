@@ -1,27 +1,38 @@
-# Makefile for Quarto book builds
+# Makefile for Quarto multi-language book builds
 #
 # Usage:
 #   make help
 #   make release
-#   make preview
-#   make clean
+#   make translate
+#   make render-all
 
-QUARTO      = quarto
-RELEASE_DIR = releases
-BUILD_DIR   = docs
+QUARTO       = quarto
+PYTHON       = python3
+RELEASE_DIR  = releases
+BUILD_DIR    = docs
+ZH_PROJECT   = books/zh-CN
 
-.PHONY: all preview render release clean help
+.PHONY: all preview render render-zh render-all translate release clean help
 
 # Default target
 all: release ## Default: build and copy distributables
 
-preview: ## Start Quarto live preview
+preview: ## Start Quarto live preview for English book
 	$(QUARTO) preview
 
-render: ## Render all formats with Quarto (HTML/PDF/EPUB/TeX as configured)
+render: ## Render English book/site (HTML/PDF/EPUB/TeX as configured)
 	$(QUARTO) render
 
-release: clean render ## Clean, render, and copy distributables to releases/
+render-zh: ## Render Chinese website (HTML)
+	$(QUARTO) render $(ZH_PROJECT)
+
+render-all: render render-zh ## Render English + Chinese sites
+
+translate: ## Translate source book to Chinese under books/zh-CN/
+	$(PYTHON) -m pip install -r scripts/requirements.txt
+	$(PYTHON) scripts/translate_to_zh.py
+
+release: clean render-all ## Clean, render both sites, and copy distributables to releases/
 	mkdir -p $(RELEASE_DIR)
 	cp -f $(BUILD_DIR)/book-latex/book.tex $(RELEASE_DIR)/
 	cp -f $(BUILD_DIR)/book.epub             $(RELEASE_DIR)/
