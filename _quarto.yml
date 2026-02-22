@@ -20,6 +20,8 @@ website:
     search: true
     right:
       - text: *book_subtitle 
+      - text: 中文
+        href: books/zh-CN/index.html
       - icon: github
         href: https://github.com/little-book-of/linear-algebra
         aria-label: GitHub
