@@ -22,6 +22,8 @@ website:
       - text: *book_subtitle 
       - text: 中文
         href: books/zh-CN/index.html
+      - text: Tiếng Việt
+        href: books/vi/index.html
       - icon: github
         href: https://github.com/little-book-of/linear-algebra
         aria-label: GitHub
