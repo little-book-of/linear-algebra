@@ -11,8 +11,9 @@ PYTHON       = python3
 RELEASE_DIR  = releases
 BUILD_DIR    = docs
 ZH_PROJECT   = books/zh-CN
+VI_PROJECT   = books/vi
 
-.PHONY: all preview render render-zh render-all translate release clean help
+.PHONY: all preview render render-zh render-vi render-all translate translate-vi release clean help
 
 # Default target
 all: release ## Default: build and copy distributables
@@ -26,11 +27,18 @@ render: ## Render English book/site (HTML/PDF/EPUB/TeX as configured)
 render-zh: ## Render Chinese website (HTML)
 	$(QUARTO) render $(ZH_PROJECT)
 
-render-all: render render-zh ## Render English + Chinese sites
+render-vi: ## Render Vietnamese website (HTML)
+	$(QUARTO) render $(VI_PROJECT)
+
+render-all: render render-zh render-vi ## Render English + Chinese + Vietnamese sites
 
 translate: ## Translate source book to Chinese under books/zh-CN/
 	$(PYTHON) -m pip install -r scripts/requirements.txt
 	$(PYTHON) scripts/translate_to_zh.py
+
+translate-vi: ## Translate source book to Vietnamese under books/vi/
+	$(PYTHON) -m pip install -r scripts/requirements.txt
+	$(PYTHON) scripts/translate_to_vi.py
 
 release: clean render-all ## Clean, render both sites, and copy distributables to releases/
 	mkdir -p $(RELEASE_DIR)
