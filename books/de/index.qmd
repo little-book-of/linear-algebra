@@ -1,0 +1,127 @@
+# Inhalt 
+
+#### Kapitel 1. Vektoren, Skalare und Geometrie 
+
+1. Skalare, Vektoren und Koordinatensysteme (was sie sind, warum uns das interessiert)
+2. Vektornotation, Komponenten und Pfeile (Vektoren lesen und schreiben)
+3. Vektoraddition und Skalarmultiplikation (die beiden Grundschritte)
+4. Linearkombinationen und Spanne (Aufbau neuer Vektoren aus alten)
+5. Länge (Norm) und Distanz (wie groß und wie weit)
+6. Skalarprodukt (algebraische und geometrische Ansichten)
+7. Winkel zwischen Vektoren und Kosinus (Messung der Ausrichtung)
+8. Projektionen und Zerlegungen (Aufspaltung entlang einer Richtung)
+9. Cauchy-Schwarz und Dreiecksungleichungen (zwei grundlegende Schranken)
+10. Orthonormale Mengen in ℝ²/ℝ³ (schöne Grundlagen, die Sie bereits kennen)
+
+#### Kapitel 2. Matrizen und Grundoperationen 
+
+11. Matrizen als Tabellen und als Maschinen (zwei mentale Modelle)
+12. Matrixformen, Indizierung und Blockansichten (Struktur sehen)
+13. Matrixaddition und Skalarmultiplikation (komponentenweise Regeln)
+14. Matrix-Vektor-Produkt (lineare Spaltenkombinationen)
+15. Matrix-Matrix-Produkt (Zusammensetzung linearer Schritte)
+16. Identität, Umkehrung und Transponierung (drei besondere Freunde)
+17. Symmetrische, diagonale, dreieckige und Permutationsmatrizen (spezielle Familien)
+18. Spur- und grundlegende Matrixeigenschaften (schnelle Invarianten)
+19. Affine Transformationen und homogene Koordinaten (einschließlich Übersetzungen)
+20. Rechnen mit Matrizen (Kostenzählungen und einfache Beschleunigungen)
+
+#### Kapitel 3. Lineare Systeme und Eliminierung
+
+21. Von Gleichungen zu Matrizen (Augmentierung und Kodierung)
+22. Zeilenoperationen (rechtliche Schritte, die Lösungen behalten)
+23. Reihenstaffel- und reduzierte Reihenstaffelformen (Zielformen)
+24. Pivots, freie Variablen und führende Variablen (Leselösungen)
+25. Lösung konsistenter Systeme (einzigartige vs. unendliche Lösungen)
+26. Inkonsistenzen erkennen (wenn keine Lösung vorhanden ist)27. Gaußsche Eliminierung von Hand (ein diszipliniertes Verfahren)
+28. Rücksubstitution und Lösungssätze (sauber abschließen)
+29. Rang und seine erste Bedeutung (Pivots als Information)
+30. LU-Faktorisierung (Elimination erfasst als L und U)
+
+#### Kapitel 4. Vektorräume und Unterräume 
+
+31. Axiome von Vektorräumen (was „Raum“ wirklich bedeutet)
+32. Unterräume, Spaltenraum und Nullraum (wo Lösungen leben)
+33. Spanne und Erzeugungsmengen (Abdeckung eines Raumes)
+34. Lineare Unabhängigkeit und Abhängigkeit (keine Redundanz vs. Redundanz)
+35. Basis und Koordinaten (jeden Vektor eindeutig benennen)
+36. Dimension (wie viele Richtungen)
+37. Rang-Nulligkeits-Theorem (Dimensionen, die sich addieren)
+38. Koordinaten relativ zu einer Basis (Änderung des „Lineals“)
+39. Basiswechselmatrizen (Bewegung zwischen Koordinatensystemen)
+40. Affine Unterräume (Linien und Ebenen nicht durch den Ursprung)
+
+#### Kapitel 5. Lineare Transformationen und Struktur 
+
+41. Lineare Transformationen (Erhaltung von Geraden und Summen)
+42. Matrixdarstellung einer linearen Karte (Auswahl einer Basis)
+43. Kernel und Image (Eingaben, die verschwinden; Ausgaben, die wir erreichen können)
+44. Invertibilität und Isomorphismen (vollkommen reversible Karten)
+45. Zusammensetzung, Kräfte und Iteration (immer wieder tun)
+46. Ähnlichkeit und Konjugation (gleiche Aktion, unterschiedliche Basis)
+47. Projektionen und Reflexionen (idempotente und involutive Karten)
+48. Rotationen und Scherung (geometrische Intuition)
+49. Rang und Betreiberstandpunkt (Rang über die Eliminierung hinaus)
+50. Blockmatrizen und Blockkarten (Teile-und-herrsche-Struktur)
+
+#### Kapitel 6. Determinanten und Volumen 
+
+51. Flächen, Volumina und vorzeichenbehaftete Skalierungsfaktoren (geometrischer Einstiegspunkt)
+52. Determinante über lineare Regeln (Multilinearität, Vorzeichen, Normalisierung)
+53. Determinanten- und Zeilenoperationen (wie sich jede Bewegung ändert)54. Dreiecksmatrizen und Diagonalprodukt (schnelle Gewinne)
+55. det(AB) = det(A)det(B) (multiplikative Magie)
+56. Invertibilität und Nulldeterminante (flaches vs. volles Volumen)
+57. Cofaktor-Erweiterung (Laplace-Methode)
+58. Permutationen und Vorzeichen (der kombinatorische Kern)
+59. Cramers Regel (Lösung mit Determinanten und wann man sie nicht verwendet)
+60. Determinanten in der Praxis berechnen (LU verwenden, Geistesstabilität)
+
+#### Kapitel 7. Eigenwerte, Eigenvektoren und Dynamik 
+
+61. Eigenwerte und Eigenvektoren (Richtungen, die bestehen bleiben)
+62. Charakteristisches Polynom (woher die Eigenwerte kommen)
+63. Algebraische vs. geometrische Multiplizität (wie viele und wie unabhängig)
+64. Diagonalisierung (wenn eine Matrix einfach wird)
+65. Potenzen einer Matrix (Langzeitverhalten über Eigenwerte)
+66. Reale vs. komplexe Spektren (Rotationen und Oszillationen)
+67. Defekte Matrizen und ein Blick auf die Jordan-Form (wenn die Diagonalisierung fehlschlägt)
+68. Stabilität und Spektralradius (wachsen, abklingen oder oszillieren)
+69. Markov-Ketten und stationäre Zustände (Wahrscheinlichkeiten als lineare Algebra)
+70. Lineare Differentialsysteme (Lösungen durch Eigenzerlegung)
+
+#### Kapitel 8. Orthogonalität, kleinste Quadrate und QR
+
+71. Innere Produkte jenseits des Skalarprodukts (benutzerdefinierte Winkelvorstellungen)
+72. Orthogonalität und orthonormale Basen (senkrechte Potenz)
+73. Gram-Schmidt-Prozess (Konstruktion orthonormaler Basen)
+74. Orthogonale Projektionen auf Unterräume (Nestpunktprinzip)
+75. Probleme der kleinsten Quadrate (passen, wenn eine genaue Lösung nicht möglich ist)
+76. Normalgleichungen und Geometrie von Residuen (warum es funktioniert)
+77. QR-Faktorisierung (stabile kleinste Quadrate über Orthogonalität)
+78. Orthogonale Matrizen (längenerhaltende Transformationen)
+79. Fourier-Sicht (Erweiterung in orthogonalen Wellen)
+80. Polynomiale und multifunktionelle kleinste Quadrate (flexiblere Anpassung)#### Kapitel 9. SVD, PCA und Konditionierung
+
+81. Singuläre Werte und SVD (universelle Faktorisierung)
+82. Geometrie von SVD (Rotationen + Dehnung)
+83. Beziehung zu Eigenzerlegungen (ATA und AAT)
+84. Low-Rank-Näherung (beste kleine Modelle)
+85. Hauptkomponentenanalyse (Varianz und Richtungen)
+86. Pseudoinverse (Moore-Penrose) und Lösung schlecht gestellter Systeme
+87. Konditionierung und Sensibilität (wie sich Fehler verstärken)
+88. Matrixnormen und Singularwerte (Größe richtig messen)
+89. Regularisierung (Ridge/Tikhonov zur Zähmung der Instabilität)
+90. Rangaufdeckender QR und praktische Diagnostik (was Rang wirklich ist)
+
+#### Kapitel 10. Anwendungen und Berechnung
+
+91. 2D/3D-Geometrie-Pipelines (Kameras, Rotationen und Transformationen)
+92. Computergrafik und Robotik (homogene Tricks in Aktion)
+93. Graphen, Adjazenz und Laplace-Operatoren (Netzwerke über Matrizen)
+94. Datenvorverarbeitung als lineare Operationen (Zentrierung, Aufhellung, Skalierung)
+95. Lineare Regression und Klassifizierung (vom Modell zur Matrix)
+96. PCA in der Praxis (Dimensionalitätsreduktionsworkflow)
+97. Empfehlungssysteme und Low-Rank-Modelle (fehlende Einträge ergänzen)
+98. PageRank und Random Walks (Ranking mit Eigenvektoren)
+99. Grundlagen der numerischen linearen Algebra (Gleitkomma, BLAS/LAPACK)
+100. Schlussstein-Problemstellungen und nächste Schritte (ein Fahrplan zur Beherrschung)
