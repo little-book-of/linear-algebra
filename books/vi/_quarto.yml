@@ -13,8 +13,6 @@ book:
     - book.qmd
     - lab.qmd
 
-website:
-  title: "Cuốn Sách Nhỏ về Đại Số Tuyến Tính"
   page-navigation: true
   navbar:
     search: true

@@ -13,8 +13,6 @@ book:
     - book.qmd
     - lab.qmd
 
-website:
-  title: "线性代数小书"
   page-navigation: true
   navbar:
     search: true
