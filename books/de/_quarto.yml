@@ -1,10 +1,10 @@
 project:
   type: book
-  output-dir: ../../docs/zh-CN
+  output-dir: ../../docs/de
 
 book:
-  title: "线性代数小书"
-  subtitle: "版本 0.3.0"
+  title: "Das kleine Buch der linearen Algebra"
+  subtitle: "Version 0.3.0"
   author: "Duc-Tam Nguyen"
   date: "2025-09-26"
   output-file: book
@@ -14,7 +14,7 @@ book:
     - lab.qmd
 
 website:
-  title: "线性代数小书"
+  title: "Das kleine Buch der linearen Algebra"
   page-navigation: true
   navbar:
     search: true
@@ -33,7 +33,6 @@ website:
         href: ../ja/index.html
       - text: "한국어"
         href: ../ko/index.html
-
       - icon: github
         href: https://github.com/little-book-of/linear-algebra
         aria-label: GitHub

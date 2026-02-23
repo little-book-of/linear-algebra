@@ -15,8 +15,9 @@ VI_PROJECT   = books/vi
 JA_PROJECT   = books/ja
 KO_PROJECT   = books/ko
 ES_PROJECT   = books/es
+DE_PROJECT   = books/de
 
-.PHONY: all preview render render-zh render-vi render-ja render-ko render-es render-all translate translate-vi translate-ja translate-ko translate-es release clean help
+.PHONY: all preview render render-zh render-vi render-ja render-ko render-es render-de render-all translate translate-vi translate-ja translate-ko translate-es translate-de release clean help
 
 # Default target
 all: release ## Default: build and copy distributables
@@ -42,7 +43,10 @@ render-ko: ## Render Korean website (HTML)
 render-es: ## Render Spanish website (HTML)
 	$(QUARTO) render $(ES_PROJECT)
 
-render-all: render render-zh render-vi render-ja render-ko render-es ## Render English + Chinese + Vietnamese + Japanese + Korean + Spanish sites
+render-de: ## Render German website (HTML)
+	$(QUARTO) render $(DE_PROJECT)
+
+render-all: render render-zh render-vi render-ja render-ko render-es render-de ## Render English + Chinese + Vietnamese + Japanese + Korean + Spanish + German sites
 
 translate: ## Translate source book to Chinese under books/zh-CN/
 	$(PYTHON) -m pip install -r scripts/requirements.txt
@@ -63,6 +67,10 @@ translate-ko: ## Translate source book to Korean under books/ko/
 translate-es: ## Translate source book to Spanish under books/es/
 	$(PYTHON) -m pip install -r scripts/requirements.txt
 	$(PYTHON) scripts/translate_to_es.py
+
+translate-de: ## Translate source book to German under books/de/
+	$(PYTHON) -m pip install -r scripts/requirements.txt
+	$(PYTHON) scripts/translate_to_de.py
 
 release: clean render-all ## Clean, render both sites, and copy distributables to releases/
 	mkdir -p $(RELEASE_DIR)

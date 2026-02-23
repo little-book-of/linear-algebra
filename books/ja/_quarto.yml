@@ -21,6 +21,8 @@ website:
     right:
       - text: "English"
         href: ../../index.html
+      - text: "Deutsch"
+        href: ../de/index.html
       - text: "Español"
         href: ../es/index.html
       - text: "中文"
