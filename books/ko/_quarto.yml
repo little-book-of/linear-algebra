@@ -1,10 +1,10 @@
 project:
   type: book
-  output-dir: ../../docs/ja
+  output-dir: ../../docs/ko
 
 book:
-  title: "線形代数の小さな本"
-  subtitle: "バージョン 0.3.0"
+  title: "선형대수학 작은 책"
+  subtitle: "버전 0.3.0"
   author: "Duc-Tam Nguyen"
   date: "2025-09-26"
   output-file: book
@@ -14,7 +14,7 @@ book:
     - lab.qmd
 
 website:
-  title: "線形代数の小さな本"
+  title: "선형대수학 작은 책"
   page-navigation: true
   navbar:
     search: true
@@ -25,8 +25,8 @@ website:
         href: ../zh-CN/index.html
       - text: "Tiếng Việt"
         href: ../vi/index.html
-      - text: "한국어"
-        href: ../ko/index.html
+      - text: "日本語"
+        href: ../ja/index.html
       - icon: github
         href: https://github.com/little-book-of/linear-algebra
         aria-label: GitHub

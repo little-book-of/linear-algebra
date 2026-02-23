@@ -13,8 +13,9 @@ BUILD_DIR    = docs
 ZH_PROJECT   = books/zh-CN
 VI_PROJECT   = books/vi
 JA_PROJECT   = books/ja
+KO_PROJECT   = books/ko
 
-.PHONY: all preview render render-zh render-vi render-ja render-all translate translate-vi translate-ja release clean help
+.PHONY: all preview render render-zh render-vi render-ja render-ko render-all translate translate-vi translate-ja translate-ko release clean help
 
 # Default target
 all: release ## Default: build and copy distributables
@@ -34,7 +35,10 @@ render-vi: ## Render Vietnamese website (HTML)
 render-ja: ## Render Japanese website (HTML)
 	$(QUARTO) render $(JA_PROJECT)
 
-render-all: render render-zh render-vi render-ja ## Render English + Chinese + Vietnamese + Japanese sites
+render-ko: ## Render Korean website (HTML)
+	$(QUARTO) render $(KO_PROJECT)
+
+render-all: render render-zh render-vi render-ja render-ko ## Render English + Chinese + Vietnamese + Japanese + Korean sites
 
 translate: ## Translate source book to Chinese under books/zh-CN/
 	$(PYTHON) -m pip install -r scripts/requirements.txt
@@ -47,6 +51,10 @@ translate-vi: ## Translate source book to Vietnamese under books/vi/
 translate-ja: ## Translate source book to Japanese under books/ja/
 	$(PYTHON) -m pip install -r scripts/requirements.txt
 	$(PYTHON) scripts/translate_to_ja.py
+
+translate-ko: ## Translate source book to Korean under books/ko/
+	$(PYTHON) -m pip install -r scripts/requirements.txt
+	$(PYTHON) scripts/translate_to_ko.py
 
 release: clean render-all ## Clean, render both sites, and copy distributables to releases/
 	mkdir -p $(RELEASE_DIR)

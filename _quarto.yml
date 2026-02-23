@@ -26,6 +26,8 @@ website:
         href: books/vi/index.html
       - text: 日本語
         href: books/ja/index.html
+      - text: 한국어
+        href: books/ko/index.html
       - icon: github
         href: https://github.com/little-book-of/linear-algebra
         aria-label: GitHub
