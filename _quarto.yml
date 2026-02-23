@@ -13,8 +13,6 @@ book:
     - books/en-US/book.qmd
     - books/en-US/lab.qmd # complicated setup local env, will write tutorials later.
 
-website:
-  title: *book_title
   page-navigation: true
   navbar:
     search: true

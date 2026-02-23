@@ -13,8 +13,6 @@ book:
     - book.qmd
     - lab.qmd
 
-website:
-  title: "線形代数の小さな本"
   page-navigation: true
   navbar:
     search: true

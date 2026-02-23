@@ -13,8 +13,6 @@ book:
     - book.qmd
     - lab.qmd
 
-website:
-  title: "El pequeño libro de álgebra lineal"
   page-navigation: true
   navbar:
     search: true
