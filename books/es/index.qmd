@@ -1,0 +1,127 @@
+# Contenido 
+
+#### Capítulo 1. Vectores, Escalares y Geometría 
+
+1. Escalares, vectores y sistemas de coordenadas (qué son, por qué nos importan)
+2. Notación vectorial, componentes y flechas (lectura y escritura de vectores)
+3. Suma de vectores y multiplicación escalar (los dos movimientos básicos)
+4. Combinaciones lineales y tramos (construcción de nuevos vectores a partir de los antiguos)
+5. Longitud (norma) y distancia (qué tan grande y qué tan lejos)
+6. Producto escalar (vistas algebraica y geométrica)
+7. Ángulos entre vectores y coseno (medición de alineación)
+8. Proyecciones y descomposiciones (división según una dirección)
+9. Cauchy-Schwarz y las desigualdades triangulares (dos cotas fundamentales)
+10. Conjuntos ortonormales en ℝ²/ℝ³ (bonitas bases que ya conoces)
+
+#### Capítulo 2. Matrices y operaciones básicas 
+
+11. Matrices como tablas y como máquinas (dos modelos mentales)
+12. Formas matriciales, indexación y vistas de bloques (ver estructura)
+13. Suma de matrices y multiplicación escalar (reglas de componentes)
+14. Producto matriz-vectorial (combinaciones lineales de columnas)
+15. Producto matriz-matriz (composición de pasos lineales)
+16. Identidad, inversa y transposición (tres amigos especiales)
+17. Matrices simétricas, diagonales, triangulares y de permutación (familias especiales)
+18. Propiedades de traza y matrices básicas (invariantes rápidas)
+19. Transformadas afines y coordenadas homogéneas (traducciones incluidas)
+20. Computación con matrices (recuento de costos y aceleraciones simples)
+
+#### Capítulo 3. Sistemas lineales y eliminación.
+
+21. De ecuaciones a matrices (aumentando y codificando)
+22. Operaciones de fila (movimientos legales que mantienen soluciones)
+23. Formas escalonadas y escalonadas reducidas (formas objetivo)
+24. Pivotes, variables libres y principales (soluciones de lectura)
+25. Resolver sistemas consistentes (soluciones únicas versus infinitas)
+26. Detectar inconsistencia (cuando no existe solución)27. Eliminación gaussiana manual (un procedimiento disciplinado)
+28. Juegos de sustitución y solución de espalda (terminar limpiamente)
+29. Rango y su primer significado (pivotes como información)
+30. Factorización LU (eliminación capturada como L y U)
+
+#### Capítulo 4. Espacios y subespacios vectoriales 
+
+31. Axiomas de espacios vectoriales (lo que realmente significa “espacio”)
+32. Subespacios, espacio de columnas y espacio nulo (donde residen las soluciones)
+33. Span y grupos electrógenos (cobertura de un espacio)
+34. Independencia y dependencia lineal (sin redundancia versus redundancia)
+35. Bases y coordenadas (nombrando cada vector de forma única)
+36. Dimensión (cuántas direcciones)
+37. Teorema de rango-nulidad (dimensiones que se suman)
+38. Coordenadas relativas a una base (cambiando la “regla”)
+39. Matrices de cambio de base (moviéndose entre sistemas de coordenadas)
+40. Subespacios afines (líneas y planos que no pasan por el origen)
+
+#### Capítulo 5. Transformaciones lineales y estructura. 
+
+41. Transformaciones lineales (preservando líneas y sumas)
+42. Representación matricial de un mapa lineal (elección de una base)
+43. Kernel e imagen (entradas que se desvanecen; salidas que podemos alcanzar)
+44. Invertibilidad e isomorfismos (mapas perfectamente reversibles)
+45. Composición, potencias e iteración (hacerlo una y otra vez)
+46. Similitud y conjugación (misma acción, distinta base)
+47. Proyecciones y reflexiones (mapas idempotentes e involutivos)
+48. Rotaciones y cizalla (intuición geométrica)
+49. Punto de vista del rango y del operador (rango más allá de la eliminación)
+50. Matrices de bloques y mapas de bloques (estructura de divide y vencerás)
+
+#### Capítulo 6. Determinantes y Volumen 
+
+51. Áreas, volúmenes y factores de escala con signo (punto de entrada geométrico)
+52. Determinante mediante reglas lineales (multilinealidad, signo, normalización)
+53. Operaciones determinantes y de fila (cómo cambia cada movimiento det)54. Matrices triangulares y producto de diagonales (victorias rápidas)
+55. det(AB) = det(A)det(B) (magia multiplicativa)
+56. Invertibilidad y determinante cero (volumen plano versus volumen total)
+57. Expansión de cofactores (método de Laplace)
+58. Permutaciones y signo (el núcleo combinatorio)
+59. Regla de Cramer (resolver con determinantes y cuándo no usarla)
+60. Determinantes informáticos en la práctica (use LU, estabilidad mental)
+
+#### Capítulo 7. Valores propios, vectores propios y dinámica 
+
+61. Valores propios y vectores propios (direcciones que permanecen fijas)
+62. Polinomio característico (de donde provienen los valores propios)
+63. Multiplicidad algebraica versus multiplicidad geométrica (cuántas y cuán independientes)
+64. Diagonalización (cuando una matriz se vuelve simple)
+65. Potencias de una matriz (comportamiento a largo plazo mediante valores propios)
+66. Espectros reales versus complejos (rotaciones y oscilaciones)
+67. Matrices defectuosas y un vistazo a la forma de Jordan (cuando falla la diagonalización)
+68. Estabilidad y radio espectral (crecer, decaer u oscilar)
+69. Cadenas de Markov y estados estacionarios (probabilidades como álgebra lineal)
+70. Sistemas diferenciales lineales (soluciones mediante descomposición propia)
+
+#### Capítulo 8. Ortogonalidad, mínimos cuadrados y QR
+
+71. Productos internos más allá del producto escalar (nociones personalizadas de ángulo)
+72. Ortogonalidad y bases ortonormales (potencia perpendicular)
+73. Proceso de Gram-Schmidt (construcción de bases ortonormales)
+74. Proyecciones ortogonales sobre subespacios (principio del punto más cercano)
+75. Problemas de mínimos cuadrados (ajustan cuando la solución exacta es imposible)
+76. Ecuaciones normales y geometría de residuos (por qué funciona)
+77. Factorización QR (mínimos cuadrados estables mediante ortogonalidad)
+78. Matrices ortogonales (transformaciones que preservan la longitud)
+79. Mirador de Fourier (expandiéndose en ondas ortogonales)
+80. Mínimos cuadrados polinomiales y multifunciones (ajuste más flexible)#### Capítulo 9. SVD, PCA y acondicionamiento
+
+81. Valores singulares y SVD (factorización universal)
+82. Geometría de SVD (rotaciones + estiramientos)
+83. Relación con las descomposiciones propias (ATA y AAT)
+84. Aproximación de rango bajo (mejores modelos pequeños)
+85. Análisis de componentes principales (varianza y direcciones)
+86. Pseudoinverso (Moore-Penrose) y resolución de sistemas mal planteados
+87. Condicionamiento y sensibilidad (cómo se amplifican los errores)
+88. Normas matriciales y valores singulares (medir el tamaño correctamente)
+89. Regularización (cresta/Tikhonov para dominar la inestabilidad)
+90. QR revelador de rangos y diagnóstico práctico (qué es realmente el rango)
+
+#### Capítulo 10. Aplicaciones y Computación
+
+91. Tuberías de geometría 2D/3D (cámaras, rotaciones y transformaciones)
+92. Infografía y robótica (trucos homogéneos en acción)
+93. Gráficos, adyacencia y laplacianos (redes vía matrices)
+94. Preprocesamiento de datos como operaciones lineales (centrado, blanqueamiento, escalado)
+95. Regresión lineal y clasificación (del modelo a la matriz)
+96. PCA en la práctica (flujo de trabajo de reducción de dimensionalidad)
+97. Sistemas de recomendación y modelos de bajo rango (llene las entradas que faltan)
+98. PageRank y paseos aleatorios (ranking con vectores propios)
+99. Conceptos básicos de álgebra lineal numérica (coma flotante, BLAS/LAPACK)
+100. Conjuntos de problemas finales y próximos pasos (una hoja de ruta hacia el dominio)
