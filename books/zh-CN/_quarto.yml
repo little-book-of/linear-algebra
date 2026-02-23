@@ -19,21 +19,22 @@ website:
   navbar:
     search: true
     right:
-      - text: "English"
-        href: ../../index.html
-      - text: "Deutsch"
-        href: ../de/index.html
-      - text: "Español"
-        href: ../es/index.html
-      - text: "中文"
-        href: ../zh-CN/index.html
-      - text: "Tiếng Việt"
-        href: ../vi/index.html
-      - text: "日本語"
-        href: ../ja/index.html
-      - text: "한국어"
-        href: ../ko/index.html
-
+      - text: Languages
+        menu:
+          - text: English
+            href: ../../index.html
+          - text: Deutsch
+            href: ../de/index.html
+          - text: Español
+            href: ../es/index.html
+          - text: 中文
+            href: ../zh-CN/index.html
+          - text: Tiếng Việt
+            href: ../vi/index.html
+          - text: 日本語
+            href: ../ja/index.html
+          - text: 한국어
+            href: ../ko/index.html
       - icon: github
         href: https://github.com/little-book-of/linear-algebra
         aria-label: GitHub

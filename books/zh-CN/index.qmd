@@ -1,3 +1,15 @@
+## Languages
+
+- [English](../../index.html)
+- [Deutsch](../de/index.html)
+- [Español](../es/index.html)
+- [中文](../zh-CN/index.html)
+- [Tiếng Việt](../vi/index.html)
+- [日本語](../ja/index.html)
+- [한국어](../ko/index.html)
+
+---
+
 ＃ 内容#### 第 1 章向量、标量和几何1. 标量、向量和坐标系（它们是什么，我们为什么关心）
 2.向量表示法、分量和箭头（读写向量）
 3.向量加法和标量乘法（两个基本动作）

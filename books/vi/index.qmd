@@ -1,3 +1,15 @@
+## Languages
+
+- [English](../../index.html)
+- [Deutsch](../de/index.html)
+- [Español](../es/index.html)
+- [中文](../zh-CN/index.html)
+- [Tiếng Việt](../vi/index.html)
+- [日本語](../ja/index.html)
+- [한국어](../ko/index.html)
+
+---
+
 # Content 
 
 #### Chapter 1. Vectors, Scalars, and Geometry 
