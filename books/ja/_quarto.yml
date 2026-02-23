@@ -14,6 +14,8 @@ book:
     - lab.qmd
 
   page-navigation: true
+
+website:
   navbar:
     search: true
     right:
