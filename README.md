@@ -10,6 +10,7 @@ A clear, hands-on guide to the geometry and structure behind vectors and matrice
 - [Download EPUB](releases/book.epub) - e-reader friendly
 - [View LaTeX](releases/book.tex) - `.tex` source
 - [Read on GitHub Pages](https://little-book-of.github.io/linear-algebra/) - online website
+- [Read in Spanish](https://little-book-of.github.io/linear-algebra/es/) - Sitio en Español
 - [Read in Chinese](https://little-book-of.github.io/linear-algebra/zh-CN/) - 中文站点
 - [Read in Japanese](https://little-book-of.github.io/linear-algebra/ja/) - 日本語サイト
 - [Read in Korean](https://little-book-of.github.io/linear-algebra/ko/) - 한국어 사이트

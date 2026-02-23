@@ -20,6 +20,8 @@ website:
     search: true
     right:
       - text: *book_subtitle 
+      - text: Español
+        href: books/es/index.html
       - text: 中文
         href: books/zh-CN/index.html
       - text: Tiếng Việt
