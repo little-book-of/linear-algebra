@@ -108,7 +108,7 @@
 72. Orthogonality and orthonormal bases (perpendicular power)
 73. Gram–Schmidt process (constructing orthonormal bases)
 74. Orthogonal projections onto subspaces (closest point principle)
-75. Least-squares problems (fit when exact solve is impossible)
+75. Least-squares problems (fitting when an exact solution is impossible)
 76. Normal equations and geometry of residuals (why it works)
 77. QR factorization (stable least squares via orthogonality)
 78. Orthogonal matrices (length-preserving transforms)
@@ -125,8 +125,8 @@
 86. Pseudoinverse (Moore–Penrose) and solving ill-posed systems
 87. Conditioning and sensitivity (how errors amplify)
 88. Matrix norms and singular values (measuring size properly)
-89. Regularization (ridge/Tikhonov to tame instability)
-90. Rank-revealing QR and practical diagnostics (what rank really is)
+89. Regularization (Ridge/Tikhonov to tame instability)
+90. Rank-Revealing QR and practical diagnostics (what rank really is)
 
 #### Chapter 10. Applications and Computation
 
