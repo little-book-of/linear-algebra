@@ -7,6 +7,9 @@
 #   make render-all
 
 QUARTO       = quarto
+QUARTO_VERSION ?= 1.6.43
+QUARTO_DEB := quarto-$(QUARTO_VERSION)-linux-amd64.deb
+QUARTO_DEB_URL := https://github.com/quarto-dev/quarto-cli/releases/download/v$(QUARTO_VERSION)/$(QUARTO_DEB)
 PYTHON       = python3
 RELEASE_DIR  = releases
 BUILD_DIR    = docs
@@ -17,34 +20,48 @@ KO_PROJECT   = books/ko
 ES_PROJECT   = books/es
 DE_PROJECT   = books/de
 
-.PHONY: all preview render render-zh render-vi render-ja render-ko render-es render-de render-all translate translate-vi translate-ja translate-ko translate-es translate-de release clean help
+.PHONY: all install-quarto check-quarto preview render render-zh render-vi render-ja render-ko render-es render-de render-all translate translate-vi translate-ja translate-ko translate-es translate-de release clean help
 
 # Default target
 all: release ## Default: build and copy distributables
 
+install-quarto: ## Install Quarto CLI (Linux .deb)
+	@if command -v $(QUARTO) >/dev/null 2>&1; then \
+		echo "Quarto already installed: $$($(QUARTO) --version)"; \
+		exit 0; \
+	fi
+	@echo "Installing Quarto v$(QUARTO_VERSION)..."
+	@curl -fsSL -o /tmp/$(QUARTO_DEB) $(QUARTO_DEB_URL)
+	@dpkg -i /tmp/$(QUARTO_DEB) || apt-get install -f -y
+	@rm -f /tmp/$(QUARTO_DEB)
+	@echo "Installed: $$($(QUARTO) --version)"
+
+check-quarto: ## Check Quarto version
+	@$(QUARTO) --version
+
 preview: ## Start Quarto live preview for English book
 	$(QUARTO) preview
 
-render: ## Render English book/site (HTML/PDF/EPUB/TeX as configured)
-	$(QUARTO) render
+render: ## Render English site (HTML only)
+	$(QUARTO) render --to html --no-execute
 
 render-zh: ## Render Chinese website (HTML)
-	$(QUARTO) render $(ZH_PROJECT)
+	$(QUARTO) render $(ZH_PROJECT) --no-execute
 
 render-vi: ## Render Vietnamese website (HTML)
-	$(QUARTO) render $(VI_PROJECT)
+	$(QUARTO) render $(VI_PROJECT) --no-execute
 
 render-ja: ## Render Japanese website (HTML)
-	$(QUARTO) render $(JA_PROJECT)
+	$(QUARTO) render $(JA_PROJECT) --no-execute
 
 render-ko: ## Render Korean website (HTML)
-	$(QUARTO) render $(KO_PROJECT)
+	$(QUARTO) render $(KO_PROJECT) --no-execute
 
 render-es: ## Render Spanish website (HTML)
-	$(QUARTO) render $(ES_PROJECT)
+	$(QUARTO) render $(ES_PROJECT) --no-execute
 
 render-de: ## Render German website (HTML)
-	$(QUARTO) render $(DE_PROJECT)
+	$(QUARTO) render $(DE_PROJECT) --no-execute
 
 render-all: render render-zh render-vi render-ja render-ko render-es render-de ## Render English + Chinese + Vietnamese + Japanese + Korean + Spanish + German sites
 

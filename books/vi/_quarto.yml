@@ -2,6 +2,9 @@ project:
   type: book
   output-dir: ../../docs/vi
 
+website:
+  site-url: https://little-book-of.github.io/linear-algebra/vi/
+
 book:
   title: "Cuốn Sách Nhỏ về Đại Số Tuyến Tính"
   subtitle: "Phiên bản 0.3.0"
@@ -15,14 +18,13 @@ book:
 
   page-navigation: true
 
-website:
   navbar:
     search: true
     right:
       - text: Languages
         menu:
           - text: English
-            href: ../../index.html
+            href: ../index.html
           - text: Deutsch
             href: ../de/index.html
           - text: Español
@@ -30,7 +32,7 @@ website:
           - text: 中文
             href: ../zh-CN/index.html
           - text: Tiếng Việt
-            href: ../vi/index.html
+            href: index.html
           - text: 日本語
             href: ../ja/index.html
           - text: 한국어
@@ -38,6 +40,9 @@ website:
       - icon: github
         href: https://github.com/little-book-of/linear-algebra
         aria-label: GitHub
+
+execute:
+  enabled: false
 
 format:
   html:

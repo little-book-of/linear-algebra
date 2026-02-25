@@ -4,6 +4,20 @@ project:
 
 website:
   site-url: https://little-book-of.github.io/linear-algebra/
+
+book:
+  title: &book_title "The Little Book of Linear Algebra"
+  subtitle: &book_subtitle "Version 0.3.0"
+  author: &book_author "Duc-Tam Nguyen"
+  date: &book_date "2025-09-26"
+  output-file: book
+  chapters:
+    - index.qmd
+    - books/en-US/book.qmd
+    - books/en-US/lab.qmd # complicated setup local env, will write tutorials later.
+
+  page-navigation: true
+
   navbar:
     search: true
     right:
@@ -28,18 +42,9 @@ website:
         href: https://github.com/little-book-of/linear-algebra
         aria-label: GitHub
 
-book:
-  title: &book_title "The Little Book of Linear Algebra"
-  subtitle: &book_subtitle "Version 0.3.0"
-  author: &book_author "Duc-Tam Nguyen"
-  date: &book_date "2025-09-26"
-  output-file: book
-  chapters:
-    - index.qmd
-    - books/en-US/book.qmd
-    - books/en-US/lab.qmd # complicated setup local env, will write tutorials later.
 
-  page-navigation: true
+execute:
+  enabled: false
 
 format:
   html:
