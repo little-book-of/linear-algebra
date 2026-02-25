@@ -2,6 +2,9 @@ project:
   type: book
   output-dir: ../../docs/zh-CN
 
+website:
+  site-url: https://little-book-of.github.io/linear-algebra/zh-CN/
+
 book:
   title: "线性代数小书"
   subtitle: "版本 0.3.0"
@@ -15,20 +18,19 @@ book:
 
   page-navigation: true
 
-website:
   navbar:
     search: true
     right:
       - text: Languages
         menu:
           - text: English
-            href: ../../index.html
+            href: ../index.html
           - text: Deutsch
             href: ../de/index.html
           - text: Español
             href: ../es/index.html
           - text: 中文
-            href: ../zh-CN/index.html
+            href: index.html
           - text: Tiếng Việt
             href: ../vi/index.html
           - text: 日本語
@@ -38,6 +40,9 @@ website:
       - icon: github
         href: https://github.com/little-book-of/linear-algebra
         aria-label: GitHub
+
+execute:
+  enabled: false
 
 format:
   html:

@@ -2,6 +2,9 @@ project:
   type: book
   output-dir: ../../docs/de
 
+website:
+  site-url: https://little-book-of.github.io/linear-algebra/de/
+
 book:
   title: "Das kleine Buch der linearen Algebra"
   subtitle: "Version 0.3.0"
@@ -15,16 +18,15 @@ book:
 
   page-navigation: true
 
-website:
   navbar:
     search: true
     right:
       - text: Languages
         menu:
           - text: English
-            href: ../../index.html
+            href: ../index.html
           - text: Deutsch
-            href: ../de/index.html
+            href: index.html
           - text: Español
             href: ../es/index.html
           - text: 中文
@@ -38,6 +40,9 @@ website:
       - icon: github
         href: https://github.com/little-book-of/linear-algebra
         aria-label: GitHub
+
+execute:
+  enabled: false
 
 format:
   html:

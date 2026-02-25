@@ -2,6 +2,9 @@ project:
   type: book
   output-dir: ../../docs/ko
 
+website:
+  site-url: https://little-book-of.github.io/linear-algebra/ko/
+
 book:
   title: "선형대수학 작은 책"
   subtitle: "버전 0.3.0"
@@ -15,14 +18,13 @@ book:
 
   page-navigation: true
 
-website:
   navbar:
     search: true
     right:
       - text: Languages
         menu:
           - text: English
-            href: ../../index.html
+            href: ../index.html
           - text: Deutsch
             href: ../de/index.html
           - text: Español
@@ -34,10 +36,13 @@ website:
           - text: 日本語
             href: ../ja/index.html
           - text: 한국어
-            href: ../ko/index.html
+            href: index.html
       - icon: github
         href: https://github.com/little-book-of/linear-algebra
         aria-label: GitHub
+
+execute:
+  enabled: false
 
 format:
   html:

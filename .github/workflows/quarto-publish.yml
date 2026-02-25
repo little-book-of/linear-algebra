@@ -29,16 +29,19 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
 
       - name: Render English HTML
-        run: quarto render --to html
+        run: quarto render --to html --no-execute
 
       - name: Render translated HTML books
         run: |
-          quarto render books/de --to html
-          quarto render books/es --to html
-          quarto render books/ja --to html
-          quarto render books/ko --to html
-          quarto render books/vi --to html
-          quarto render books/zh-CN --to html
+          quarto render books/de --to html --no-execute
+          quarto render books/es --to html --no-execute
+          quarto render books/ja --to html --no-execute
+          quarto render books/ko --to html --no-execute
+          quarto render books/vi --to html --no-execute
+          quarto render books/zh-CN --to html --no-execute
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

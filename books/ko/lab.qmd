@@ -1,6 +1,6 @@
 ---
 engine: jupyter
-jupyter: lab-venv
+jupyter: python3
 ---
 
 # The LAB 

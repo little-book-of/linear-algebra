@@ -1,6 +1,6 @@
 ---
-Motor: Jupiter
-jupyter: lab-venv
+engine: jupyter
+jupyter: python3
 ---
 
 # Das LABOR 
