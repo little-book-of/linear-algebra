@@ -52,3 +52,9 @@ format:
     toc-depth: 3
     number-sections: false
     theme: [cosmo, brand]
+
+  epub:
+    sidebar: false
+    toc: false
+    theme: [cosmo, brand]
+    number-sections: false
