@@ -46,6 +46,8 @@ execute:
 
 format:
   html:
+    self-contained: true
+    html-math-method: mathml
     sidebar: true
     toc: true
     toc-location: left
@@ -54,7 +56,16 @@ format:
     theme: [cosmo, brand]
 
   epub:
+    self-contained: true
+    html-math-method: mathml
     sidebar: false
-    toc: false
+    toc: true
+    toc-depth: 3
     theme: [cosmo, brand]
-    number-sections: false
+    number-sections: true
+
+  pdf:
+    pdf-engine: xelatex  # 显式指定 xelatex（默认也是它）
+    include-in-header:
+      - text: |
+          \usepackage{ctex}
