@@ -62,10 +62,15 @@ format:
     toc: true
     toc-depth: 3
     theme: [cosmo, brand]
-    number-sections: true
+    number-sections: false
 
   pdf:
+    sidebar: false
+    toc: true
+    toc-depth: 3
+    theme: [cosmo, brand]
     pdf-engine: xelatex  # 显式指定 xelatex（默认也是它）
+    number-sections: false
     include-in-header:
       - text: |
           \usepackage{ctex}
