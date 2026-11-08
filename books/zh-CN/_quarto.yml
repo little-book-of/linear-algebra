@@ -46,9 +46,31 @@ execute:
 
 format:
   html:
+    self-contained: true
+    html-math-method: mathml
     sidebar: true
     toc: true
     toc-location: left
     toc-depth: 3
     number-sections: false
     theme: [cosmo, brand]
+
+  epub:
+    self-contained: true
+    html-math-method: mathml
+    sidebar: false
+    toc: true
+    toc-depth: 3
+    theme: [cosmo, brand]
+    number-sections: false
+
+  pdf:
+    sidebar: false
+    toc: true
+    toc-depth: 3
+    theme: [cosmo, brand]
+    pdf-engine: xelatex  # 显式指定 xelatex（默认也是它）
+    number-sections: false
+    include-in-header:
+      - text: |
+          \usepackage{ctex}
