@@ -9097,7 +9097,7 @@ for scale in [1,1e-2,1e-4,1e-6]:
 
 一些重要的范数：
 
-- 弗罗贝尼乌斯范数：
+- 矩阵元素总方根（又称弗罗贝尼乌斯范数）：
 
 $$
 \|A\|_F = \sqrt{\sum_{i,j} |a_{ij}|^2}
@@ -9140,7 +9140,7 @@ spec = np.linalg.norm(A, 2)
 one_norm = np.linalg.norm(A, 1)
 inf_norm = np.linalg.norm(A, np.inf)
 
-print("Frobenius norm:", fro)
+print("矩阵元素总方根:", fro)
 print("Spectral norm:", spec)
 print("1-norm:", one_norm)
 print("Infinity norm:", inf_norm)
@@ -9156,7 +9156,7 @@ print("Spectral norm:", spec)
 
 它们匹配 → 谱范数 = 最大奇异值。
 
-4. 奇异值的弗罗贝尼乌斯范数
+4. 用奇异值计算矩阵元素总方根
 
 $$
 \|A\|_F = \sqrt{\sigma_1^2 + \sigma_2^2 + \dots}
@@ -9164,7 +9164,7 @@ $$
 
 ```{python}
 fro_from_svd = np.sqrt(np.sum(S**2))
-print("Frobenius norm (from SVD):", fro_from_svd)
+print("矩阵元素总方根（由 SVD 计算）:", fro_from_svd)
 ```
 
 5.拉伸效果演示
@@ -9184,11 +9184,11 @@ print("Spectral norm (max possible stretch):", spec)
 
 1. 比较对角矩阵的范数 - 它们是否匹配最大的对角线元素？
 2. 生成随机矩阵并查看范数有何不同。
-3. 计算 1 阶矩阵的 Frobenius 与谱范数。
+3. 计算秩 1 矩阵的矩阵元素总方根与谱范数。
 
 #### 要点
 
-- 弗罗贝尼乌斯范数 = 矩阵的总能量。
+- 矩阵元素总方根 = 矩阵的总能量。
 - 谱范数 = 最大拉伸功率（最大奇异值）。
 - 其他范数（1-范数、∞-范数）捕获行/列优势。
 - 奇异值统一了“矩阵大小”的所有这些视图。
