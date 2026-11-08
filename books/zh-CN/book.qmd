@@ -1112,7 +1112,7 @@ machines of order.
 
 在最基本的层面上，矩阵是排列成行和列的数字网格。
 
-- A $2 \times 2$ 矩阵有 2 行和 2 列：
+- 一个 $2 \times 2$ 矩阵有 2 行和 2 列：
 
   $$
   A = \begin{bmatrix} 
@@ -1121,7 +1121,7 @@ machines of order.
   \end{bmatrix}
   $$
 
-- A $3 \times 2$ 矩阵有 3 行和 2 列：
+- 一个 $3 \times 2$ 矩阵有 3 行和 2 列：
 
   $$
   B = \begin{bmatrix} 
