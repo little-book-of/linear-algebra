@@ -7399,7 +7399,7 @@ print("Steady state for Q:", steady.real.flatten())
 
 - 马尔可夫链通过与随机矩阵的重复相乘而演化。
 - 稳态是特征值为 1 的特征向量。
-- 该框架为 PageRank、天气模型和排队系统等实际应用程序提供支持。
+- 该框架为谷歌排名（又称 PageRank）、天气模型和排队系统等实际应用程序提供支持。
 
 ### 70.线性微分系统（通过特征分解求解）
 
@@ -10111,16 +10111,16 @@ plt.show()
 - SVD 提供了一种自然的方法来近似和填充缺失的评级。
 - 这种低秩建模思想支撑着 Netflix 和 Spotify 推荐系统等现代协作过滤系统。
 
-### 98. PageRank 和随机游走（使用特征向量排名）
+### 98. 谷歌排名和随机游走（使用特征向量排名）
 
-PageRank 算法因 Google 而闻名，它使用线性代数和图上的随机游走来对节点（网页、人员、项目）进行排名。
+谷歌排名算法因 Google 而闻名，它使用线性代数和图上的随机游走来对节点（网页、人员、项目）进行排名。
 这个想法是：重要性通过链接流动——被重要节点链接让你变得重要。
 
-#### PageRank 理念
+#### 谷歌排名理念
 
 - 在图上开始随机游走：在每一步，移动到随机邻居。
 - 添加概率“传送”步骤 $1 - \alpha$ 以避免死胡同。
-- 此游走的稳态分布是 PageRank 向量，作为转移矩阵的主特征向量。
+- 此游走的稳态分布是谷歌排名向量，作为转移矩阵的主特征向量。
 
 #### 设置您的实验室
 
@@ -10160,21 +10160,21 @@ alpha = 0.85  # damping factor
 G_matrix = alpha * P + (1 - alpha) * np.ones((n,n)) / n
 ```
 
-4. 迭代计算PageRank
+4. 迭代计算谷歌排名
 
 ```{python}
 r = np.ones(n) / n  # start uniform
 for _ in range(100):
     r = r @ G_matrix
 r /= r.sum()
-print("PageRank vector:", r)
+print("谷歌排名向量:", r)
 ```
 
 5. 与NetworkX内置比较
 
 ```{python}
 pr = nx.pagerank(G, alpha=alpha)
-print("NetworkX PageRank:", pr)
+print("NetworkX 谷歌排名:", pr)
 ```
 
 6. 可视化节点重要性
@@ -10182,7 +10182,7 @@ print("NetworkX PageRank:", pr)
 ```{python}
 sizes = [5000 * r_i for r_i in r]
 nx.draw_circular(G, with_labels=True, node_size=sizes, node_color="lightblue", arrowsize=15)
-plt.title("PageRank visualization (node size ~ importance)")
+plt.title("Google ranking visualization (node size ~ importance)")
 plt.show()
 ```
 
@@ -10190,11 +10190,11 @@ plt.show()
 
 1. 改变 $\alpha$ （例如，0.6 与 0.95）。秩有变化吗？
 2. 添加一个没有外链的“悬空节点”。瞬移如何处理？
-3. 在较大的图（例如具有 50 个节点的随机图）上尝试 PageRank。
+3. 在较大的图（例如具有 50 个节点的随机图）上尝试谷歌排名。
 
 #### 要点
 
-- PageRank 是一个随机游走稳态问题。
+- 谷歌排名是一个随机游走稳态问题。
 - 它简化为寻找 Google 矩阵的主要特征向量。
 - 此方法推广到网页之外 - 影响排名、推荐和网络分析。
 
@@ -10348,9 +10348,9 @@ print("R^2 on test set:", model.score(X_test_pca, y_test))
 
 减小尺寸会提高还是损害精度？
 
-#### 问题集 3 - 使用 PageRank 进行图分析
+#### 问题集 3 - 使用谷歌排名进行图分析
 
-将 PageRank 应用于定制网络。
+将谷歌排名应用于定制网络。
 
 ```{python}
 import networkx as nx
@@ -10359,7 +10359,7 @@ G = nx.barabasi_albert_graph(20, 2)  # 20 nodes, scale-free graph
 pr = nx.pagerank(G, alpha=0.85)
 
 nx.draw(G, with_labels=True, node_size=[5000*pr[n] for n in G], node_color="lightblue")
-plt.title("PageRank on a scale-free graph")
+plt.title("Google ranking on a scale-free graph")
 plt.show()
 ```
 
@@ -10401,7 +10401,7 @@ print("Estimated coefficients:", beta_hat)
 
 #### 要点
 
-- 您已经练习过向量、矩阵、系统、特征值、SVD、PCA、PageRank 等。
+- 您已经练习过向量、矩阵、系统、特征值、SVD、PCA、谷歌排名等。
 - 实际问题通常结合多个概念 - 实验室展示了一切如何组合在一起。
 - 后续步骤：深入研究数值线性代数，探索机器学习应用，或研究高级矩阵分解（若尔当标准形、张量分解）。
 
